@@ -1,8 +1,68 @@
 /* ---ШАПКА САЙТА--- */
 .header{
-	min-height: 300px;
-	background: $subColor;
+	position: relative;
+	min-height: 100vh;
+	width: 980px;
+	margin: auto;
+	color: $backColor;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.presentation{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	&__bg{
+		position: absolute;
+		z-index: 0;
+		top: 147px;
+		left: 139px;
+	}
+	&__title{
+		position: absolute;
+		font-size: 50px;
+		font-family: "Panton";
+		line-height: 1.2;
+		z-index: 1;
+		top: 195px;
+		left: 100px;
+	}
+	&__consult{
+		position: absolute;
+		z-index: 1;
+		top: 295px;
+		left: 100px;
+	}
+}
+.description{
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	&__panel{
+
+	}
+	&__body{
+
+	}
+	&Menu{
+		&__item{}
+		&__icon{}
+		&__title{}
+	}
+	&Body{
+		&__item{
+			display: none;
+			&.active{
+				display: block;
+			}
+		}
+		&__img{
+
+		}
+		&__text{
+			& h3{}
+			& p{}
+		}
+	}
 }

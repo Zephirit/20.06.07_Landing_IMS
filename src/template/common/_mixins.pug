@@ -16,5 +16,16 @@ mixin navigation
 			li.navigation__item Оплата
 			li.navigation__item Отзывы
 		.navigation__phone
-			a(href="tel:+7(843)2400238").navigation__phone
+			a(href="tel:+78432400238").navigation__phone +7(843)2400238
 			button.navigation__order Заказать звонок
+mixin contacts(cl)
+	ul.contacts(class=cl)
+		li.contacts__item
+			a(href="#")
+				img(src="./img/viber.png", alt="viber")
+		li.contacts__item
+			a(href="#")
+				img(src="./img/whatsapp.png", alt="whatsapp")
+		li.contacts__item
+			a(href="#")
+				img(src="./img/telegram.png", alt="telegram")

@@ -10,8 +10,8 @@ body, html {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  background: #f5f5f5;
-  color: #364f6b;
+  background: #253c53;
+  color: #253c53;
   overflow-x: hidden;
   font-family: "Roboto";
   font-weight: normal;
@@ -28,17 +28,64 @@ body, html {
 
 /* ---ШАПКА САЙТА--- */
 .header {
-  min-height: 300px;
-  background: #3fc1c9;
+  position: relative;
+  min-height: 100vh;
+  width: 980px;
+  margin: auto;
+  color: #fafafa;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.presentation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.presentation__bg {
+  position: absolute;
+  z-index: 0;
+  top: 147px;
+  left: 139px;
+}
+
+.presentation__title {
+  position: absolute;
+  font-size: 50px;
+  font-family: "Panton";
+  line-height: 1.2;
+  z-index: 1;
+  top: 195px;
+  left: 100px;
+}
+
+.presentation__consult {
+  position: absolute;
+  z-index: 1;
+  top: 295px;
+  left: 100px;
+}
+
+.description {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+}
+
+.descriptionBody__item {
+  display: none;
+}
+
+.descriptionBody__item.active {
+  display: block;
+}
+
 /* ---СЕКЦИЯ СРАВНЕНИЙ--- */
 .comparative {
   min-height: 300px;
-  background: #fc5185;
+  background: #ea3302;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +94,7 @@ body, html {
 /* ---СЕКЦИЯ ИСПОЛЬЗОВАНИЯ--- */
 .applying {
   min-height: 300px;
-  background: #3fc1c9;
+  background: #c3a976;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +103,7 @@ body, html {
 /* ---СЕКЦИЯ ДО-ПОСЛЕ--- */
 .beforeAfter {
   min-height: 300px;
-  background: #fc5185;
+  background: #ea3302;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,7 +112,7 @@ body, html {
 /* ---СЕКЦИЯ ЦВЕТОВЫХ ТЕМ--- */
 .colors {
   min-height: 300px;
-  background: #3fc1c9;
+  background: #c3a976;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,7 +121,7 @@ body, html {
 /* ---СЕКЦИЯ ВОПРОСОВ--- */
 .questions {
   min-height: 300px;
-  background: #fc5185;
+  background: #ea3302;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,7 +130,7 @@ body, html {
 /* ---СЕКЦИЯ ПРОДУКЦИИ--- */
 .production {
   min-height: 300px;
-  background: #3fc1c9;
+  background: #c3a976;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,7 +139,7 @@ body, html {
 /* ---СЕКЦИЯ АКЦИЙ--- */
 .stocks {
   min-height: 300px;
-  background: #fc5185;
+  background: #ea3302;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,7 +148,7 @@ body, html {
 /* ---СЕКЦИЯ ОТЗЫВОВ--- */
 .reviews {
   min-height: 300px;
-  background: #3fc1c9;
+  background: #c3a976;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,7 +157,7 @@ body, html {
 /* ---СЕКЦИЯ КАРТЫ--- */
 .maps {
   min-height: 300px;
-  background: #fc5185;
+  background: #ea3302;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,7 +166,7 @@ body, html {
 /* ---ФОРМА ОБРАТНОЙ СВЯЗИ--- */
 .form {
   min-height: 200px;
-  background: #f5f5f5;
+  background: #fafafa;
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -133,8 +180,8 @@ body, html {
 
 footer {
   position: relative;
-  background-color: #364f6b;
-  color: #f5f5f5;
+  background-color: #253c53;
+  color: #fafafa;
   flex: 0 0 auto;
 }
 
