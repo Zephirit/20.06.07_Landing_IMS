@@ -2,22 +2,23 @@ mixin form(title,subtitle)
 	.form
 		.form__title=title
 		.form__subtitle=subtitle
-		input(type="text" placeholder="ФИО")
-		input(type="tel" placeholder="Телефон")
+		.form__input
+			input(type="text" placeholder="ФИО")
+			input(type="tel" placeholder="Телефон")
 mixin navigation
 	nav.navigation
-		.navigation__logo
+		a(href="/").navigation__logo
 			img(src="./img/logo.png", alt="logo")
 		ul.navigation__list
-			li.navigation__item Преимущества
-			li.navigation__item Сравнения
-			li.navigation__item Типы панелей
-			li.navigation__item Галерея
-			li.navigation__item Оплата
-			li.navigation__item Отзывы
+			li.navigation__item.hvr-grow Преимущества
+			li.navigation__item.hvr-grow Сравнения
+			li.navigation__item.hvr-grow Типы панелей
+			li.navigation__item.hvr-grow Галерея
+			li.navigation__item.hvr-grow Оплата
+			li.navigation__item.hvr-grow Отзывы
 		.navigation__phone
-			a(href="tel:+78432400238").navigation__phone +7(843)2400238
-			button.navigation__order Заказать звонок
+			a(href="tel:+78432400238").hvr-pulse +7(843)2400238
+			button Заказать звонок
 mixin contacts(cl)
 	ul.contacts(class=cl)
 		li.contacts__item

@@ -1,8 +1,37 @@
 /* ---СЕКЦИЯ ИСПОЛЬЗОВАНИЯ--- */
-.applying{
-	min-height: 300px;
-	background: $subColor;
+.applying {
+	position: relative;
+	width: 100%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	&__content {
+		max-width: 980px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__title {
+		position: relative;
+		width: 100%;
+		margin: 60px 0 20px 0;
+		text-transform: uppercase;
+		font-family: Panton;
+		font-weight: 900;
+		font-size: 33px;
+		color: black;		
+	}
+	&__items {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 20px;
+		& img {
+			width: 262px;
+			height: 200px;
+			margin: 20px 0;
+			object-fit: cover;
+		}
+	}
 }

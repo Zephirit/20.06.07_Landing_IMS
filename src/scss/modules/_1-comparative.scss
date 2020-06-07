@@ -1,6 +1,9 @@
 /* ---СЕКЦИЯ СРАВНЕНИЙ--- */
 .comparative{
+	position: relative;
+	z-index: 5;
 	min-height: 300px;
+	width: 100%;
 	background: $contrColor;
 	display: flex;
 	justify-content: center;

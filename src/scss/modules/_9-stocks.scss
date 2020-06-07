@@ -1,8 +1,12 @@
 /* ---СЕКЦИЯ АКЦИЙ--- */
 .stocks{
-	min-height: 300px;
-	background: $contrColor;
+	background: $subColor !important;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	&__content {
+		max-width: 980px;
+		background: $subColor !important;
+
+	}
 }

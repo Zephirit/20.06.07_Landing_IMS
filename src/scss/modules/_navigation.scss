@@ -1,3 +1,62 @@
 .navigation{
+	position: relative;
+	background: $mainColor;
+	width: 980px;
+	height: 65px;
+	display: flex;
+	justify-content: flex-end;
+	&__logo{
+		@include centered(y);
+		width: 130px;
+		left: 0;
+
+	}
+	&__list{
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
 	
+	&__item{
+		padding: 10px;
+		cursor: pointer;
+		font-size: 14px;
+		font-family: "Panton";
+		color: $backColor;
+		font-weight: bold;
+		line-height: 1.2;
+		text-align: left;
+		text-transform: uppercase;
+	}
+	&__phone{
+		position: relative;
+		margin-left: 35px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		& a{
+			font-size: 19px;
+			font-family: "Panton";
+			color: rgb(255, 255, 255);
+			line-height: 1.2;
+		}
+		
+		& button{
+			position: relative;
+			cursor: pointer;
+			font-size: 14px;
+			font-family: "Panton";
+			color: rgb(255, 255, 255);
+			font-weight: bold;
+			line-height: 1.2;
+			text-align: center;
+			color: $backColor;
+			border: none;
+			outline: none;
+			background-image: linear-gradient( to top, rgb(175,8,8) 0%, rgb(255,66,0) 100%);
+			width: 160px;
+			height: 33px;
+		}
+	}
 }

@@ -1,68 +1,173 @@
 /* ---ШАПКА САЙТА--- */
-.header{
+.header {
 	position: relative;
+	z-index: 0;
 	min-height: 100vh;
-	width: 980px;
+	width: 100%;
 	margin: auto;
+	background: $mainColor;
 	color: $backColor;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	// overflow: hidden;
+	&__navigation {
+		@include centered(x);
+		z-index: 5;
+		top: 30px;
+	}
 }
-.presentation{
+.presentation {
 	position: absolute;
-	width: 100%;
+	z-index: 0;
+	width: 980px;
 	height: 100%;
-	&__bg{
+	&__filter {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: rgba($mainColor, 0.3);
+	}
+	&__gradient {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to top, $mainColor 40%, transparent 70%);
+	}
+	&__bg {
 		position: absolute;
 		z-index: 0;
-		top: 147px;
+		top: 19vh;
 		left: 139px;
 	}
-	&__title{
+
+	&__title {
 		position: absolute;
-		font-size: 50px;
-		font-family: "Panton";
-		line-height: 1.2;
+		display: flex;
+		flex-direction: column;
 		z-index: 1;
-		top: 195px;
+		top: 23vh;
 		left: 100px;
-	}
-	&__consult{
-		position: absolute;
-		z-index: 1;
-		top: 295px;
-		left: 100px;
+		& h1 {
+			text-transform: uppercase;
+			margin: 0;
+			color: white;
+			font-size: 50px;
+			font-family: "Panton";
+			line-height: 1.2;
+		}
+		& h2 {
+			margin: 0 0 50px 0;
+			color: white;
+			font-size: 50px;
+			font-family: "Panton";
+			line-height: 1.2;
+		}
+		& button {
+			cursor: pointer;
+			border-style: solid;
+			border-width: 3px;
+			border-color: rgb(252, 64, 0);
+			color: white;
+			background: rgba($mainColor, 0.8);
+			width: 281px;
+			height: 50px;
+			z-index: 1;
+			font-size: 20px;
+			font-family: "Panton";
+			// font-weight: bold;
+			line-height: 1.2;
+		}
 	}
 }
-.description{
-	position: absolute;
+.description {
+	position: relative;
+	width: 100%;
 	z-index: 1;
 	bottom: 0;
-	&__panel{
-
+	&__panel {
 	}
-	&__body{
-
+	&__body {
 	}
-	&Menu{
-		&__item{}
-		&__icon{}
-		&__title{}
-	}
-	&Body{
-		&__item{
-			display: none;
-			&.active{
-				display: block;
+	&Menu {
+		@include centered(x);
+		top: -180px;
+		display: flex;
+		width: 980px;
+		margin: auto;
+		&__item {
+			position: relative;
+			display: flex;
+			height: 180px;
+			width: 196px;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			text-decoration: none;
+			background-color: rgb(195, 169, 118);
+			&:nth-child(2n) {
+				background-color: rgb(166, 140, 90);
 			}
 		}
-		&__img{
-
+		&__icon {
+			position: relative;
+			height: 50px;
+			width: 50px;
+			margin: 30px auto 15px;
 		}
-		&__text{
-			& h3{}
-			& p{}
+
+		&__title {
+			max-width: 150px;
+
+			color: $backColor;
+			font-size: 16px;
+			font-family: "Panton";
+			font-weight: bold;
+			line-height: 1.2;
+			text-align: center;
+		}
+	}
+	&Body {
+		position: relative;
+		height: 100%;
+
+		&__item {
+			position: relative;
+			display: flex;
+			display: none;
+			background-color: $backColor;
+			&.active {
+				display: flex;
+			}
+		}
+		&__img {
+			position: relative;
+			width: 200px;
+			& img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&__text {
+			position: relative;
+			box-sizing: border-box;
+			padding: 30px;
+			width: 920px;
+			& h3 {
+				font-size: 21px;
+				margin: 10px 0;
+				font-family: "Panton";
+				color: rgb(40, 40, 40);
+				line-height: 1.2;
+				text-align: left;
+			}
+			& p {
+				font-size: 16px;
+				font-family: "Panton";
+				color: rgb(40, 40, 40);
+				line-height: 1.2;
+			}
 		}
 	}
 }
