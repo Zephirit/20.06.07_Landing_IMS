@@ -1,0 +1,9 @@
+/* ---ФОРМА ОБРАТНОЙ СВЯЗИ--- */
+.form{
+	min-height: 200px;
+	background: $backColor;
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

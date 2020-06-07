@@ -1,0 +1,16 @@
+/* ---БАЗОВАЯ НАСТРОЙКА СТРАНИЦЫ--- */
+body,html {
+	height: 100%;
+	margin: 0;
+}
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	background: $backColor;
+	color: $mainColor;
+	overflow-x: hidden;
+	font-family: "Roboto";
+	font-weight: normal;
+}

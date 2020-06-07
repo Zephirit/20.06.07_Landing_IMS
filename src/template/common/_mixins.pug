@@ -1,0 +1,20 @@
+mixin form(title,subtitle)
+	.form
+		.form__title=title
+		.form__subtitle=subtitle
+		input(type="text" placeholder="ФИО")
+		input(type="tel" placeholder="Телефон")
+mixin navigation
+	nav.navigation
+		.navigation__logo
+			img(src="./img/logo.png", alt="logo")
+		ul.navigation__list
+			li.navigation__item Преимущества
+			li.navigation__item Сравнения
+			li.navigation__item Типы панелей
+			li.navigation__item Галерея
+			li.navigation__item Оплата
+			li.navigation__item Отзывы
+		.navigation__phone
+			a(href="tel:+7(843)2400238").navigation__phone
+			button.navigation__order Заказать звонок

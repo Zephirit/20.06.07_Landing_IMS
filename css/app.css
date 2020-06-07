@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/* ---БАЗОВАЯ НАСТРОЙКА СТРАНИЦЫ--- */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background: #f5f5f5;
+  color: #364f6b;
+  overflow-x: hidden;
+  font-family: "Roboto";
+  font-weight: normal;
+}
+
+/* ---НАСТРОЙКА ШРИФТОВ СТРАНИЦЫ--- */
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Regular.eot");
+  src: local("☺"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ---ШАПКА САЙТА--- */
+.header {
+  min-height: 300px;
+  background: #3fc1c9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---СЕКЦИЯ СРАВНЕНИЙ--- */
+.comparative {
+  min-height: 300px;
+  background: #fc5185;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---СЕКЦИЯ ИСПОЛЬЗОВАНИЯ--- */
+.applying {
+  min-height: 300px;
+  background: #3fc1c9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---СЕКЦИЯ ДО-ПОСЛЕ--- */
+.beforeAfter {
+  min-height: 300px;
+  background: #fc5185;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---СЕКЦИЯ ЦВЕТОВЫХ ТЕМ--- */
+.colors {
+  min-height: 300px;
+  background: #3fc1c9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---СЕКЦИЯ ВОПРОСОВ--- */
+.questions {
+  min-height: 300px;
+  background: #fc5185;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---СЕКЦИЯ ПРОДУКЦИИ--- */
+.production {
+  min-height: 300px;
+  background: #3fc1c9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---СЕКЦИЯ АКЦИЙ--- */
+.stocks {
+  min-height: 300px;
+  background: #fc5185;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---СЕКЦИЯ ОТЗЫВОВ--- */
+.reviews {
+  min-height: 300px;
+  background: #3fc1c9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---СЕКЦИЯ КАРТЫ--- */
+.maps {
+  min-height: 300px;
+  background: #fc5185;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---ФОРМА ОБРАТНОЙ СВЯЗИ--- */
+.form {
+  min-height: 200px;
+  background: #f5f5f5;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---ПОДВАЛ СТРАНИЦЫ--- */
+.content {
+  flex: 1 0 auto;
+}
+
+footer {
+  position: relative;
+  background-color: #364f6b;
+  color: #f5f5f5;
+  flex: 0 0 auto;
+}
+
+.footer {
+  text-align: center;
+}

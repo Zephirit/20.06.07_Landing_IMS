@@ -1,0 +1,27 @@
+//Переменные
+$mainColor: #364f6b;
+$subColor: #3fc1c9;
+$backColor: #f5f5f5;
+$contrColor: #fc5185;
+//Общие настройки стилей
+@import "./base/_mixins.scss";
+@import "./base/_base.scss";
+@import "./base/_fonts.scss";
+
+// Сборка частей проекта
+
+// Страницы
+@import "./pages/index.scss";
+// Модули
+@import "./modules/_header.scss";
+@import "./modules/_1-comparative.scss";
+@import "./modules/_2-applying.scss";
+@import "./modules/_4-beforeAfter.scss";
+@import "./modules/_5-colors.scss";
+@import "./modules/_7-questions.scss";
+@import "./modules/_8-production.scss";
+@import "./modules/_9-stocks.scss";
+@import "./modules/_10-reviews.scss";
+@import "./modules/_11-maps.scss";
+@import "./modules/_form.scss";
+@import "./modules/_footer.scss";

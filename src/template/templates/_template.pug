@@ -1,0 +1,34 @@
+block variables
+
+doctype html
+html(lang="ru-Ru")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		meta(content="SM-group" name="author")
+		meta(content="description" name="description")
+		meta(content="prepros" name="keywords")
+		meta(content="width=device-width, initial-scale=1" name="viewport")
+		meta(content="ie=edge" http-equiv="x-ua-compatible")
+
+		//- favicon block start
+		link(rel="shortcut icon" href="./favicon.ico" type="image/ico")
+		//- favicon block end
+
+		//- link(rel="manifest" href="./manifest.json")
+
+		link(rel='stylesheet' href='./css/normalize.css')
+		link(rel='stylesheet' href='./css/animate.min.css')
+		link(rel='stylesheet' href='./css/hover-min.css')
+		link(rel='stylesheet' href='./css/app.css')
+		script(type="module" src="./js/main.js")
+
+		<!--[if lt IE 9]>
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+		<![endif]-->
+
+
+	body
+		include ../common/_mixins
+		.wrapper
+			block content
