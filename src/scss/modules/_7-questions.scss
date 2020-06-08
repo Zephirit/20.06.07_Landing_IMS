@@ -48,6 +48,10 @@
 			box-shadow: 0 0 6px (rgba($mainColor, .8));
 			transition: all .4s;
 			margin: 10px auto;
+			transition: all .4s;
+			&:hover{
+				box-shadow: 0 0 2px (rgba($mainColor, .5));
+			}
 		}
 		&__trigger{
 			position: absolute;

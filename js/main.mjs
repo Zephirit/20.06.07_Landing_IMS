@@ -77,7 +77,6 @@ window.onload = () => {
 	}
 
 	function _accordion(links, accs) {
-		accs[0].classList.add('active')
 		links.forEach((link, index) => {
 			link.addEventListener('click', (e) => {
 				e.preventDefault()

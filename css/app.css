@@ -231,7 +231,7 @@ ul {
   position: relative;
   display: flex;
   display: none;
-  background-color: #fafafa;
+  background-color: rgba(37, 60, 83, 0.1);
 }
 
 .descriptionBody__item.active {
@@ -302,13 +302,15 @@ ul {
   display: flex;
   flex-direction: column;
   width: 780px;
-  padding: 50px 0;
+  height: 100%;
 }
 
 .comparative__graph {
   position: relative;
   display: flex;
+  margin-top: 50px;
   height: 475px;
+  width: 100%;
 }
 
 .comparative__age {
@@ -442,16 +444,28 @@ ul {
   justify-content: flex-end;
   flex-direction: column;
   height: 100%;
-  width: 25%;
-  border: 1px solid black;
+  width: 150px;
 }
 
 .bar__text {
-  width: 100px;
+  width: 90px;
   font-family: Panton;
   font-weight: 700;
   font-size: 14px;
   margin-bottom: 15px;
+}
+
+.bar__image {
+  position: relative;
+  height: 65px;
+  width: 65px;
+  overflow: hidden;
+}
+
+.bar__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .bar__body {
@@ -470,13 +484,16 @@ ul {
   font-weight: 700;
   font-size: 27px;
   text-align: center;
+  line-height: 20px;
 }
 
 .bar__bodyPrice {
   font-size: 14px;
+  font-weight: 600;
 }
 
 .bar__firstText {
+  width: 100px;
   font-weight: 800;
 }
 
@@ -486,13 +503,19 @@ ul {
 }
 
 .bar__secondBody {
-  height: 150px;
+  height: 170px;
   background: #fafafa;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
 .bar__thirdBody {
   height: 120px;
+  background: #fafafa;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.bar__forthBody {
+  height: 80px;
   background: #fafafa;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
@@ -702,6 +725,38 @@ ul {
   display: block;
 }
 
+.container-beforeafter {
+  width: 100%;
+  padding-top: 45.05%;
+  height: 0;
+  position: relative;
+}
+
+.beforeafter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  pointer-events: auto;
+  -ms-touch-action: none;
+}
+
+.beforeafter .beforeafter-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.beforeafter img {
+  width: 100%;
+  height: 100%;
+}
+
 /* ---СЕКЦИЯ ЦВЕТОВЫХ ТЕМ--- */
 .colors {
   position: relative;
@@ -795,6 +850,11 @@ ul {
   box-shadow: 0 0 6px rgba(37, 60, 83, 0.8);
   transition: all .4s;
   margin: 10px auto;
+  transition: all .4s;
+}
+
+.questionsBody__item:hover {
+  box-shadow: 0 0 2px rgba(37, 60, 83, 0.5);
 }
 
 .questionsBody__trigger {
