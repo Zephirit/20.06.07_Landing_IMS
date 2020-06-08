@@ -55,6 +55,7 @@
 		position: relative;
 		margin: 20px 0;
 		color: $backColor;
+		cursor: text;
 		& input {
 			width: 230px;
 			height: 45px;
@@ -66,6 +67,7 @@
 			font-family: Panton;
 			font-weight: 600;
 			font-size: 19px;
+			cursor: text;
 			&::placeholder {
 				color: $backColor;
 				text-transform: uppercase;

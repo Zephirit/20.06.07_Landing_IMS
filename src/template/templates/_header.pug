@@ -1,9 +1,11 @@
 header.header Шапка сайта
 	.header__navigation.animated.slideInDown
 		+navigation
-	.header__contacts
-		+contacts('contacts--vert')
+	//- .header__contacts
+	//- 	+contacts('contacts--vert')
 	.presentation
+		.presentation__contacts
+			+contacts('contacts--vert')
 		.presentation__bg.animated.fadeIn
 			.presentation__filter
 			.presentation__gradient

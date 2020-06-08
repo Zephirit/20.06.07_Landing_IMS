@@ -1,6 +1,7 @@
 .navigation{
 	position: relative;
 	background: $mainColor;
+	margin: auto;
 	width: 980px;
 	height: 65px;
 	display: flex;
@@ -24,7 +25,6 @@
 		font-family: "Panton";
 		color: $backColor;
 		font-weight: bold;
-		line-height: 1.2;
 		text-align: left;
 		text-transform: uppercase;
 	}
@@ -39,7 +39,10 @@
 			font-size: 19px;
 			font-family: "Panton";
 			color: rgb(255, 255, 255);
-			line-height: 1.2;
+			text-decoration: none;
+			& span:first-child{
+				font-weight: 300
+			}
 		}
 		
 		& button{

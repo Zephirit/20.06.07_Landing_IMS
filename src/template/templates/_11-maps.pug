@@ -1,1 +1,19 @@
-section.maps Секция карты
+section.map
+	.map__bg
+		img(src="./img/map.jpg", alt="map").map__img
+		#googleMap
+	.map__content
+		.mapCard
+			.mapCard__logo
+				img(src="./img/logo_black.png", alt="logo")
+			.mapCard__place
+				h3.mapCard__title Мы находимся
+				p.mapCard__text Республика Татарстан, город Казань, улица Фатыха Карима, дом 9, офис 502
+			.mapCard__phones
+				h3.mapCard__title Наши телефоны
+				a(href="tel:+78432400238").mapCard__text.hvr-grow +7 (843) 240-02-38 — офис
+				a(href="tel:+79625593090").mapCard__text.hvr-grow +7 962 559-30-90 — отдел продаж
+				a(href="tel:+79662507747").mapCard__text.hvr-grow +7 966 250-77-47 — производство
+			.mapCard__email
+				span.mapCard__text email: 
+				a(href="mailto:info@imakestone.ru").mapCard__link.hvr-grow info@imakestone.ru

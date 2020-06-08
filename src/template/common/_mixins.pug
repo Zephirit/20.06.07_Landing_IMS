@@ -1,15 +1,8 @@
 mixin form(title,subtitle)
-	.form.stocks__form
+	form.form
 		.form__title=title
 		.form__subtitle=subtitle
 		.form__input
-			input(type="text" placeholder="ФИО")
-			input(type="tel" placeholder="Телефон")
-mixin stocks(title,subtitle)
-	.stocks__form
-		.stocks__title=title
-		.stocks__subtitle=subtitle
-		.stocks__input
 			input(type="text" placeholder="ФИО")
 			input(type="tel" placeholder="Телефон")
 mixin navigation
@@ -24,16 +17,18 @@ mixin navigation
 			li.navigation__item.hvr-grow Оплата
 			li.navigation__item.hvr-grow Отзывы
 		.navigation__phone
-			a(href="tel:+78432400238").hvr-pulse +7(843)2400238
+			a(href="tel:+78432400238").hvr-pulse
+				span +7 (843) 
+				span 240 02 38
 			button Заказать звонок
 mixin contacts(cl)
 	ul.contacts(class=cl)
-		li.contacts__item
+		li.contacts__item.hvr-grow
 			a(href="#")
 				img(src="./img/viber.png", alt="viber")
-		li.contacts__item
+		li.contacts__item.hvr-grow
 			a(href="#")
 				img(src="./img/whatsapp.png", alt="whatsapp")
-		li.contacts__item
+		li.contacts__item.hvr-grow
 			a(href="#")
 				img(src="./img/telegram.png", alt="telegram")

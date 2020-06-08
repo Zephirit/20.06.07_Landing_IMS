@@ -27,7 +27,7 @@
 		display: flex;
 		justify-content: flex-start;
 		flex-wrap: wrap;
-		margin-bottom: 20px;
+		margin-bottom: 120px;
 	}
 	&__item {
 		position: relative;
@@ -50,7 +50,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding: 40px 40px 25px;
+		padding: 40px 20px 25px 20px;
 	}
 	&__name {
 		font-family: Panton;
@@ -67,14 +67,14 @@
 		& button {
 			width: 165px;
 			height: 45px;
-			border: 3px solid $contrColor;
+			border: 2px solid $contrColor;
 			background: $backColor;
 			color: $contrColor;
 			font-family: Panton;
-			font-weight: 800;
+			font-weight: 700;
 			text-transform: uppercase;
 			font-size: 18px;
-			letter-spacing: 2px;
+			letter-spacing: 3px;
 			cursor: pointer;
 		}
 	}

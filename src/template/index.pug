@@ -1,7 +1,7 @@
 //- Наследуемый шаблон _template
 extends ./templates/_template
 block variables
-	- var title = "Шаблон"
+	- var title = "IMS - I make stone"
 //- Тело блока
 block content
 	include ./templates/_header
@@ -17,5 +17,4 @@ block content
 	include ./templates/_10-reviews
 	include ./templates/_11-maps
 	+form("Бесплатная консультация специалиста","Наш сотрудник с радостью ответит на все Ваши вопросы и вышлет на почту лучшее предложение")
-	+navigation
 	include ./templates/_footer

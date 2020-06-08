@@ -1,6 +1,7 @@
 <?php
-if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST['phone']!="")){ //Проверка отправилось ли наше поля name и не пустые ли они
-        $to = 'info@get-protect.com'; //Почта получателя
+if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST['phone']!="")){
+     //Проверка отправилось ли наше поля name и не пустые ли они
+        $to = 'gray84@tut.com'; //Почта получателя
         $subject = 'Обратный звонок'; //Загаловок сообщения
         $message = '
                 <html>

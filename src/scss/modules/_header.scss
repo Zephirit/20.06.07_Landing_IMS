@@ -16,12 +16,18 @@
 		z-index: 5;
 		top: 30px;
 	}
+	
 }
 .presentation {
 	position: absolute;
 	z-index: 0;
 	width: 980px;
 	height: 100%;
+	&__contacts{
+		position: absolute;
+		left: 0;
+		top: 15%;
+	}
 	&__filter {
 		position: absolute;
 		width: 100%;

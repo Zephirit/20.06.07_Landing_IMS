@@ -14,7 +14,7 @@ body, html {
   background: #fafafa;
   color: #253c53;
   overflow: hidden;
-  font-family: "Roboto";
+  font-family: "Panton";
   font-weight: normal;
 }
 
@@ -86,6 +86,12 @@ ul {
   z-index: 0;
   width: 980px;
   height: 100%;
+}
+
+.presentation__contacts {
+  position: absolute;
+  left: 0;
+  top: 15%;
 }
 
 .presentation__filter {
@@ -612,7 +618,7 @@ ul {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 120px;
 }
 
 .production__item {
@@ -634,7 +640,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 40px 40px 25px;
+  padding: 40px 20px 25px 20px;
 }
 
 .product__name {
@@ -653,14 +659,14 @@ ul {
 .product__button button {
   width: 165px;
   height: 45px;
-  border: 3px solid #ea3302;
+  border: 2px solid #ea3302;
   background: #fafafa;
   color: #ea3302;
   font-family: Panton;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 18px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   cursor: pointer;
 }
 
@@ -727,6 +733,7 @@ ul {
   position: relative;
   margin: 20px 0;
   color: #fafafa;
+  cursor: text;
 }
 
 .stocks__input input {
@@ -740,6 +747,7 @@ ul {
   font-family: Panton;
   font-weight: 600;
   font-size: 19px;
+  cursor: text;
 }
 
 .stocks__input input::placeholder {
@@ -752,22 +760,199 @@ ul {
 
 /* ---СЕКЦИЯ ОТЗЫВОВ--- */
 .reviews {
-  min-height: 300px;
+  position: relative;
   width: 100%;
-  background: #c3a976;
   display: flex;
   justify-content: center;
+}
+
+.reviews__content {
+  position: relative;
+  width: 980px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  margin-bottom: 50px;
+}
+
+.reviews__title {
+  position: relative;
+  width: 100%;
+  margin: 55px 0 20px 0;
+  text-transform: uppercase;
+  font-family: Panton;
+  font-weight: 900;
+  font-size: 33px;
+  color: black;
+}
+
+.reviews__items {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.review {
+  position: relative;
+  width: 30%;
+  min-width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.review__image {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  top: -40px;
+}
+
+.review__image img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.review__desc {
+  position: relative;
+  width: 100%;
+  top: -40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: Panton;
+  font-weight: normal;
+  font-size: 14px;
+  color: black;
+}
+
+.review__name {
+  font-weight: 700;
+  margin: 10px 0 0;
+}
+
+.review__workplace {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.review__company {
+  margin-left: 5px;
+  color: #ea3302;
 }
 
 /* ---СЕКЦИЯ КАРТЫ--- */
-.maps {
-  min-height: 300px;
+.map {
+  position: relative;
+  height: 410px;
   width: 100%;
-  background: #ea3302;
+  background: #253c53;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.map__bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.map__img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.map__content {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  margin: auto;
+  width: 980px;
+  height: 100%;
+}
+
+.mapCard {
+  position: relative;
+  margin: 20px;
+  background: #fafafa;
+  box-shadow: 0 0 8px rgba(37, 60, 83, 0.7);
+  width: 350px;
+  padding: 25px;
+  min-height: 300px;
+  font-size: 19px;
+  font-family: "Panton";
+  color: #253c53;
+  font-weight: 400;
+}
+
+.mapCard h3 {
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: 800;
+  margin: 5px 0;
+}
+
+.mapCard p {
+  margin: 5px 0;
+}
+
+.mapCard__logo {
+  position: relative;
+  width: 130px;
+  margin: 15px;
+}
+
+.mapCard__place {
+  margin: 15px;
+}
+
+.mapCard__phones {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  margin: 15px;
+}
+
+.mapCard__phones a {
+  text-decoration: none;
+  color: #253c53;
+}
+
+.mapCard__email {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 10px 15px;
+}
+
+.mapCard__email a {
+  padding: 0 10px 2px;
+  color: #ea3302;
 }
 
 /* ---ФОРМА ОБРАТНОЙ СВЯЗИ--- */
@@ -830,6 +1015,7 @@ ul {
 .navigation {
   position: relative;
   background: #253c53;
+  margin: auto;
   width: 980px;
   height: 65px;
   display: flex;
@@ -857,7 +1043,6 @@ ul {
   font-family: "Panton";
   color: #fafafa;
   font-weight: bold;
-  line-height: 1.2;
   text-align: left;
   text-transform: uppercase;
 }
@@ -875,7 +1060,11 @@ ul {
   font-size: 19px;
   font-family: "Panton";
   color: white;
-  line-height: 1.2;
+  text-decoration: none;
+}
+
+.navigation__phone a span:first-child {
+  font-weight: 300;
 }
 
 .navigation__phone button {
@@ -895,6 +1084,25 @@ ul {
   height: 33px;
 }
 
+.contacts {
+  position: relative;
+  display: flex;
+}
+
+.contacts--hor {
+  flex-direction: row;
+}
+
+.contacts--vert {
+  flex-direction: column;
+}
+
+.contacts__item {
+  position: relative;
+  padding: 8px;
+  width: 30px;
+}
+
 /* ---ПОДВАЛ СТРАНИЦЫ--- */
 .content {
   flex: 1 0 auto;
@@ -910,4 +1118,25 @@ footer {
 
 .footer {
   text-align: center;
+}
+
+.footer__navigation {
+  position: relative;
+  height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__content {
+  position: relative;
+  width: 980px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__defense {
+  position: relative;
+  background-color: #1c2d3e;
+  color: #fafafa;
 }

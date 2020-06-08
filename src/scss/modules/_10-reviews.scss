@@ -1,9 +1,102 @@
 /* ---СЕКЦИЯ ОТЗЫВОВ--- */
-.reviews{
-	min-height: 300px;
+.reviews {
+	position: relative;
 	width: 100%;
-	background: $subColor;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	&__content {
+		position: relative;
+		width: 980px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		margin-bottom: 50px;
+	}
+	&__title {
+		position: relative;
+		width: 100%;
+		margin: 55px 0 20px 0;
+		text-transform: uppercase;
+		font-family: Panton;
+		font-weight: 900;
+		font-size: 33px;
+		color: black;		
+	}
+	&__items {
+		position: relative;
+		// top: 45px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		// margin-bottom: 120px;
+	}
+}
+.review {
+	position: relative;
+	width: 30%;
+	min-width: 250px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 30px;
+	padding: 10px;
+	background: rgba(0,0,0,.05);
+
+	&__image{
+		@include centered(x);
+		position: relative;
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		overflow: hidden;
+		top: -40px;
+		& img {
+			width: 80px;
+			height: 80px;
+			object-fit: contain;
+
+		}
+
+	}
+	&__desc {
+		position: relative;
+		width: 100%;
+		top: -40px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		// padding: 0 25px;
+		font-family: Panton;
+		font-weight: normal;
+		font-size: 14px;
+		color: black;
+	}
+	&__name {
+		font-weight: 700;
+		margin: 10px 0 0;
+	}
+	&__workplace {
+		position: relative;
+		width: 100%;
+		margin-bottom: 15px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+
+	}
+	&__job {
+	}
+	&__company {
+		margin-left: 5px;
+		color: $contrColor;
+	}
+	&__text {
+		
+	}
 }

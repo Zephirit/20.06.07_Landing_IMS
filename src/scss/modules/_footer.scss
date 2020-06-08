@@ -11,4 +11,22 @@ footer{
 }
 .footer{
 	text-align: center;
+	&__navigation{
+		position: relative;
+		height: 120px;
+		display: flex;
+		align-items: center;
+	}
+	&__content{
+		position: relative;
+		width: 980px;
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__defense{
+		position: relative;
+		background-color: darken($mainColor,6%);
+		color: $backColor;
+	}
 }

@@ -1,3 +1,21 @@
 .contacts{
-	
+	position: relative;
+	display: flex;
+	&--hor{
+		flex-direction: row;
+	}
+	&--vert{
+		flex-direction: column;
+	}
+	&__item{
+		position: relative;
+		padding: 8px;
+		width: 30px;
+		& a{
+
+		}
+		& img{
+
+		}
+	}
 }
