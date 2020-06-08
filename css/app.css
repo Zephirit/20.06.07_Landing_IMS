@@ -503,12 +503,80 @@ ul {
 
 /* ---СЕКЦИЯ ВОПРОСОВ--- */
 .questions {
-  min-height: 300px;
   width: 100%;
-  background: #ea3302;
+  background: #c3a976;
+  padding: 30px 0 50px 0;
+}
+
+.questions__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 980px;
+  margin: auto;
+}
+
+.questions__title {
+  position: relative;
+  font-size: 32px;
+  font-family: "Panton";
+  text-transform: uppercase;
+  color: #fafafa;
+  font-weight: 800;
+  text-align: center;
+  line-height: 90px;
+}
+
+.questionsBody__desc {
+  display: none;
+  font-size: 16px;
+  font-family: "Panton";
+  color: #253c53;
+  font-weight: 400;
+  padding: 15px 25px 25px;
+}
+
+.questionsBody__item {
+  position: relative;
+  cursor: pointer;
+  width: 750px;
+  display: flex;
+  background: #fafafa;
+  color: #253c53;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 6px rgba(37, 60, 83, 0.8);
+  transition: all .4s;
+  margin: 10px auto;
+}
+
+.questionsBody__item.active .questionsBody__desc {
+  display: block;
+}
+
+.questionsBody__trigger {
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  height: 65px;
+  width: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 40px;
+  font-family: "Panton";
+  text-transform: uppercase;
+  color: #c3a976;
+}
+
+.questionsBody__title {
+  font-size: 18px;
+  font-family: "Panton";
+  text-transform: uppercase;
+  color: #253c53;
+  font-weight: 600;
+  padding: 25px;
 }
 
 /* ---СЕКЦИЯ ПРОДУКЦИИ--- */
@@ -543,6 +611,7 @@ ul {
   width: 100%;
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
@@ -550,13 +619,12 @@ ul {
   position: relative;
   display: flex;
   justify-content: flex-start;
-  width: 50%;
+  width: 490px;
 }
 
 .production__item img {
   width: 210px;
   height: 210px;
-  margin: 20px 0;
   object-fit: contain;
 }
 
@@ -566,7 +634,34 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 40px;
+  padding: 40px 40px 25px;
+}
+
+.product__name {
+  font-family: Panton;
+  font-weight: normal;
+  font-size: 25px;
+}
+
+.product__price {
+  font-family: Panton;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 23px;
+}
+
+.product__button button {
+  width: 165px;
+  height: 45px;
+  border: 3px solid #ea3302;
+  background: #fafafa;
+  color: #ea3302;
+  font-family: Panton;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
 
 /* ---СЕКЦИЯ АКЦИЙ--- */

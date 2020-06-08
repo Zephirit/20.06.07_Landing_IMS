@@ -1,9 +1,80 @@
 /* ---СЕКЦИЯ ВОПРОСОВ--- */
-.questions{
-	min-height: 300px;
+.questions {
 	width: 100%;
-	background: $contrColor;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	background: $subColor;
+	padding: 30px 0 50px 0;
+
+	&__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 980px;
+		margin: auto;
+	}
+
+	&__title {
+		position: relative;
+		font-size: 32px;
+		font-family: "Panton";
+		text-transform: uppercase;
+		color: $backColor;
+		font-weight: 800;
+		text-align: center;
+		line-height: 90px;
+	}
+
+	&Body {
+		&__list {}
+		&__desc {
+			display: none;
+			font-size: 16px;
+			font-family: "Panton";
+			color: $mainColor;
+			font-weight: 400;
+			padding: 15px 25px 25px;
+		}
+		&__item {
+			position: relative;
+			cursor: pointer;
+			width: 750px;
+			display: flex;
+			background: $backColor;
+			color: $mainColor;
+			flex-direction: column;
+			justify-content: center;
+			box-shadow: 0 0 6px (rgba($mainColor, .8));
+			transition: all .4s;
+			margin: 10px auto;
+			&.active{
+				& .questionsBody__desc {
+					display: block;
+				}
+			}
+		}
+		&__trigger{
+			position: absolute;
+			cursor: pointer;
+			right: 0;
+			top: 0;
+			height: 65px;
+			width: 65px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 40px;
+			font-family: "Panton";
+			text-transform: uppercase;
+			color: $subColor;
+		}
+		&__title {
+			font-size: 18px;
+			font-family: "Panton";
+			text-transform: uppercase;
+			color: $mainColor;
+			font-weight: 600;
+			padding: 25px;
+		}
+
+			
+	}
 }
