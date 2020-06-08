@@ -7,7 +7,6 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border: 1px solid black;
 	&__content {
 		@include centered;
 		position: relative;
@@ -16,7 +15,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		border: 1px solid black;
 		z-index: 5;
 
 	}
@@ -25,19 +23,19 @@
 		display: flex;
 		flex-direction: column;
 		width: 780px;
-		height: 80%;
 		padding: 50px 0;
 	}
 	&__graph {
 		position: relative;
 		display: flex;
+		height: 475px;
 	}
 	&__age {
 		position: relative;
 		display: flex;
 		justify-content: flex-end;
 		width: 65px;
-		height: 490px;
+		height: 100%;
 		// border: 1px solid black;
 	}
 	&__y {
@@ -55,7 +53,7 @@
 		font-weight: normal;
 		font-size: 18px;
 		color: rgba(black,.5);
-		// border: 1px solid black;
+
 
 	}
 	&__yAxe {
@@ -66,23 +64,30 @@
 	}
 	&__field {
 		position: relative;
-		height: 490px;
+		height: 100%;
 		display: flex;
 		justify-content: flex-end;
 		flex-direction: column;
 		margin-left: 25px;
-		// border: 1px solid black;
+		
 	}
 	&__title {
 		position: absolute;
 		width: 100%;
 		top: 0;
-		// margin: 0 20px;
 		text-transform: uppercase;
 		font-family: Panton;
 		font-weight: 900;
 		font-size: 33px;
 		color: black;
+	}
+	&__bars {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		height: 370px;
+		margin-right: 100px;
 	}
 	&__xAxe {
 		position: relative;
@@ -108,7 +113,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		// border: 1px solid black;
 		background: $mainColor;
 	}
 	&__logo {
@@ -143,5 +147,70 @@
 		height: 100%;
 		background: $mainColor;
 
+	}
+}
+.bar {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	height: 100%;
+	width: 25%;
+	border: 1px solid black;
+	&__text {
+		width: 100px;
+		font-family: Panton;
+		font-weight: 700;
+		font-size: 14px;
+		margin-bottom: 15px;
+	}
+	&__body {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		height: 210px;
+		width: 65px;
+		background: $subColor;
+		padding: 20px 0;
+		&Age {
+			font-weight: 700;
+			font-size: 27px;
+			text-align: center;
+		}
+		&Price{
+			font-size: 14px;
+		}
+	}
+	&__first {
+		&Text {
+			font-weight: 800;
+			// color: $backColor;
+		}
+		&Body {
+			height: 210px;
+			color: $backColor;
+			&Text {
+				// color: $backColor;
+			}
+			&Price {
+				// color: $backColor;
+			}
+		}
+	}
+	&__second {
+		&Body {
+			height: 150px;
+			background: $backColor;
+			box-shadow: 0 0 4px rgba(black,.3);
+		}
+	}
+	&__third {
+		&Body {
+			height: 120px;
+			background: $backColor;
+			box-shadow: 0 0 4px rgba(black,.3);
+		}
 	}
 }

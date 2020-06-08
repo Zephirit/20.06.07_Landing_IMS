@@ -32,6 +32,9 @@
 			color: $mainColor;
 			font-weight: 400;
 			padding: 15px 25px 25px;
+			&.active{
+				display: block;
+			}
 		}
 		&__item {
 			position: relative;
@@ -45,11 +48,6 @@
 			box-shadow: 0 0 6px (rgba($mainColor, .8));
 			transition: all .4s;
 			margin: 10px auto;
-			&.active{
-				& .questionsBody__desc {
-					display: block;
-				}
-			}
 		}
 		&__trigger{
 			position: absolute;

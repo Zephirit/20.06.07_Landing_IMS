@@ -62,9 +62,46 @@ window.onload = () => {
 		})
 	}
 
+	function _tabs(links, tabs) {
+		tabs[0].classList.add('active')
+		links.forEach((link, index) => {
+			console.log(index, link)
+			link.addEventListener('click', (e) => {
+				e.preventDefault()
+				tabs.forEach(tab => {
+					tab.classList.remove('active')
+					tabs[index].classList.add('active')
+				});
+			})
+		});
+	}
+
+	function _accordion(links, accs) {
+		accs[0].classList.add('active')
+		links.forEach((link, index) => {
+			link.addEventListener('click', (e) => {
+				e.preventDefault()
+				if (accs[index].classList.contains('active')) {
+					accs[index].classList.remove('active')
+				} else {
+					accs[index].classList.add('active')
+				}
+			})
+		});
+	}
+	const linksAdv = document.querySelectorAll('.descriptionMenu__item')
+	const tabsAdv = document.querySelectorAll('.descriptionBody__item')
+	const linksBA = document.querySelectorAll('.beforeAfterMenu__item')
+	const tabBA = document.querySelectorAll('.beforeAfterBody__img')
+	const linksQuestion = document.querySelectorAll('.questionsBody__item')
+	const accsQuestion = document.querySelectorAll('.questionsBody__desc')
+
 	function init() {
 		_sendEmail()
 		_getLinks()
+		_tabs(linksAdv, tabsAdv)
+		_tabs(linksBA, tabBA)
+		_accordion(linksQuestion, accsQuestion)
 	}
 	init()
 }
