@@ -11,40 +11,68 @@
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+
 	&__navigation {
 		position: absolute;
 		z-index: 5;
 		top: 30px;
+
+		@include tablets {
+			top: 20px;
+			width: calc(100% - 10px);
+		}
+
+		@include phones {
+			top: 15px;
+			width: calc(100% - 10px);
+		}
 	}
-	
+
 }
+
 .presentation {
 	position: absolute;
 	z-index: 0;
 	width: 980px;
 	height: 100%;
-	&__contacts{
+
+	@include tablets {
+		width: 100%;
+	}
+
+	@include phones {
+		width: 100%;
+	}
+
+	&__contacts {
 		position: absolute;
 		left: 0;
 		top: 15%;
 	}
+
 	&__filter {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		background: rgba($mainColor, 0.3);
 	}
+
 	&__gradient {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		background: linear-gradient(to top, $mainColor 40%, transparent 70%);
 	}
+
 	&__bg {
 		position: absolute;
 		z-index: 0;
 		top: 19vh;
 		left: 139px;
+
+		@include phones {
+			display: none;
+		}
 	}
 
 	&__title {
@@ -54,6 +82,14 @@
 		z-index: 1;
 		top: 23vh;
 		left: 100px;
+
+		@include phones {
+			left: auto;
+			@include centered(x);
+			width: 280px;
+			top: 43vh;
+		}
+
 		& h1 {
 			text-transform: uppercase;
 			margin: 0;
@@ -61,14 +97,26 @@
 			font-size: 50px;
 			font-family: "Panton";
 			line-height: 1.2;
+
+			@include phones {
+				text-align: center;
+				font-size: 24px;
+			}
 		}
+
 		& h2 {
 			margin: 0 0 50px 0;
 			color: white;
 			font-size: 50px;
 			font-family: "Panton";
 			line-height: 1.2;
+
+			@include phones {
+				text-align: center;
+				font-size: 18px;
+			}
 		}
+
 		& button {
 			cursor: pointer;
 			border-style: solid;
@@ -86,15 +134,17 @@
 		}
 	}
 }
+
 .description {
 	position: relative;
 	width: 100%;
 	z-index: 1;
 	bottom: 0;
-	&__panel {
-	}
-	&__body {
-	}
+
+	&__panel {}
+
+	&__body {}
+
 	&Menu {
 		@include centered(x);
 		z-index: 1;
@@ -102,6 +152,16 @@
 		display: flex;
 		width: 980px;
 		margin: auto;
+
+		@include tablets {
+			width: 100%;
+		}
+
+		@include phones {
+			width: 100%;
+			top: -100px;
+		}
+
 		&__item {
 			position: relative;
 			display: flex;
@@ -112,24 +172,49 @@
 			align-items: center;
 			text-decoration: none;
 			background-color: rgb(195, 169, 118);
+
 			&:nth-child(2n) {
 				background-color: rgb(166, 140, 90);
+
 				&:before {
 					border-color: rgb(166, 140, 90) transparent transparent;
 				}
+
 				& .descriptionMenu__title {
 					background-color: rgb(166, 140, 90);
 				}
 			}
+
 			&:before {
 				border-color: rgb(195, 169, 118) transparent transparent;
 			}
+
+			@include phones {
+				justify-content: center;
+				height: 100px;
+				width: 100%;
+			}
 		}
+
 		&__icon {
 			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			height: 50px;
 			width: 50px;
 			margin: 30px auto 15px;
+
+			& img {
+				width: 100%;
+				// height: 100%;
+			}
+
+			@include phones {
+				height: 40px;
+				width: 40px;
+				margin: 10px auto;
+			}
 		}
 
 		&__title {
@@ -142,18 +227,33 @@
 			font-weight: bold;
 			line-height: 1.2;
 			text-align: center;
+
+			@include phones {
+				display: none;
+			}
 		}
 	}
+
 	&Body {
 		position: relative;
+		width: 100%;
 		z-index: 0;
 		height: 100%;
+		background-color: rgba($mainColor, .1);
+		display: flex;
+		justify-content: center;
 
 		&__item {
 			position: relative;
+			width: 1280px;
 			display: flex;
 			display: none;
-			background-color: rgba($mainColor,.1);
+			@include tablets{
+				width: 100%
+			}
+			@include phones{
+				width: 100%
+			}
 			&.active {
 				display: flex;
 			}
@@ -161,17 +261,23 @@
 		&__img {
 			position: relative;
 			width: 200px;
+
 			& img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 			}
+			@include phones{
+				display: none;
+			}
 		}
+
 		&__text {
 			position: relative;
 			box-sizing: border-box;
 			padding: 30px;
-			width: 920px;
+			width: 960px;
+
 			& h3 {
 				font-size: 21px;
 				margin: 10px 0;
@@ -180,6 +286,7 @@
 				line-height: 1.2;
 				text-align: left;
 			}
+
 			& p {
 				font-size: 16px;
 				font-family: "Panton";

@@ -5,9 +5,9 @@ mixin form(title,subtitle,id)
 		form.form__input(method="post" action="./send.php")
 			input(type="text" placeholder="ФИО" name="name")
 			input(type="tel" placeholder="Телефон" name="phone")
-			input(type="submit")
-mixin navigation
-	nav.navigation
+			input(type="submit").form__submit
+mixin navigation(cl)
+	nav.navigation(class=cl)
 		a(href="/").navigation__logo
 			img(src="./img/logo.png", alt="logo")
 		ul.navigation__list
@@ -22,6 +22,12 @@ mixin navigation
 				span +7 (843) 
 				span 240 02 38
 			button.link(data-target="form") Заказать звонок
+		.navigation__burger.burger
+			.burger__lines
+				.burger__line.burger__line1
+				.burger__line.burger__line2
+				.burger__line.burger__line3
+
 mixin contacts(cl)
 	ul.contacts(class=cl)
 		li.contacts__item.hvr-grow

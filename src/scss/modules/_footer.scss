@@ -23,6 +23,26 @@ footer{
 		margin: auto;
 		display: flex;
 		justify-content: space-between;
+		@include tablets{
+			align-items: center;
+			width: 100%;
+			justify-content: space-between;
+			& p{
+				padding: 0 10px;
+				margin: 0;
+				font-size: 16px;
+			}
+		}
+		@include phones{
+			align-items: center;
+			width: 100%;
+			justify-content: space-between;
+			& p{
+				padding: 0 10px;
+				margin: 0;
+				font-size: 12px;
+			}
+		}
 	}
 	&__defense{
 		position: relative;

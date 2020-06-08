@@ -9,7 +9,18 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
-	&__title{
+
+	@include tablets {
+		width: 85%;
+		padding: 30px 0;
+	}
+
+	@include phones {
+		width: 85%;
+		padding: 20px 0;
+	}
+
+	&__title {
 		position: relative;
 		width: 100%;
 		margin-bottom: 10px;
@@ -17,8 +28,21 @@
 		font-family: Panton;
 		font-weight: 900;
 		font-size: 33px;
-		color: black;	
+		color: black;
+
+		@include tablets {
+			width: 85%;
+			font-size: 33px;
+		}
+
+		@include phones {
+			text-align: center;
+			font-size: 20px;
+		}
+
+
 	}
+
 	&__subtitle {
 		position: relative;
 		width: 100%;
@@ -26,21 +50,60 @@
 		font-weight: normal;
 		font-size: 19px;
 		color: black;
+
+		@include phones {
+			text-align: center;
+			font-size: 14px;
+		}
 	}
+
+	&__submit {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 200px;
+		// height: 55px;
+		background: $subColor;
+		color: $backColor !important;
+		font-weight: 600;
+		font-size: 19px;
+		text-transform: uppercase;
+
+	}
+
 	&__input {
 		position: relative;
+		display: flex;
 		margin: 20px 0;
 		color: $subColor;
+
+		@include tablets {
+			width: 100%;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+
+		@include phones {
+			display: flex;
+			width: 100%;
+			flex-direction: column;
+			align-items: center;
+		}
+
 		& input {
 			width: 230px;
 			height: 45px;
-			margin-right: 30px;
+			margin: 0 30px 10px 0;
+			box-sizing: border-box;
 			padding-left: 15px;
 			border: 3px solid $subColor;
 			color: black;
 			font-family: Panton;
 			font-weight: 600;
 			font-size: 19px;
+			// background: $backColor;
+			text-transform: uppercase;
+
 			&::placeholder {
 				color: $subColor;
 				text-transform: uppercase;
@@ -48,6 +111,18 @@
 				font-weight: 600;
 				font-size: 19px;
 			}
+
+			@include tablets {
+				width: 28%;
+				height: 40px;
+				margin: 0;
+
+			}
+
+			@include phones {
+				margin: 0 0 10px 0;
+			}
+
 
 		}
 	}

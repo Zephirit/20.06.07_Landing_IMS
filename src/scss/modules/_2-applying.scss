@@ -19,7 +19,18 @@
 		font-family: Panton;
 		font-weight: 900;
 		font-size: 33px;
-		color: black;		
+		color: black;
+		@include tablets {
+			width: 85%;
+			font-size: 33px;
+			padding: 0 40px; 
+		}
+		@include phones {
+			width: 85%;
+			font-size: 20px;
+			margin: 0 0 20px 0;
+		}
+		
 	}
 	&__items {
 		position: relative;
@@ -32,6 +43,22 @@
 			height: 200px;
 			margin: 20px 0;
 			object-fit: cover;
+			@include tablets {
+				width: 200px;
+				height: 152px;
+				margin: 10px 0;
+			}
+			@include phones {
+				width: 150px;
+				height: 115px;
+				margin: 5px;
+			}
+		}
+		@include tablets {
+			justify-content: space-around;
+		}
+		@include phones {
+			justify-content: center;
 		}
 	}
 }

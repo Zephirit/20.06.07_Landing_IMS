@@ -6,12 +6,31 @@
 	color: $backColor;
 	overflow: hidden;
 
+	@include tablets {
+		height: auto;
+		
+	}
+
+	@include phones {
+		height: auto;
+	}
+
 	&__content {
 		position: relative;
 		display: flex;
 		width: 980px;
 		height: 100%;
 		margin: auto;
+
+		@include tablets {
+			width: 100%;
+			flex-direction: column;
+		}
+
+		@include phones {
+			width: 100%;
+			flex-direction: column;
+		}
 	}
 
 	&Menu {
@@ -22,6 +41,19 @@
 		height: 100%;
 		width: 100%;
 		padding-top: 30px;
+		
+
+		@include tablets {
+			position: relative;
+			left: auto;
+			padding-top: 5px;
+		}
+
+		@include phones {
+			position: relative;
+			left: auto;
+			padding-top: 5px;
+		}
 
 		&__title {
 			font-size: 32px;
@@ -31,12 +63,37 @@
 			font-weight: 800;
 			line-height: 80px;
 			padding-left: 35px;
+			@include tablets {
+				text-align: center;
+				padding-left: 0;
+				font-size: 22px;
+				line-height: 40px;
+			}
+
+			@include phones {
+				text-align: center;
+				padding-left: 0;
+				font-size: 18px;
+				line-height: 34px;
+			}
 		}
 
 		&__list {
 			position: relative;
 			display: flex;
 			flex-direction: column;
+
+			@include tablets {
+				flex-direction: row;
+				padding-bottom: 20px;
+			}
+
+			@include phones {
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				padding-bottom: 20px;
+			}
 		}
 
 		&__item {
@@ -46,6 +103,16 @@
 			height: 95px;
 			padding: 10px 35px;
 			cursor: pointer;
+
+			@include tablets {
+				padding: 5px 5px;
+			}
+
+			@include phones {
+				padding: 5px 2px;
+				width: 45%;
+
+			}
 
 			&:before {
 				border-color: transparent $subColor transparent transparent;
@@ -77,7 +144,13 @@
 		flex-direction: column;
 		order: 1;
 		max-width: 725px;
+		@include tablets {
+			max-width: 100%;
+		}
 
+		@include phones {
+			max-width: 100%;
+		}
 		&__title {
 			font-size: 32px;
 			font-family: "Panton";
@@ -85,6 +158,19 @@
 			color: $backColor;
 			font-weight: 800;
 			line-height: 130px;
+			@include tablets {
+				text-align: center;
+				padding-left: 0;
+				font-size: 26px;
+				line-height: 60px;
+			}
+
+			@include phones {
+				text-align: center;
+				padding-left: 0;
+				font-size: 20px;
+				line-height: 48px;
+			}
 		}
 
 		&__img {
@@ -92,7 +178,7 @@
 			display: none;
 			width: 100%;
 			height: 100%;
-			overflow: hidden;
+			// overflow: hidden;
 		}
 
 		&_2 {
@@ -111,7 +197,17 @@
 			position: relative;
 			width: 640px;
 			height: 385px;
-			overflow: hidden;
+
+			// overflow: hidden;
+			@include tablets {
+				width: 100%;
+				// height: 200px;
+			}
+
+			@include phones {
+				width: 100%;
+				height: 200px;
+			}
 		}
 
 		&__desc {
@@ -128,32 +224,14 @@
 				width: 100%;
 				line-height: 40px;
 				text-align: center;
+				@include tablets {
+					font-size: 18px;
+				}
+	
+				@include phones {
+					font-size: 14px;
+				}
 			}
-		}
-
-		&__before,
-		&__after {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-
-			& img {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
-		}
-
-		&__before {
-			z-index: 1;
-		}
-
-		&__after {
-			z-index: 2;
-			width: 40%;
 		}
 	}
 }
@@ -164,8 +242,8 @@
 
 .container-beforeafter {
 	width: 100%;
-	padding-top: 45.05%;
-	height: 0;
+	height: 100%;
+	// height: 0;
 	position: relative;
 }
 
@@ -192,4 +270,26 @@
 .beforeafter img {
 	width: 100%;
 	height: 100%;
+}
+
+.beforeafter-cursor {
+	background-color: $contrColor !important;
+	width: 10px !important;
+	overflow: visible !important;
+
+	&:before,
+	&:after {
+		content: '';
+		@include centered(x);
+		top: -10px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: darken($contrColor, 5%);
+	}
+
+	&:after {
+		top: auto;
+		bottom: -10px;
+	}
 }

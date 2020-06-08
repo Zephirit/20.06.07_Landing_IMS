@@ -13,13 +13,12 @@
     <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/hover-min.css">
     <link rel="stylesheet" href="./css/app.css">
-    <script type="module" src="./js/before-after.mjs" defer></script>
-    <script type="module" src="./js/main.mjs" defer></script><!--[if lt IE 9]>
+    <script type="module" src="./js/main-dist.mjs" defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
     <div class="wrapper">
-      <header class="header section" id="header">Шапка сайта
+      <header class="header section" id="header">
         <div class="header__navigation animated slideInDown">
               <nav class="navigation"><a class="navigation__logo" href="/"><img src="./img/logo.png" alt="logo"></a>
                 <ul class="navigation__list">
@@ -32,6 +31,13 @@
                 </ul>
                 <div class="navigation__phone"><a class="hvr-pulse" href="tel:+78432400238"><span>+7 (843) </span><span>240 02 38</span></a>
                   <button class="link" data-target="form">Заказать звонок</button>
+                </div>
+                <div class="navigation__burger burger">
+                  <div class="burger__lines">
+                    <div class="burger__line burger__line1"></div>
+                    <div class="burger__line burger__line2"></div>
+                    <div class="burger__line burger__line3"></div>
+                  </div>
                 </div>
               </nav>
         </div>
@@ -171,7 +177,7 @@
             <form class="form__input" method="post" action="./send.php">
               <input type="text" placeholder="ФИО" name="name">
               <input type="tel" placeholder="Телефон" name="phone">
-              <input type="submit">
+              <input class="form__submit" type="submit">
             </form>
           </div>
       <section class="beforeAfter section" id="beforeAfter">
@@ -197,20 +203,36 @@
             <div class="beforeAfterBody__title">До и после</div>
             <ul class="beforeAfterBody__list">
               <div class="beforeAfterBody__img animated fadeIn beforeAfterBody_1">
-                <div class="beforeAfterBody__before"><img src="./img/slider_before.jpg" alt="before"></div>
-                <div class="beforeAfterBody__after"><img src="./img/slider_after.jpg" alt="after"></div>
+                <div class="container-beforeafter">
+                  <div class="beforeafter">
+                    <div class="beforeafter-item beforeafter-itemActive"><img src="./img/slider_before.jpg" alt="before"></div>
+                    <div class="beforeafter-item"><img src="./img/slider_after.jpg" alt="after"></div>
+                  </div>
+                </div>
               </div>
               <div class="beforeAfterBody__img animated fadeIn beforeAfterBody_2">
-                <div class="beforeAfterBody__before"><img src="./img/slider_before.jpg" alt="before"></div>
-                <div class="beforeAfterBody__after"><img src="./img/slider_after.jpg" alt="after"></div>
+                <div class="container-beforeafter">
+                  <div class="beforeafter">
+                    <div class="beforeafter-item beforeafter-itemActive"><img src="./img/slider_before.jpg" alt="before"></div>
+                    <div class="beforeafter-item"><img src="./img/slider_after.jpg" alt="after"></div>
+                  </div>
+                </div>
               </div>
               <div class="beforeAfterBody__img animated fadeIn beforeAfterBody_3">
-                <div class="beforeAfterBody__before"><img src="./img/slider_before.jpg" alt="before"></div>
-                <div class="beforeAfterBody__after"><img src="./img/slider_after.jpg" alt="after"></div>
+                <div class="container-beforeafter">
+                  <div class="beforeafter">
+                    <div class="beforeafter-item beforeafter-itemActive"><img src="./img/slider_before.jpg" alt="before"></div>
+                    <div class="beforeafter-item"><img src="./img/slider_after.jpg" alt="after"></div>
+                  </div>
+                </div>
               </div>
               <div class="beforeAfterBody__img animated fadeIn beforeAfterBody_4">
-                <div class="beforeAfterBody__before"><img src="./img/slider_before.jpg" alt="before"></div>
-                <div class="beforeAfterBody__after"><img src="./img/slider_after.jpg" alt="after"></div>
+                <div class="container-beforeafter">
+                  <div class="beforeafter">
+                    <div class="beforeafter-item beforeafter-itemActive"><img src="./img/slider_before.jpg" alt="before"></div>
+                    <div class="beforeafter-item"><img src="./img/slider_after.jpg" alt="after"></div>
+                  </div>
+                </div>
               </div>
             </ul>
             <div class="beforeAfterBody__desc"><span>До</span><span>После</span></div>
@@ -258,7 +280,7 @@
             <form class="form__input" method="post" action="./send.php">
               <input type="text" placeholder="ФИО" name="name">
               <input type="tel" placeholder="Телефон" name="phone">
-              <input type="submit">
+              <input class="form__submit" type="submit">
             </form>
           </div>
       <section class="production section" id="production">
@@ -297,6 +319,7 @@
             <div class="stocks__input">
               <input type="text" placeholder="ФИО">
               <input type="tel" placeholder="Телефон">
+              <input class="stocks__submit" type="submit">
             </div>
           </div>
         </div>
@@ -365,13 +388,13 @@
             <form class="form__input" method="post" action="./send.php">
               <input type="text" placeholder="ФИО" name="name">
               <input type="tel" placeholder="Телефон" name="phone">
-              <input type="submit">
+              <input class="form__submit" type="submit">
             </form>
           </div>
       <footer class="animated slideInUp" id="footer">
         <div class="footer">
           <div class="footer__navigation">
-                <nav class="navigation"><a class="navigation__logo" href="/"><img src="./img/logo.png" alt="logo"></a>
+                <nav class="navigation navigation--footer"><a class="navigation__logo" href="/"><img src="./img/logo.png" alt="logo"></a>
                   <ul class="navigation__list">
                     <li class="navigation__item hvr-grow link" data-target="description">Преимущества</li>
                     <li class="navigation__item hvr-grow link" data-target="comparative">Сравнения</li>
@@ -382,6 +405,13 @@
                   </ul>
                   <div class="navigation__phone"><a class="hvr-pulse" href="tel:+78432400238"><span>+7 (843) </span><span>240 02 38</span></a>
                     <button class="link" data-target="form">Заказать звонок</button>
+                  </div>
+                  <div class="navigation__burger burger">
+                    <div class="burger__lines">
+                      <div class="burger__line burger__line1"></div>
+                      <div class="burger__line burger__line2"></div>
+                      <div class="burger__line burger__line3"></div>
+                    </div>
                   </div>
                 </nav>
           </div>

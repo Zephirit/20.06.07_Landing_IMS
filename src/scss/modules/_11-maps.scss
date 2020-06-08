@@ -8,7 +8,9 @@
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-
+	@include phones{
+		height: 380px;
+	}
 	&__bg {
 		position: relative;
 		width: 100%;
@@ -30,6 +32,14 @@
 		margin: auto;
 		width: 980px;
 		height: 100%;
+		@include tablets{
+			width: 100%;
+			justify-content: center;
+		}
+		@include phones{
+			justify-content: center;
+			width: 100%;
+		}
 	}
 
 	&Card {
@@ -45,11 +55,21 @@
 		font-family: "Panton";
 		color: $mainColor;
 		font-weight: 400;
+		@include phones{
+			width: 300px;
+			font-size: 17px;
+			padding: 15px;
+			min-height: auto;
+		}
+		
 		& h3{
 			text-transform: uppercase;
 			font-size: 19px;
 			font-weight: 800;
 			margin: 5px 0;
+			@include phones{
+				font-size: 14px;
+			}
 		}
 		& p{
 			margin: 5px 0;
@@ -71,6 +91,9 @@
 			font-size: 20px;
 			
 			margin: 15px;
+			@include phones{
+				font-size: 14px;
+			}
 			& a{
 				text-decoration: none;
 				color: $mainColor;

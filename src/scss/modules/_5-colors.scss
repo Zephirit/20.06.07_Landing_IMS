@@ -10,6 +10,13 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		@include tablets {
+			width: 85%;
+		}
+		@include phones {
+			width: 85%;
+		}
+
 	}
 	&__title {
 		position: relative;
@@ -19,7 +26,15 @@
 		font-family: Panton;
 		font-weight: 900;
 		font-size: 33px;
-		color: black;		
+		color: black;
+		@include tablets {
+			margin: 30px 0 20px 0;
+		}
+		@include phones {
+			text-align: center;
+			font-size: 20px;
+			margin: 25px 0 13px 0;
+		}		
 	}
 	&__items {
 		position: relative;
@@ -32,6 +47,16 @@
 			height: 120px;
 			margin: 12px 12px;
 			object-fit: cover;
+			@include tablets {
+				width: 100px;
+				height: 100px;
+				margin: 5px 2px;
+				}
+			@include phones {
+				width: 80px;
+				height: 80px;
+				margin: 5px 5px;
+			}
 		}
 	}
 }

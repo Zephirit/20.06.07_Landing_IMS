@@ -1,14 +1,13 @@
+import BeforeAfter from 'before-after'
 window.onload = () => {
 	console.log("Страница загружена")
-	const beforaAfterItem = new BeforeAfter({
-		element: document.querySelector('.beforeAfterBody__img')
-	})
+
 	function _sendEmail() {
 		const forms = document.querySelectorAll('.form__input')
 		forms.forEach(frm => {
 			frm.onsubmit = (e) => {
 				e.preventDefault()
-				fetch('../send.php', {
+				fetch('send.php', {
 					method: 'POST',
 					body: new FormData(frm)
 				})
@@ -64,12 +63,26 @@ window.onload = () => {
 		})
 	}
 
-	function _tabs(links, tabs) {
+	function _tabs(links, tabs, isBaSlider) {
+		let beforaAfterItem;
 		tabs[0].classList.add('active')
+		if (isBaSlider) {
+			beforaAfterItem = new BeforeAfter({
+				element: tabs[0]
+			})
+			beforaAfterItem.create();
+		}
 		links.forEach((link, index) => {
 			console.log(index, link)
 			link.addEventListener('click', (e) => {
 				e.preventDefault()
+				if (isBaSlider) {
+					beforaAfterItem.destroy()
+					beforaAfterItem = new BeforeAfter({
+						element: tabs[index]
+					})
+					beforaAfterItem.create();
+				}
 				tabs.forEach(tab => {
 					tab.classList.remove('active')
 					tabs[index].classList.add('active')
@@ -98,10 +111,10 @@ window.onload = () => {
 	const accsQuestion = document.querySelectorAll('.questionsBody__desc')
 
 	function init() {
-		_sendEmail()
+		// _sendEmail()
 		_getLinks()
 		_tabs(linksAdv, tabsAdv)
-		_tabs(linksBA, tabBA)
+		_tabs(linksBA, tabBA, true)
 		_accordion(linksQuestion, accsQuestion)
 	}
 	init()

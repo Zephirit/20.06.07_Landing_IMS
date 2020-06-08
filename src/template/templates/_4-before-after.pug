@@ -20,10 +20,12 @@ section.beforeAfter.section#beforeAfter
 			ul.beforeAfterBody__list
 				each item in [1,2,3,4]
 					.beforeAfterBody__img.animated.fadeIn(class=`beforeAfterBody_${item}`)
-						.beforeAfterBody__before
-							img(src="./img/slider_before.jpg", alt="before")
-						.beforeAfterBody__after
-							img(src="./img/slider_after.jpg", alt="after")
+						.container-beforeafter
+							.beforeafter
+								.beforeafter-item.beforeafter-itemActive
+									img(src="./img/slider_before.jpg", alt="before")
+								.beforeafter-item
+									img(src="./img/slider_after.jpg", alt="after")
 			.beforeAfterBody__desc
 				span До
 				span После

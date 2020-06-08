@@ -1,4 +1,4 @@
-.navigation{
+.navigation {
 	position: relative;
 	background: $mainColor;
 	margin: auto;
@@ -6,19 +6,105 @@
 	height: 65px;
 	display: flex;
 	justify-content: flex-end;
-	&__logo{
+	&--footer{
+		& .burger{
+			display: none;
+		}
+	}
+	@include tablets {
+		justify-content: space-between;
+		width: 700px;
+	}
+
+	@include phones {
+		justify-content: space-between;
+		width: 100%;
+		&--footer{
+			justify-content: center;
+		}
+	}
+
+	&__logo {
 		@include centered(y);
 		width: 130px;
 		left: 0;
-
+		@include tablets {
+			position: relative;
+			display: flex;
+			align-items: center;
+		}
+		@include phones {
+			display: none;
+		}
 	}
-	&__list{
+
+	&__list {
 		position: relative;
 		display: flex;
 		align-items: center;
+		transition: right	.4s;
+		@include tablets {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			width: auto;
+			right: 0;
+			top: 80px;
+			right: -100%;
+			background: rgba($mainColor,.8);
+			border-radius: 5px;
+			padding: 10px;
+			box-shadow: 0 0 4px $mainColor;
+			&.active{
+				right: 0;
+			}
+		}
+
+		@include phones {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			background: $mainColor;
+			padding: 10px 0;
+			width: 100%;
+			right: 0;
+			top: 70px;
+			right: -100%;
+			&.active{
+				right: 0;
+			}
+			
+		}
+
+		&_active {
+			@include tablets {
+				right: 0;
+
+				&_active {
+					.first__line1 {
+						animation: rotateline1 1s;
+						transform: translateY(28px) rotate(135deg);
+						background-color: $subColor;
+					}
+
+					.first__line2 {
+						animation: scaleline2 .5s;
+						opacity: 0;
+						transform: scale(0);
+					}
+
+					.first__line3 {
+						animation: rotateline3 1s;
+						box-shadow: 0 0 10px black;
+						transform: translateY(-28px) rotate(-135deg);
+						background-color: $subColor;
+					}
+				}
+			}
+		}
 	}
-	
-	&__item{
+
+	&__item {
 		padding: 10px;
 		cursor: pointer;
 		font-size: 14px;
@@ -27,25 +113,48 @@
 		font-weight: bold;
 		text-align: left;
 		text-transform: uppercase;
+
+		@include tablets {
+			font-size: 20px;
+			text-align: right;
+			width: 100%;
+			// right: 0;
+			top: 65px;
+
+
+		}
 	}
-	&__phone{
+
+	&__phone {
 		position: relative;
 		margin-left: 35px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
-		& a{
+
+		& a {
 			font-size: 19px;
 			font-family: "Panton";
 			color: rgb(255, 255, 255);
 			text-decoration: none;
-			& span:first-child{
+
+			& span:first-child {
 				font-weight: 300
 			}
 		}
-		
-		& button{
+		@include phones {
+			margin-left: 0;
+			padding: 0 10px;
+		}
+
+		@include tablets {
+			position: relative;
+			margin-left: 0;
+			display: flex;
+		}
+
+		& button {
 			position: relative;
 			cursor: pointer;
 			font-size: 14px;
@@ -57,9 +166,162 @@
 			color: $backColor;
 			border: none;
 			outline: none;
-			background-image: linear-gradient( to top, rgb(175,8,8) 0%, rgb(255,66,0) 100%);
+			background-image: linear-gradient(to top, rgb(175, 8, 8) 0%, rgb(255, 66, 0) 100%);
 			width: 160px;
 			height: 33px;
+		}
+	}
+
+	&__burger {
+		position: relative;
+		width: 65px;
+		height: 65px;
+		color: $backColor;
+		display: none;
+		@include tablets {
+			position: relative;
+			display: block;
+			right: 0;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			// padding-right: 15px;
+			// height: 100%;
+			// width: 40%;
+			cursor: pointer;
+			color: $mainColor;
+			z-index: 12;
+		}
+
+		@include phones {
+			position: relative;
+			display: block;
+			right: 0;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			cursor: pointer;
+			color: $mainColor;
+			z-index: 12;
+			padding: 0 10px;
+		}
+	}
+}
+
+.burger {
+	&__line {
+		position: relative;
+		width: 100%;
+		height: 6px;
+		border-radius: 3px;
+		background-color: $backColor;
+		box-shadow: 0 0 5px black;
+
+		&1 {
+			animation: rotateline1-rev 1s;
+		}
+
+		&2 {
+			margin: 20px 0;
+			animation: scaleline2-rev 1s;
+		}
+
+		&3 {
+			animation: rotateline3-rev 1s;
+		}
+	}
+
+	&__lines {
+		position: absolute;
+		width: 65px;
+		height: 65px;
+	}
+
+	@keyframes rotateline1 {
+		0% {
+			transform: translateY(0) rotate(0);
+		}
+
+		50% {
+			transform: translateY(28px) rotate(0);
+		}
+
+		100% {
+			transform: translateY(28px) rotate(135deg);
+			background-color: $subColor;
+		}
+	}
+
+	@keyframes rotateline1-rev {
+		0% {
+			transform: translateY(28px) rotate(135deg);
+		}
+
+		50% {
+			transform: translateY(28px) rotate(0);
+		}
+
+		100% {
+			transform: translateY(0) rotate(0);
+		}
+	}
+
+	@keyframes scaleline2 {
+		0% {
+			opacity: 1;
+			transform: scale(1);
+		}
+
+		100% {
+			opacity: 0;
+			transform: scale(0);
+		}
+	}
+
+	@keyframes scaleline2-rev {
+		0% {
+			opacity: 0;
+			transform: scale(0);
+		}
+
+		50% {
+			opacity: .3;
+			transform: scale(.3);
+		}
+
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	@keyframes rotateline3 {
+		0% {
+			transform: translateY(0) rotate(0);
+		}
+
+		50% {
+			transform: translateY(-28px) rotate(0);
+
+		}
+
+		100% {
+			transform: translateY(-28px) rotate(-135deg);
+			background-color: $subColor;
+		}
+	}
+
+	@keyframes rotateline3-rev {
+		0% {
+			transform: translateY(-28px) rotate(-135deg);
+		}
+
+		50% {
+			transform: translateY(-28px) rotate(0);
+		}
+
+		100% {
+			transform: translateY(0) rotate(0);
 		}
 	}
 }
