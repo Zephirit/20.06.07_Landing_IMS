@@ -1,9 +1,37 @@
 /* ---СЕКЦИЯ ЦВЕТОВЫХ ТЕМ--- */
-.colors{
-	min-height: 300px;
+.colors {
+	position: relative;
 	width: 100%;
-	background: $subColor;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	&__content {
+		max-width: 870px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__title {
+		position: relative;
+		width: 100%;
+		margin: 75px 0 43px 0;
+		text-transform: uppercase;
+		font-family: Panton;
+		font-weight: 900;
+		font-size: 33px;
+		color: black;		
+	}
+	&__items {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 33px;
+		& img {
+			width: 120px;
+			height: 120px;
+			margin: 12px 12px;
+			object-fit: cover;
+		}
+	}
 }

@@ -1,8 +1,15 @@
 mixin form(title,subtitle)
-	.form
+	.form.stocks__form
 		.form__title=title
 		.form__subtitle=subtitle
 		.form__input
+			input(type="text" placeholder="ФИО")
+			input(type="tel" placeholder="Телефон")
+mixin stocks(title,subtitle)
+	.stocks__form
+		.stocks__title=title
+		.stocks__subtitle=subtitle
+		.stocks__input
 			input(type="text" placeholder="ФИО")
 			input(type="tel" placeholder="Телефон")
 mixin navigation

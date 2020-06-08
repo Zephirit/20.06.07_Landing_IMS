@@ -9,17 +9,186 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="shortcut icon" href="./favicon.ico" type="image/ico">
-    <link rel="manifest" href="./manifest.json">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/hover-min.css">
-    <link rel="stylesheet" href="./css/app.css"><!--[if lt IE 9]>
+    <link rel="stylesheet" href="./css/app.css">
+    <script type="module" src="./js/main.mjs"></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
     <div class="wrapper">
+      <header class="header">Шапка сайта
+        <div class="header__navigation animated slideInDown">
+              <nav class="navigation"><a class="navigation__logo" href="/"><img src="./img/logo.png" alt="logo"></a>
+                <ul class="navigation__list">
+                  <li class="navigation__item hvr-grow">Преимущества</li>
+                  <li class="navigation__item hvr-grow">Сравнения</li>
+                  <li class="navigation__item hvr-grow">Типы панелей</li>
+                  <li class="navigation__item hvr-grow">Галерея</li>
+                  <li class="navigation__item hvr-grow">Оплата</li>
+                  <li class="navigation__item hvr-grow">Отзывы</li>
+                </ul>
+                <div class="navigation__phone"><a class="hvr-pulse" href="tel:+78432400238">+7(843)2400238</a>
+                  <button>Заказать звонок</button>
+                </div>
+              </nav>
+        </div>
+        <div class="header__contacts">
+              <ul class="contacts contacts--vert">
+                <li class="contacts__item"><a href="#"><img src="./img/viber.png" alt="viber"></a></li>
+                <li class="contacts__item"><a href="#"><img src="./img/whatsapp.png" alt="whatsapp"></a></li>
+                <li class="contacts__item"><a href="#"><img src="./img/telegram.png" alt="telegram"></a></li>
+              </ul>
+        </div>
+        <div class="presentation">
+          <div class="presentation__bg animated fadeIn">
+            <div class="presentation__filter"></div>
+            <div class="presentation__gradient"></div><img src="./img/headerBg.jpg" alt="background">
+          </div>
+          <div class="presentation__title">
+            <h1 class="animated zoomIn">Термопанель и гибкий камень</h1>
+            <h2 class="animated zoomIn">от производителя</h2>
+            <button class="hvr-pulse-shrink">Получить консультацию</button>
+          </div>
+        </div>
+      </header>
+      <div class="description">
+        <div class="descriptionMenu"><a class="descriptionMenu__item hvr-bubble-bottom" href="#">
+            <div class="descriptionMenu__icon"><img src="./img/icon_fire.png" alt="fire"></div>
+            <div class="descriptionMenu__title">Не горят, устойчивы к перепаду</div></a><a class="descriptionMenu__item hvr-bubble-bottom" href="#">
+            <div class="descriptionMenu__icon"><img src="./img/icon_drops.png" alt="drops"></div>
+            <div class="descriptionMenu__title">Легко моются, не впитывают влагу</div></a><a class="descriptionMenu__item hvr-bubble-bottom" href="#">
+            <div class="descriptionMenu__icon"><img src="./img/icon_sun.png" alt="sun"></div>
+            <div class="descriptionMenu__title">Устойчивы к выцветанию</div></a><a class="descriptionMenu__item hvr-bubble-bottom" href="#">
+            <div class="descriptionMenu__icon"><img src="./img/icon_zigzag.png" alt="zigzag"></div>
+            <div class="descriptionMenu__title">Не трескаются, высокопрочные</div></a><a class="descriptionMenu__item hvr-bubble-bottom" href="#">
+            <div class="descriptionMenu__icon"><img src="./img/icon_sheet.png" alt="sheet"></div>
+            <div class="descriptionMenu__title">Перечень других преимуществ</div></a></div>
+        <div class="descriptionBody">
+          <div class="descriptionBody__item active">
+            <div class="descriptionBody__img"><img src="./img/ognestoykost.jpg" alt="fireResist"></div>
+            <div class="descriptionBody__text">
+              <h3>Огнестойкость гибкого камня и термопанелей</h3>
+              <p>Экологически чистый материал не горит , не плавится и не поддерживает горение. Результатом воздействия высоких температур на гибкий камень является его размягчение. Температурный диапазон эксплуатации этого материала от -40˚C до +650˚C. Материал с такими характеристиками легко можно использовать как для внутренней, так и для внешней отделки. Защитное покрытие термопанелей на основе мраморной крошки так же не горит , не плавится и не поддерживает горение!</p>
+            </div>
+          </div>
+          <div class="descriptionBody__item">
+            <div class="descriptionBody__img"><img src="" alt=""></div>
+            <div class="descriptionBody__text">
+              <h3>Огнестойкость гибкого камня и термопанелей</h3>
+              <p>Экологически чистый материал не горит , не плавится и не поддерживает горение. Результатом воздействия высоких температур на гибкий камень является его размягчение. Температурный диапазон эксплуатации этого материала от -40˚C до +650˚C. Материал с такими характеристиками легко можно использовать как для внутренней, так и для внешней отделки. Защитное покрытие термопанелей на основе мраморной крошки так же не горит , не плавится и не поддерживает горение!</p>
+            </div>
+          </div>
+          <div class="descriptionBody__item">
+            <div class="descriptionBody__img"><img src="" alt=""></div>
+            <div class="descriptionBody__text">
+              <h3>Огнестойкость гибкого камня и термопанелей</h3>
+              <p>Экологически чистый материал не горит , не плавится и не поддерживает горение. Результатом воздействия высоких температур на гибкий камень является его размягчение. Температурный диапазон эксплуатации этого материала от -40˚C до +650˚C. Материал с такими характеристиками легко можно использовать как для внутренней, так и для внешней отделки. Защитное покрытие термопанелей на основе мраморной крошки так же не горит , не плавится и не поддерживает горение!</p>
+            </div>
+          </div>
+          <div class="descriptionBody__item">
+            <div class="descriptionBody__img"><img src="" alt=""></div>
+            <div class="descriptionBody__text">
+              <h3>Огнестойкость гибкого камня и термопанелей</h3>
+              <p>Экологически чистый материал не горит , не плавится и не поддерживает горение. Результатом воздействия высоких температур на гибкий камень является его размягчение. Температурный диапазон эксплуатации этого материала от -40˚C до +650˚C. Материал с такими характеристиками легко можно использовать как для внутренней, так и для внешней отделки. Защитное покрытие термопанелей на основе мраморной крошки так же не горит , не плавится и не поддерживает горение!</p>
+            </div>
+          </div>
+          <div class="descriptionBody__item">
+            <div class="descriptionBody__img"><img src="" alt=""></div>
+            <div class="descriptionBody__text">
+              <h3>Огнестойкость гибкого камня и термопанелей</h3>
+              <p>Экологически чистый материал не горит , не плавится и не поддерживает горение. Результатом воздействия высоких температур на гибкий камень является его размягчение. Температурный диапазон эксплуатации этого материала от -40˚C до +650˚C. Материал с такими характеристиками легко можно использовать как для внутренней, так и для внешней отделки. Защитное покрытие термопанелей на основе мраморной крошки так же не горит , не плавится и не поддерживает горение!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="comparative">Секция сравнений</section>
+      <section class="applying">
+        <div class="applying__content">
+          <div class="applying__title">где применяется гибкий камень и термопанели</div>
+          <div class="applying__items"><img src="./img/usage/fasady.jpg" alt="Fasady"><img src="./img/usage/kaminy.jpg" alt="Kaminy"><img src="./img/usage/kartiny.jpg" alt="Kartiny"><img src="./img/usage/kuhnia.jpg" alt="Kuhnia"><img src="./img/usage/podokonniki.jpg" alt="Podokonniki"><img src="./img/usage/poly.jpg" alt="Poly"><img src="./img/usage/sauny.jpg" alt="Sauny"><img src="./img/usage/steny.jpg" alt="Steny"><img src="./img/usage/stoly.jpg" alt="Stoly"><img src="./img/usage/stoyki.jpg" alt="Stoyki"><img src="./img/usage/svet.jpg" alt="Svet"><img src="./img/usage/vannye.jpg" alt="Vannye"></div>
+        </div>
+      </section>
+          <div class="form">
+            <div class="form__title">Бесплатная консультация специалиста</div>
+            <div class="form__subtitle">Наш сотрудник с радостью ответит на все Ваши вопросы и вышлет на почту лучшее предложение</div>
+            <div class="form__input">
+              <input type="text" placeholder="ФИО">
+              <input type="tel" placeholder="Телефон">
+            </div>
+          </div>
+      <section class="beforeAfter">
+        <div class="beforeAfterMenu">
+          <div class="beforeAfterMenu__title">Еще проекты</div>
+          <ul class="beforeAfterMenu__list">
+            <li class="beforeAfterMenu__item"></li>
+          </ul>
+        </div>
+        <div class="beforeAfterBody"></div>
+      </section>
+      <section class="colors">
+        <div class="colors__content">
+          <div class="colors__title">цветовая гамма производимых изделий</div>
+          <div class="colors__items"><img src="./img/colors/1.png" alt="1"><img src="./img/colors/2.png" alt="2"><img src="./img/colors/3.png" alt="3"><img src="./img/colors/4.png" alt="4"><img src="./img/colors/5.png" alt="5"><img src="./img/colors/6.png" alt="6"><img src="./img/colors/7.png" alt="7"><img src="./img/colors/8.png" alt="8"><img src="./img/colors/9.png" alt="9"><img src="./img/colors/10.png" alt="10"><img src="./img/colors/11.png" alt="11"><img src="./img/colors/12.png" alt="12"><img src="./img/colors/13.png" alt="13"><img src="./img/colors/14.png" alt="14"><img src="./img/colors/15.png" alt="15"><img src="./img/colors/16.png" alt="16"><img src="./img/colors/17.png" alt="17"><img src="./img/colors/18.png" alt="18"></div>
+        </div>
+      </section>
+          <div class="form">
+            <div class="form__title">Остались вопросы?</div>
+            <div class="form__subtitle">Наш сотрудник с радостью ответит на все Ваши вопросы и вышлет на почту лучшее предложение</div>
+            <div class="form__input">
+              <input type="text" placeholder="ФИО">
+              <input type="tel" placeholder="Телефон">
+            </div>
+          </div>
+      <section class="questions">Секция вопросов</section>
+      <section class="production">Секция продукции</section>
+      <section class="stocks">
+        <div class="stocks__content">
+              <div class="form">
+                <div class="form__title">Акция!</div>
+                <div class="form__subtitle">До 31 марта принимаются заказы на строительный сезон 2020 года. Скидка на термопанели 10% с бесплатным хранением на нашем складе.*</div>
+                <div class="form__input">
+                  <input type="text" placeholder="ФИО">
+                  <input type="tel" placeholder="Телефон">
+                </div>
+              </div>
+        </div>
+      </section>
+      <section class="reviews">Секция отзывов</section>
+      <section class="maps">Секция карты</section>
+          <div class="form">
+            <div class="form__title">Бесплатная консультация специалиста</div>
+            <div class="form__subtitle">Наш сотрудник с радостью ответит на все Ваши вопросы и вышлет на почту лучшее предложение</div>
+            <div class="form__input">
+              <input type="text" placeholder="ФИО">
+              <input type="tel" placeholder="Телефон">
+            </div>
+          </div>
+          <nav class="navigation"><a class="navigation__logo" href="/"><img src="./img/logo.png" alt="logo"></a>
+            <ul class="navigation__list">
+              <li class="navigation__item hvr-grow">Преимущества</li>
+              <li class="navigation__item hvr-grow">Сравнения</li>
+              <li class="navigation__item hvr-grow">Типы панелей</li>
+              <li class="navigation__item hvr-grow">Галерея</li>
+              <li class="navigation__item hvr-grow">Оплата</li>
+              <li class="navigation__item hvr-grow">Отзывы</li>
+            </ul>
+            <div class="navigation__phone"><a class="hvr-pulse" href="tel:+78432400238">+7(843)2400238</a>
+              <button>Заказать звонок</button>
+            </div>
+          </nav>
       <footer class="animated rubberBand">
-        <div class="footer"> </div>
+        <div class="footer"> 
+          <div class="footer__defense">© 2020 Все права защищены </div>
+          <div class="footer__contacts">
+                <ul class="contacts contacts--hor">
+                  <li class="contacts__item"><a href="#"><img src="./img/viber.png" alt="viber"></a></li>
+                  <li class="contacts__item"><a href="#"><img src="./img/whatsapp.png" alt="whatsapp"></a></li>
+                  <li class="contacts__item"><a href="#"><img src="./img/telegram.png" alt="telegram"></a></li>
+                </ul>
+          </div>
+        </div>
       </footer>
     </div>
   </body>

@@ -1,3 +1,10 @@
 section.stocks
-    .stocks__content
-        +form("Акция!","До 31 марта принимаются заказы на строительный сезон 2020 года. Скидка на термопанели 10% с бесплатным хранением на нашем складе.*")
+	.stocks__bg
+		img(src="./img/discount.png", alt="Discount")
+	.stocks__content
+		.stocks__form
+			.stocks__title Акция!
+			.stocks__subtitle До 31 марта принимаются заказы на строительный сезон 2020 года. Скидка на термопанели 10% с бесплатным хранением на нашем складе.*
+			.stocks__input
+				input(type="text" placeholder="ФИО")
+				input(type="tel" placeholder="Телефон")

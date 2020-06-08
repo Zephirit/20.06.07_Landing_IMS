@@ -1,9 +1,139 @@
 /* ---СЕКЦИЯ ДО-ПОСЛЕ--- */
-.beforeAfter{
-	min-height: 300px;
+.beforeAfter {
+	height: 600px;
 	width: 100%;
-	background: $contrColor;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	background: $mainColor;
+	color: $backColor;
+	overflow: hidden;
+
+	&__content {
+		position: relative;
+		display: flex;
+		width: 980px;
+		height: 100%;
+		margin: auto;
+	}
+
+	&Menu {
+		position: absolute;
+		left: calc(100% - 240px);
+		order: 2;
+		background: $subColor;
+		height: 100%;
+		width: 100%;
+		padding-top: 30px;
+
+		&__title {
+			font-size: 32px;
+			font-family: "Panton";
+			text-transform: uppercase;
+			color: $mainColor;
+			font-weight: 800;
+			line-height: 80px;
+			padding-left: 35px;
+		}
+
+		&__list {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__item {
+			position: relative;
+			background: $subColor;
+			width: 235px;
+			height: 95px;
+			padding: 10px 35px;
+			cursor: pointer;
+
+			&:before {
+				border-color: transparent $subColor transparent transparent;
+			}
+		}
+
+		&__img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			box-sizing: border-box;
+			overflow: hidden;
+			border: 3px solid $backColor;
+			border-radius: 5px;
+			box-shadow: 0 0 6px (rgba($mainColor, .8));
+
+			& img {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	&Body {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		order: 1;
+		max-width: 725px;
+
+		&__title {
+			font-size: 32px;
+			font-family: "Panton";
+			text-transform: uppercase;
+			color: $backColor;
+			font-weight: 800;
+			line-height: 130px;
+		}
+
+		&__img {
+			position: relative;
+			width: 640px;
+			height: 385px;
+			overflow: hidden;
+		}
+
+		&__desc {
+			position: relative;
+			display: flex;
+			width: 100%;
+
+			& span {
+				font-size: 20px;
+				font-family: "Panton";
+				text-transform: uppercase;
+				color: $backColor;
+				font-weight: 400;
+				width: 100%;
+				line-height: 40px;
+				text-align: center;
+			}
+		}
+
+		&__before,
+		&__after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			& img {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&__before {
+			z-index: 1;
+		}
+
+		&__after {
+			z-index: 2;
+			width: 40%;
+		}
+	}
 }

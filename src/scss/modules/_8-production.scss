@@ -1,9 +1,56 @@
 /* ---СЕКЦИЯ ПРОДУКЦИИ--- */
 .production{
-	min-height: 300px;
+	position: relative;
 	width: 100%;
-	background: $subColor;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	&__content {
+		width: 980px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	&__title {
+		position: relative;
+		width: 100%;
+		margin: 60px 0 20px 0;
+		text-transform: uppercase;
+		font-family: Panton;
+		font-weight: 900;
+		font-size: 33px;
+		color: black;		
+	}
+	&__items {
+		position: relative;
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		margin-bottom: 20px;
+	}
+	&__item {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		width: 50%;
+		& img {
+			width: 210px;
+			height: 210px;
+			margin: 20px 0;
+			object-fit: contain;
+		}
+	}
+}
+.product {
+	&__image {}
+	&__desc {
+		position: relative;
+		width: 310px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 40px;
+	}
+	&__price {}
+	&__button{}
 }
