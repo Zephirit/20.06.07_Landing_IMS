@@ -18,19 +18,19 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">Шапка сайта
+      <header class="header section" id="header">Шапка сайта
         <div class="header__navigation animated slideInDown">
               <nav class="navigation"><a class="navigation__logo" href="/"><img src="./img/logo.png" alt="logo"></a>
                 <ul class="navigation__list">
-                  <li class="navigation__item hvr-grow">Преимущества</li>
-                  <li class="navigation__item hvr-grow">Сравнения</li>
-                  <li class="navigation__item hvr-grow">Типы панелей</li>
-                  <li class="navigation__item hvr-grow">Галерея</li>
-                  <li class="navigation__item hvr-grow">Оплата</li>
-                  <li class="navigation__item hvr-grow">Отзывы</li>
+                  <li class="navigation__item hvr-grow link" data-target="description">Преимущества</li>
+                  <li class="navigation__item hvr-grow link" data-target="comparative">Сравнения</li>
+                  <li class="navigation__item hvr-grow link" data-target="applying">Типы панелей</li>
+                  <li class="navigation__item hvr-grow link" data-target="beforeAfter">Галерея</li>
+                  <li class="navigation__item hvr-grow link" data-target="products">Оплата</li>
+                  <li class="navigation__item hvr-grow link" data-target="reviews">Отзывы</li>
                 </ul>
                 <div class="navigation__phone"><a class="hvr-pulse" href="tel:+78432400238"><span>+7 (843) </span><span>240 02 38</span></a>
-                  <button>Заказать звонок</button>
+                  <button class="link" data-target="form">Заказать звонок</button>
                 </div>
               </nav>
         </div>
@@ -49,11 +49,11 @@
           <div class="presentation__title">
             <h1 class="animated zoomIn">Термопанель и гибкий камень</h1>
             <h2 class="animated zoomIn">от производителя</h2>
-            <button class="hvr-pulse-shrink">Получить консультацию</button>
+            <button class="hvr-pulse-shrink link" data-target="form">Получить консультацию</button>
           </div>
         </div>
       </header>
-      <div class="description">
+      <div class="description section" id="description">
         <div class="descriptionMenu"><a class="descriptionMenu__item hvr-bubble-bottom" href="#">
             <div class="descriptionMenu__icon"><img src="./img/icon_fire.png" alt="fire"></div>
             <div class="descriptionMenu__title">Не горят, устойчивы к перепаду</div></a><a class="descriptionMenu__item hvr-bubble-bottom" href="#">
@@ -103,22 +103,46 @@
           </div>
         </div>
       </div>
-      <section class="comparative">Секция сравнений</section>
-      <section class="applying">
+      <section class="section comparative" id="comparative">
+        <div class="comparative__content">
+          <div class="comparative__left">
+            <div class="comparative__graph">
+              <div class="comparative__age">
+                <div class="comparative__y">Долговечность</div>
+                <div class="comparative__yAxe"></div>
+              </div>
+              <div class="comparative__field">
+                <div class="comparative__title">сравнительная характеристика материалов</div>
+                <div class="comparative__xAxe"></div>
+              </div>
+            </div>
+            <div class="comparative__x">стоимость с установкой</div>
+          </div>
+          <div class="comparative__right">
+            <div class="comparative__logo">
+              <div class="comparative__image"><img src="./img/logo.png" alt="logo"></div>
+              <div class="comparative__text">i make stone</div>
+            </div>
+          </div>
+        </div>
+        <div class="comparative__bg"></div>
+      </section>
+      <section class="applying section" id="applying">
         <div class="applying__content">
           <div class="applying__title">где применяется гибкий камень и термопанели</div>
           <div class="applying__items"><img src="./img/usage/fasady.jpg" alt="Fasady"><img src="./img/usage/kaminy.jpg" alt="Kaminy"><img src="./img/usage/kartiny.jpg" alt="Kartiny"><img src="./img/usage/kuhnia.jpg" alt="Kuhnia"><img src="./img/usage/podokonniki.jpg" alt="Podokonniki"><img src="./img/usage/poly.jpg" alt="Poly"><img src="./img/usage/sauny.jpg" alt="Sauny"><img src="./img/usage/steny.jpg" alt="Steny"><img src="./img/usage/stoly.jpg" alt="Stoly"><img src="./img/usage/stoyki.jpg" alt="Stoyki"><img src="./img/usage/svet.jpg" alt="Svet"><img src="./img/usage/vannye.jpg" alt="Vannye"></div>
         </div>
       </section>
-          <form class="form">
+          <div class="form section" id="form">
             <div class="form__title">Бесплатная консультация специалиста</div>
             <div class="form__subtitle">Наш сотрудник с радостью ответит на все Ваши вопросы и вышлет на почту лучшее предложение</div>
-            <div class="form__input">
-              <input type="text" placeholder="ФИО">
-              <input type="tel" placeholder="Телефон">
-            </div>
-          </form>
-      <section class="beforeAfter">
+            <form class="form__input" method="post" action="./send.php">
+              <input type="text" placeholder="ФИО" name="name">
+              <input type="tel" placeholder="Телефон" name="phone">
+              <input type="submit">
+            </form>
+          </div>
+      <section class="beforeAfter section" id="beforeAfter">
         <div class="beforeAfter__content">
           <div class="beforeAfterMenu">
             <div class="beforeAfterMenu__title">Еще проекты</div>
@@ -147,13 +171,13 @@
           </div>
         </div>
       </section>
-      <section class="colors">
+      <section class="colors section" id="colors">
         <div class="colors__content">
           <div class="colors__title">цветовая гамма производимых изделий</div>
           <div class="colors__items"><img src="./img/colors/1.png" alt="1"><img src="./img/colors/2.png" alt="2"><img src="./img/colors/3.png" alt="3"><img src="./img/colors/4.png" alt="4"><img src="./img/colors/5.png" alt="5"><img src="./img/colors/6.png" alt="6"><img src="./img/colors/7.png" alt="7"><img src="./img/colors/8.png" alt="8"><img src="./img/colors/9.png" alt="9"><img src="./img/colors/10.png" alt="10"><img src="./img/colors/11.png" alt="11"><img src="./img/colors/12.png" alt="12"><img src="./img/colors/13.png" alt="13"><img src="./img/colors/14.png" alt="14"><img src="./img/colors/15.png" alt="15"><img src="./img/colors/16.png" alt="16"><img src="./img/colors/17.png" alt="17"><img src="./img/colors/18.png" alt="18"></div>
         </div>
       </section>
-      <section class="questions"> 
+      <section class="questions section" id="questions">
         <div class="questions__content">
           <div class="questions__title">Часто задаваемые вопросы о продукции</div>
           <div class="questionsBody">
@@ -182,15 +206,16 @@
           </div>
         </div>
       </section>
-          <form class="form">
+          <div class="form section">
             <div class="form__title">Остались вопросы?</div>
             <div class="form__subtitle">Наш сотрудник с радостью ответит на все Ваши вопросы и вышлет на почту лучшее предложение</div>
-            <div class="form__input">
-              <input type="text" placeholder="ФИО">
-              <input type="tel" placeholder="Телефон">
-            </div>
-          </form>
-      <section class="production">
+            <form class="form__input" method="post" action="./send.php">
+              <input type="text" placeholder="ФИО" name="name">
+              <input type="tel" placeholder="Телефон" name="phone">
+              <input type="submit">
+            </form>
+          </div>
+      <section class="production section" id="production">
         <div class="production__content">
           <div class="production__title">наша продукция</div>
           <div class="production__items">
@@ -217,7 +242,7 @@
           </div>
         </div>
       </section>
-      <section class="stocks">
+      <section class="stocks section" id="stocks">
         <div class="stocks__bg"><img src="./img/discount.png" alt="Discount"></div>
         <div class="stocks__content">
           <div class="stocks__form">
@@ -230,7 +255,7 @@
           </div>
         </div>
       </section>
-      <section class="reviews">
+      <section class="reviews section" id="reviews">
         <div class="reviews__content">
           <div class="reviews__title">отзывы</div>
           <div class="reviews__items">
@@ -270,7 +295,7 @@
           </div>
         </div>
       </section>
-      <section class="map">
+      <section class="map section" id="map">
         <div class="map__bg"><img class="map__img" src="./img/map.jpg" alt="map">
           <div id="googleMap"></div>
         </div>
@@ -288,28 +313,29 @@
           </div>
         </div>
       </section>
-          <form class="form">
+          <div class="form section">
             <div class="form__title">Бесплатная консультация специалиста</div>
             <div class="form__subtitle">Наш сотрудник с радостью ответит на все Ваши вопросы и вышлет на почту лучшее предложение</div>
-            <div class="form__input">
-              <input type="text" placeholder="ФИО">
-              <input type="tel" placeholder="Телефон">
-            </div>
-          </form>
-      <footer class="animated slideInUp">
+            <form class="form__input" method="post" action="./send.php">
+              <input type="text" placeholder="ФИО" name="name">
+              <input type="tel" placeholder="Телефон" name="phone">
+              <input type="submit">
+            </form>
+          </div>
+      <footer class="animated slideInUp" id="footer">
         <div class="footer">
           <div class="footer__navigation">
                 <nav class="navigation"><a class="navigation__logo" href="/"><img src="./img/logo.png" alt="logo"></a>
                   <ul class="navigation__list">
-                    <li class="navigation__item hvr-grow">Преимущества</li>
-                    <li class="navigation__item hvr-grow">Сравнения</li>
-                    <li class="navigation__item hvr-grow">Типы панелей</li>
-                    <li class="navigation__item hvr-grow">Галерея</li>
-                    <li class="navigation__item hvr-grow">Оплата</li>
-                    <li class="navigation__item hvr-grow">Отзывы</li>
+                    <li class="navigation__item hvr-grow link" data-target="description">Преимущества</li>
+                    <li class="navigation__item hvr-grow link" data-target="comparative">Сравнения</li>
+                    <li class="navigation__item hvr-grow link" data-target="applying">Типы панелей</li>
+                    <li class="navigation__item hvr-grow link" data-target="beforeAfter">Галерея</li>
+                    <li class="navigation__item hvr-grow link" data-target="products">Оплата</li>
+                    <li class="navigation__item hvr-grow link" data-target="reviews">Отзывы</li>
                   </ul>
                   <div class="navigation__phone"><a class="hvr-pulse" href="tel:+78432400238"><span>+7 (843) </span><span>240 02 38</span></a>
-                    <button>Заказать звонок</button>
+                    <button class="link" data-target="form">Заказать звонок</button>
                   </div>
                 </nav>
           </div>

@@ -275,13 +275,158 @@ ul {
 /* ---СЕКЦИЯ СРАВНЕНИЙ--- */
 .comparative {
   position: relative;
-  z-index: 5;
-  min-height: 300px;
+  height: 590px;
   width: 100%;
-  background: #ea3302;
+  background: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.comparative__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  width: 980px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  z-index: 5;
+}
+
+.comparative__left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 780px;
+  height: 80%;
+  padding: 50px 0;
+}
+
+.comparative__graph {
+  position: relative;
+  display: flex;
+}
+
+.comparative__age {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 65px;
+  height: 490px;
+}
+
+.comparative__y {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 194px;
+  height: 44px;
+  transform: rotate(-90deg) translateY(-100px);
+  text-transform: uppercase;
+  font-family: Panton;
+  font-weight: normal;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.comparative__yAxe {
+  position: relative;
+  height: 100%;
+  width: 6px;
+  background: #ea3302;
+}
+
+.comparative__field {
+  position: relative;
+  height: 490px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-left: 25px;
+}
+
+.comparative__title {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  text-transform: uppercase;
+  font-family: Panton;
+  font-weight: 900;
+  font-size: 33px;
+  color: black;
+}
+
+.comparative__xAxe {
+  position: relative;
+  height: 6px;
+  width: 600px;
+  background: #ea3302;
+  transform: translateX(-25px);
+}
+
+.comparative__x {
+  position: relative;
+  margin: 20px 0 0 65px;
+  text-transform: uppercase;
+  font-family: Panton;
+  font-weight: normal;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.comparative__right {
+  position: relative;
+  width: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #253c53;
+}
+
+.comparative__logo {
+  position: relative;
+  display: flex;
+  width: 200px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+.comparative__image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.comparative__text {
+  position: relative;
+  font-family: Panton;
+  font-weight: 100;
+  font-size: 55px;
+  text-transform: uppercase;
+  color: #fafafa;
+  text-align: right;
+}
+
+.comparative__bg {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  background: #253c53;
 }
 
 /* ---СЕКЦИЯ ИСПОЛЬЗОВАНИЯ--- */

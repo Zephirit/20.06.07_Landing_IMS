@@ -1,26 +1,27 @@
-mixin form(title,subtitle)
-	form.form
+mixin form(title,subtitle,id)
+	.form.section(id=id)
 		.form__title=title
 		.form__subtitle=subtitle
-		.form__input
-			input(type="text" placeholder="ФИО")
-			input(type="tel" placeholder="Телефон")
+		form.form__input(method="post" action="./send.php")
+			input(type="text" placeholder="ФИО" name="name")
+			input(type="tel" placeholder="Телефон" name="phone")
+			input(type="submit")
 mixin navigation
 	nav.navigation
 		a(href="/").navigation__logo
 			img(src="./img/logo.png", alt="logo")
 		ul.navigation__list
-			li.navigation__item.hvr-grow Преимущества
-			li.navigation__item.hvr-grow Сравнения
-			li.navigation__item.hvr-grow Типы панелей
-			li.navigation__item.hvr-grow Галерея
-			li.navigation__item.hvr-grow Оплата
-			li.navigation__item.hvr-grow Отзывы
+			li.navigation__item.hvr-grow.link(data-target="description") Преимущества
+			li.navigation__item.hvr-grow.link(data-target="comparative") Сравнения
+			li.navigation__item.hvr-grow.link(data-target="applying") Типы панелей
+			li.navigation__item.hvr-grow.link(data-target="beforeAfter") Галерея
+			li.navigation__item.hvr-grow.link(data-target="products") Оплата
+			li.navigation__item.hvr-grow.link(data-target="reviews") Отзывы
 		.navigation__phone
 			a(href="tel:+78432400238").hvr-pulse
 				span +7 (843) 
 				span 240 02 38
-			button Заказать звонок
+			button.link(data-target="form") Заказать звонок
 mixin contacts(cl)
 	ul.contacts(class=cl)
 		li.contacts__item.hvr-grow
