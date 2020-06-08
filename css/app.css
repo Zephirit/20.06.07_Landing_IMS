@@ -13,7 +13,7 @@ body, html {
   min-height: 100%;
   background: #fafafa;
   color: #253c53;
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: "Roboto";
   font-weight: normal;
 }
@@ -27,48 +27,42 @@ ul {
 /* ---НАСТРОЙКА ШРИФТОВ СТРАНИЦЫ--- */
 @font-face {
   font-family: 'Panton';
-  src: url("../fonts/Panton-Bold.eot");
-  src: local("Panton Bold"), local("Panton-Bold"), url("../fonts/Panton-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Panton-Bold.woff") format("woff"), url("../fonts/Panton-Bold.ttf") format("truetype");
+  src: local("Panton Bold"), local("Panton-Bold"), url("../fonts/Panton-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Panton';
-  src: url("../fonts/Panton-Thin.eot");
-  src: local("Panton Thin"), local("Panton-Thin"), url("../fonts/Panton-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Panton-Thin.woff") format("woff"), url("../fonts/Panton-Thin.ttf") format("truetype");
+  src: local("Panton Thin"), local("Panton-Thin"), url("../fonts/Panton-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Panton';
-  src: url("../fonts/Panton-SemiBold.eot");
-  src: local("Panton SemiBold"), local("Panton-SemiBold"), url("../fonts/Panton-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Panton-SemiBold.woff") format("woff"), url("../fonts/Panton-SemiBold.ttf") format("truetype");
+  src: local("Panton SemiBold"), local("Panton-SemiBold"), url("../fonts/Panton-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Panton';
-  src: url("../fonts/Panton-Regular.eot");
-  src: local("Panton Regular"), local("Panton-Regular"), url("../fonts/Panton-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Panton-Regular.woff") format("woff"), url("../fonts/Panton-Regular.ttf") format("truetype");
+  src: local("Panton Regular"), local("Panton-Regular"), url("../fonts/Panton-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Panton';
-  src: url("../fonts/Panton-Light.eot");
-  src: local("Panton Light"), local("Panton-Light"), url("../fonts/Panton-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Panton-Light.woff") format("woff"), url("../fonts/Panton-Light.ttf") format("truetype");
+  src: local("Panton Light"), local("Panton-Light"), url("../fonts/Panton-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Panton';
-  src: url("../fonts/Panton-Black.eot");
-  src: local("Panton Black"), local("Panton-Black"), url("../fonts/Panton-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Panton-Black.woff") format("woff"), url("../fonts/Panton-Black.ttf") format("truetype");
+  src: local("Panton Black"), local("Panton-Black"), url("../fonts/Panton-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
 }
@@ -85,12 +79,11 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .header__navigation {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   z-index: 5;
   top: 30px;
 }
@@ -175,6 +168,7 @@ ul {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
   top: -180px;
   display: flex;
   width: 980px;
@@ -197,6 +191,18 @@ ul {
   background-color: #a68c5a;
 }
 
+.descriptionMenu__item:nth-child(2n):before {
+  border-color: #a68c5a transparent transparent;
+}
+
+.descriptionMenu__item:nth-child(2n) .descriptionMenu__title {
+  background-color: #a68c5a;
+}
+
+.descriptionMenu__item:before {
+  border-color: #c3a976 transparent transparent;
+}
+
 .descriptionMenu__icon {
   position: relative;
   height: 50px;
@@ -206,6 +212,8 @@ ul {
 
 .descriptionMenu__title {
   max-width: 150px;
+  height: 100%;
+  background-color: #c3a976;
   color: #fafafa;
   font-size: 16px;
   font-family: "Panton";
@@ -216,6 +224,7 @@ ul {
 
 .descriptionBody {
   position: relative;
+  z-index: 0;
   height: 100%;
 }
 

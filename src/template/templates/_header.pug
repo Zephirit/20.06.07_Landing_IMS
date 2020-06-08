@@ -1,36 +1,36 @@
 header.header Шапка сайта
-	.header__navigation
+	.header__navigation.animated.slideInDown
 		+navigation
 	.header__contacts
 		+contacts('contacts--vert')
 	.presentation
-		.presentation__bg
+		.presentation__bg.animated.fadeIn
 			.presentation__filter
 			.presentation__gradient
 			img(src="./img/headerBg.jpg", alt="background")
 		.presentation__title
-			h1 Термопанель и гибкий камень
-			h2 от производителя
-			button Получить консультацию
+			h1.animated.zoomIn Термопанель и гибкий камень
+			h2.animated.zoomIn от производителя
+			button.hvr-pulse-shrink Получить консультацию
 .description
 	.descriptionMenu
-		a(href="#").descriptionMenu__item
+		a(href="#").descriptionMenu__item.hvr-bubble-bottom
 			.descriptionMenu__icon
 				img(src="./img/icon_fire.png", alt="fire")
 			.descriptionMenu__title Не горят, устойчивы к перепаду
-		a(href="#").descriptionMenu__item
+		a(href="#").descriptionMenu__item.hvr-bubble-bottom
 			.descriptionMenu__icon
 				img(src="./img/icon_drops.png", alt="drops")
 			.descriptionMenu__title Легко моются, не впитывают влагу
-		a(href="#").descriptionMenu__item
+		a(href="#").descriptionMenu__item.hvr-bubble-bottom
 			.descriptionMenu__icon
 				img(src="./img/icon_sun.png", alt="sun")
 			.descriptionMenu__title Устойчивы к выцветанию
-		a(href="#").descriptionMenu__item
+		a(href="#").descriptionMenu__item.hvr-bubble-bottom
 			.descriptionMenu__icon
 				img(src="./img/icon_zigzag.png", alt="zigzag")
 			.descriptionMenu__title Не трескаются, высокопрочные
-		a(href="#").descriptionMenu__item
+		a(href="#").descriptionMenu__item.hvr-bubble-bottom
 			.descriptionMenu__icon
 				img(src="./img/icon_sheet.png", alt="sheet")
 			.descriptionMenu__title Перечень других преимуществ

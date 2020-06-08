@@ -10,9 +10,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	// overflow: hidden;
+	overflow: hidden;
 	&__navigation {
-		@include centered(x);
+		position: absolute;
 		z-index: 5;
 		top: 30px;
 	}
@@ -91,6 +91,7 @@
 	}
 	&Menu {
 		@include centered(x);
+		z-index: 1;
 		top: -180px;
 		display: flex;
 		width: 980px;
@@ -107,6 +108,15 @@
 			background-color: rgb(195, 169, 118);
 			&:nth-child(2n) {
 				background-color: rgb(166, 140, 90);
+				&:before {
+					border-color: rgb(166, 140, 90) transparent transparent;
+				}
+				& .descriptionMenu__title {
+					background-color: rgb(166, 140, 90);
+				}
+			}
+			&:before {
+				border-color: rgb(195, 169, 118) transparent transparent;
 			}
 		}
 		&__icon {
@@ -118,7 +128,8 @@
 
 		&__title {
 			max-width: 150px;
-
+			height: 100%;
+			background-color: rgb(195, 169, 118);
 			color: $backColor;
 			font-size: 16px;
 			font-family: "Panton";
@@ -129,6 +140,7 @@
 	}
 	&Body {
 		position: relative;
+		z-index: 0;
 		height: 100%;
 
 		&__item {
