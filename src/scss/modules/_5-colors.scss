@@ -47,6 +47,10 @@
 			height: 120px;
 			margin: 12px 12px;
 			object-fit: cover;
+			transition: .5s;
+			&:hover {
+				box-shadow: 5px 5px 5px rgba($mainColor,.3);
+			}
 			@include tablets {
 				width: 100px;
 				height: 100px;

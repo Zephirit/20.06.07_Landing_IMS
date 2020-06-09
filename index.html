@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/hover-min.css">
     <link rel="stylesheet" href="./css/app.css">
-    <script type="module" src="./js/main-dist.mjs" defer></script><!--[if lt IE 9]>
+    <script type="module" src="./js/main-bundle.js"></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
@@ -42,6 +42,10 @@
               </nav>
         </div>
         <div class="presentation">
+          <div id="bg"> <img src="./img/headerBg.jpg" alt="background">
+            <div class="presentation__gradient"></div>
+          </div>
+          <div class="presentation__title"></div>
           <div class="presentation__contacts">
                 <ul class="contacts contacts--vert">
                   <li class="contacts__item hvr-grow"><a href="#"><img src="./img/viber.png" alt="viber"></a></li>
@@ -184,24 +188,24 @@
         <div class="beforeAfter__content">
           <div class="beforeAfterMenu">
             <div class="beforeAfterMenu__title">Еще проекты</div>
-            <ul class="beforeAfterMenu__list">
-              <li class="beforeAfterMenu__item hvr-bubble-left">
+            <div class="beforeAfterMenu__list">
+              <div class="beforeAfterMenu__item hvr-bubble-left">
                 <div class="beforeAfterMenu__img hvr-grow"><img src="./img/more.jpg" alt="more"></div>
-              </li>
-              <li class="beforeAfterMenu__item hvr-bubble-left">
+              </div>
+              <div class="beforeAfterMenu__item hvr-bubble-left">
                 <div class="beforeAfterMenu__img hvr-grow"><img src="./img/more.jpg" alt="more"></div>
-              </li>
-              <li class="beforeAfterMenu__item hvr-bubble-left">
+              </div>
+              <div class="beforeAfterMenu__item hvr-bubble-left">
                 <div class="beforeAfterMenu__img hvr-grow"><img src="./img/more.jpg" alt="more"></div>
-              </li>
-              <li class="beforeAfterMenu__item hvr-bubble-left">
+              </div>
+              <div class="beforeAfterMenu__item hvr-bubble-left">
                 <div class="beforeAfterMenu__img hvr-grow"><img src="./img/more.jpg" alt="more"></div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
           <div class="beforeAfterBody">
             <div class="beforeAfterBody__title">До и после</div>
-            <ul class="beforeAfterBody__list">
+            <div class="beforeAfterBody__list">
               <div class="beforeAfterBody__img animated fadeIn beforeAfterBody_1">
                 <div class="container-beforeafter">
                   <div class="beforeafter">
@@ -234,7 +238,7 @@
                   </div>
                 </div>
               </div>
-            </ul>
+            </div>
             <div class="beforeAfterBody__desc"><span>До</span><span>После</span></div>
           </div>
         </div>
@@ -249,28 +253,28 @@
         <div class="questions__content">
           <div class="questions__title">Часто задаваемые вопросы о продукции</div>
           <div class="questionsBody">
-            <ul class="questionsBody__list">
-              <li class="questionsBody__item">
+            <div class="questionsBody__list">
+              <div class="questionsBody__item">
                 <div class="questionsBody__title">Не отслоится ли со временем декоративный слой от утеплителя? </div>
                 <div class="questionsBody__trigger">+</div>
                 <div class="questionsBody__desc animated fadeIn">Не отслоится, не беспокойтесь :) Мы все сделаем</div>
-              </li>
-              <li class="questionsBody__item">
+              </div>
+              <div class="questionsBody__item">
                 <div class="questionsBody__title">Не отслоится ли со временем декоративный слой от утеплителя? </div>
                 <div class="questionsBody__trigger">+</div>
                 <div class="questionsBody__desc animated fadeIn">Не отслоится, не беспокойтесь :) Она не плачет</div>
-              </li>
-              <li class="questionsBody__item">
+              </div>
+              <div class="questionsBody__item">
                 <div class="questionsBody__title">Не отслоится ли со временем декоративный слой от утеплителя? </div>
                 <div class="questionsBody__trigger">+</div>
                 <div class="questionsBody__desc animated fadeIn">Не отслоится, не беспокойтесь :) Ой горе, ну и что</div>
-              </li>
-              <li class="questionsBody__item">
+              </div>
+              <div class="questionsBody__item">
                 <div class="questionsBody__title">Не отслоится ли со временем декоративный слой от утеплителя? </div>
                 <div class="questionsBody__trigger">+</div>
                 <div class="questionsBody__desc animated fadeIn">Не отслоится, не беспокойтесь :) Земля круглая</div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>

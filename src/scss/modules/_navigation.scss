@@ -19,6 +19,7 @@
 	@include phones {
 		justify-content: space-between;
 		width: 100%;
+		padding: 12px 0;
 		&--footer{
 			justify-content: center;
 		}
@@ -70,36 +71,10 @@
 			right: 0;
 			top: 70px;
 			right: -100%;
+			// top: -100%;
 			&.active{
+				// top: 0;
 				right: 0;
-			}
-			
-		}
-
-		&_active {
-			@include tablets {
-				right: 0;
-
-				&_active {
-					.first__line1 {
-						animation: rotateline1 1s;
-						transform: translateY(28px) rotate(135deg);
-						background-color: $subColor;
-					}
-
-					.first__line2 {
-						animation: scaleline2 .5s;
-						opacity: 0;
-						transform: scale(0);
-					}
-
-					.first__line3 {
-						animation: rotateline3 1s;
-						box-shadow: 0 0 10px black;
-						transform: translateY(-28px) rotate(-135deg);
-						background-color: $subColor;
-					}
-				}
 			}
 		}
 	}
@@ -174,14 +149,15 @@
 
 	&__burger {
 		position: relative;
-		width: 65px;
-		height: 65px;
+		width: 55px;
+		height: 55px;
 		color: $backColor;
 		display: none;
 		@include tablets {
 			position: relative;
 			display: block;
 			right: 0;
+			top: 17px;
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
@@ -196,8 +172,10 @@
 		@include phones {
 			position: relative;
 			display: block;
-			right: 0;
+			right: 15px;
+			top: 7px;
 			display: flex;
+			align-self: center;
 			align-items: center;
 			justify-content: flex-end;
 			cursor: pointer;
@@ -215,15 +193,19 @@
 		height: 6px;
 		border-radius: 3px;
 		background-color: $backColor;
-		box-shadow: 0 0 5px black;
+		// box-shadow: 0 0 5px black;
+		
 
 		&1 {
 			animation: rotateline1-rev 1s;
 		}
 
 		&2 {
-			margin: 20px 0;
+			margin: 15px 0;
 			animation: scaleline2-rev 1s;
+			@include phones {
+				margin: 12px 0;	
+			}
 		}
 
 		&3 {
@@ -235,93 +217,9 @@
 		position: absolute;
 		width: 65px;
 		height: 65px;
-	}
-
-	@keyframes rotateline1 {
-		0% {
-			transform: translateY(0) rotate(0);
-		}
-
-		50% {
-			transform: translateY(28px) rotate(0);
-		}
-
-		100% {
-			transform: translateY(28px) rotate(135deg);
-			background-color: $subColor;
-		}
-	}
-
-	@keyframes rotateline1-rev {
-		0% {
-			transform: translateY(28px) rotate(135deg);
-		}
-
-		50% {
-			transform: translateY(28px) rotate(0);
-		}
-
-		100% {
-			transform: translateY(0) rotate(0);
-		}
-	}
-
-	@keyframes scaleline2 {
-		0% {
-			opacity: 1;
-			transform: scale(1);
-		}
-
-		100% {
-			opacity: 0;
-			transform: scale(0);
-		}
-	}
-
-	@keyframes scaleline2-rev {
-		0% {
-			opacity: 0;
-			transform: scale(0);
-		}
-
-		50% {
-			opacity: .3;
-			transform: scale(.3);
-		}
-
-		100% {
-			opacity: 1;
-			transform: scale(1);
-		}
-	}
-
-	@keyframes rotateline3 {
-		0% {
-			transform: translateY(0) rotate(0);
-		}
-
-		50% {
-			transform: translateY(-28px) rotate(0);
-
-		}
-
-		100% {
-			transform: translateY(-28px) rotate(-135deg);
-			background-color: $subColor;
-		}
-	}
-
-	@keyframes rotateline3-rev {
-		0% {
-			transform: translateY(-28px) rotate(-135deg);
-		}
-
-		50% {
-			transform: translateY(-28px) rotate(0);
-		}
-
-		100% {
-			transform: translateY(0) rotate(0);
+		@include phones {
+			width: 55px;
+			height: 55px;	
 		}
 	}
 }

@@ -95,16 +95,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.onload = () => {
-  console.log("Страница загружена");
-
   function _sendEmail() {
     const forms = document.querySelectorAll('.form__input');
     forms.forEach(frm => {
       frm.onsubmit = e => {
         e.preventDefault();
+        let frmData = new FormData(frm);
         fetch('send.php', {
           method: 'POST',
-          body: new FormData(frm)
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name: frm.name.value,
+            phone: frm.phone.value
+          })
+        }).then(response => alert('Сообщение отправлено')).then(() => {
+          frm.reset();
         });
       };
     });
@@ -117,10 +124,8 @@ window.onload = () => {
       sections[section.id] = {};
       sections[section.id].top = topPos;
     });
-    console.log(sections);
 
     let _getTop = id => {
-      console.log(id);
       return sections[id].top;
     };
 
@@ -128,20 +133,11 @@ window.onload = () => {
       getTop: _getTop
     };
   }
-  function _checkBurger(){
-    const burger = document.querySelector('.navigation__burger')
-    const list = document.querySelector('.navigation__list')
-    burger.addEventListener('click',(e)=>{
-      e.preventDefault()
-      list.classList.toggle('active')
-    })
-  }
+
   function _scrollSection(target) {
     const element = document.querySelector('#' + target);
 
     const targetPos = _sectionsPosition().getTop(target);
-
-    console.log(element, targetPos);
 
     if (target === 'description') {
       const menu = document.querySelector('.descriptionMenu');
@@ -181,7 +177,6 @@ window.onload = () => {
     }
 
     links.forEach((link, index) => {
-      console.log(index, link);
       link.addEventListener('click', e => {
         e.preventDefault();
 
@@ -215,6 +210,15 @@ window.onload = () => {
     });
   }
 
+  function _checkBurger() {
+    const burger = document.querySelector('.navigation__burger');
+    const list = document.querySelector('.navigation__list');
+    burger.addEventListener('click', e => {
+      e.preventDefault();
+      list.classList.toggle('active');
+    });
+  }
+
   const linksAdv = document.querySelectorAll('.descriptionMenu__item');
   const tabsAdv = document.querySelectorAll('.descriptionBody__item');
   const linksBA = document.querySelectorAll('.beforeAfterMenu__item');
@@ -223,7 +227,8 @@ window.onload = () => {
   const accsQuestion = document.querySelectorAll('.questionsBody__desc');
 
   function init() {
-    // _sendEmail()
+    _sendEmail();
+
     _getLinks();
 
     _tabs(linksAdv, tabsAdv);
@@ -232,7 +237,7 @@ window.onload = () => {
 
     _accordion(linksQuestion, accsQuestion);
 
-    _checkBurger()
+    _checkBurger();
   }
 
   init();

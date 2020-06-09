@@ -23,8 +23,8 @@
 		}
 
 		@include phones {
-			top: 15px;
-			width: calc(100% - 10px);
+			top: 0;
+			width: 100%;
 		}
 	}
 
@@ -35,6 +35,9 @@
 	z-index: 0;
 	width: 980px;
 	height: 100%;
+	& img {
+		// display: none;
+	}
 
 	@include tablets {
 		width: 100%;
@@ -100,7 +103,7 @@
 
 			@include phones {
 				text-align: center;
-				font-size: 24px;
+				font-size: 30px;
 			}
 		}
 
@@ -113,7 +116,7 @@
 
 			@include phones {
 				text-align: center;
-				font-size: 18px;
+				font-size: 23px;
 			}
 		}
 
@@ -293,6 +296,19 @@
 				color: rgb(40, 40, 40);
 				line-height: 1.2;
 			}
+		}
+	}
+}
+#bg {
+	display: none;
+	@include phones {
+		display: block;
+		z-index: 1;
+	}
+	& img {
+		@include phones {
+			@include centered;
+			left: 350px;
 		}
 	}
 }
