@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/hover-min.css">
     <link rel="stylesheet" href="./css/app.css">
-    <script type="module" src="./js/main-dist.mjs" defer></script><!--[if lt IE 9]>
+    <script type="module" src="./js/main-bundle.mjs"></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
@@ -29,8 +29,9 @@
                   <li class="navigation__item hvr-grow link" data-target="products">Оплата</li>
                   <li class="navigation__item hvr-grow link" data-target="reviews">Отзывы</li>
                 </ul>
+                <div class="navigation__bg"></div>
                 <div class="navigation__phone"><a class="hvr-pulse" href="tel:+78432400238"><span>+7 (843) </span><span>240 02 38</span></a>
-                  <button class="link" data-target="form">Заказать звонок</button>
+                  <button class="link hvr-pulse" data-target="form">Заказать звонок</button>
                 </div>
                 <div class="navigation__burger burger">
                   <div class="burger__lines">
@@ -42,6 +43,10 @@
               </nav>
         </div>
         <div class="presentation">
+          <div id="bg"> <img src="./img/headerBg.jpg" alt="background">
+            <div class="presentation__gradient"></div>
+          </div>
+          <div class="presentation__title"></div>
           <div class="presentation__contacts">
                 <ul class="contacts contacts--vert">
                   <li class="contacts__item hvr-grow"><a href="#"><img src="./img/viber.png" alt="viber"></a></li>
@@ -77,7 +82,7 @@
             <div class="descriptionBody__img"><img src="./img/ognestoykost.jpg" alt="fireResist"></div>
             <div class="descriptionBody__text">
               <h3>Огнестойкость гибкого камня и термопанелей</h3>
-              <p>Экологически чистый материал не горит , не плавится и не поддерживает горение. Результатом воздействия высоких температур на гибкий камень является его размягчение. Температурный диапазон эксплуатации этого материала от -40˚C до +650˚C. Материал с такими характеристиками легко можно использовать как для внутренней, так и для внешней отделки. Защитное покрытие термопанелей на основе мраморной крошки так же не горит , не плавится и не поддерживает горение!</p>
+              <p>Экологически чистый материал не горит, не плавится и не поддерживает горение. Результатом воздействия высоких температур на гибкий камень является его размягчение. Температурный диапазон эксплуатации этого материала от -40˚C до +650˚C. Материал с такими характеристиками легко можно использовать как для внутренней, так и для внешней отделки. Защитное покрытие термопанелей на основе мраморной крошки так же не горит, не плавится и не поддерживает горение!</p>
             </div>
           </div>
           <div class="descriptionBody__item animated fadeIn">
@@ -111,6 +116,7 @@
         </div>
       </div>
       <section class="section comparative" id="comparative">
+        <div class="comparative__title" id="titleMob">сравнительная характеристика материалов</div>
         <div class="comparative__content">
           <div class="comparative__left">
             <div class="comparative__graph">
@@ -184,24 +190,24 @@
         <div class="beforeAfter__content">
           <div class="beforeAfterMenu">
             <div class="beforeAfterMenu__title">Еще проекты</div>
-            <ul class="beforeAfterMenu__list">
-              <li class="beforeAfterMenu__item hvr-bubble-left">
+            <div class="beforeAfterMenu__list">
+              <div class="beforeAfterMenu__item hvr-bubble-left">
                 <div class="beforeAfterMenu__img hvr-grow"><img src="./img/more.jpg" alt="more"></div>
-              </li>
-              <li class="beforeAfterMenu__item hvr-bubble-left">
+              </div>
+              <div class="beforeAfterMenu__item hvr-bubble-left">
                 <div class="beforeAfterMenu__img hvr-grow"><img src="./img/more.jpg" alt="more"></div>
-              </li>
-              <li class="beforeAfterMenu__item hvr-bubble-left">
+              </div>
+              <div class="beforeAfterMenu__item hvr-bubble-left">
                 <div class="beforeAfterMenu__img hvr-grow"><img src="./img/more.jpg" alt="more"></div>
-              </li>
-              <li class="beforeAfterMenu__item hvr-bubble-left">
+              </div>
+              <div class="beforeAfterMenu__item hvr-bubble-left">
                 <div class="beforeAfterMenu__img hvr-grow"><img src="./img/more.jpg" alt="more"></div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
           <div class="beforeAfterBody">
             <div class="beforeAfterBody__title">До и после</div>
-            <ul class="beforeAfterBody__list">
+            <div class="beforeAfterBody__list">
               <div class="beforeAfterBody__img animated fadeIn beforeAfterBody_1">
                 <div class="container-beforeafter">
                   <div class="beforeafter">
@@ -234,7 +240,7 @@
                   </div>
                 </div>
               </div>
-            </ul>
+            </div>
             <div class="beforeAfterBody__desc"><span>До</span><span>После</span></div>
           </div>
         </div>
@@ -249,28 +255,36 @@
         <div class="questions__content">
           <div class="questions__title">Часто задаваемые вопросы о продукции</div>
           <div class="questionsBody">
-            <ul class="questionsBody__list">
-              <li class="questionsBody__item">
-                <div class="questionsBody__title">Не отслоится ли со временем декоративный слой от утеплителя? </div>
-                <div class="questionsBody__trigger">+</div>
+            <div class="questionsBody__list">
+              <div class="questionsBody__item">
+                <div class="questionsBody__title"> 
+                  <p>Не отслоится ли со временем декоративный слой от утеплителя? </p>
+                  <div class="questionsBody__trigger">+</div>
+                </div>
                 <div class="questionsBody__desc animated fadeIn">Не отслоится, не беспокойтесь :) Мы все сделаем</div>
-              </li>
-              <li class="questionsBody__item">
-                <div class="questionsBody__title">Не отслоится ли со временем декоративный слой от утеплителя? </div>
-                <div class="questionsBody__trigger">+</div>
+              </div>
+              <div class="questionsBody__item">
+                <div class="questionsBody__title">
+                  <p>Не отслоится ли со временем декоративный слой от утеплителя? </p>
+                  <div class="questionsBody__trigger">+</div>
+                </div>
                 <div class="questionsBody__desc animated fadeIn">Не отслоится, не беспокойтесь :) Она не плачет</div>
-              </li>
-              <li class="questionsBody__item">
-                <div class="questionsBody__title">Не отслоится ли со временем декоративный слой от утеплителя? </div>
-                <div class="questionsBody__trigger">+</div>
+              </div>
+              <div class="questionsBody__item">
+                <div class="questionsBody__title"> 
+                  <p>Не отслоится ли со временем декоративный слой от утеплителя? </p>
+                  <div class="questionsBody__trigger">+</div>
+                </div>
                 <div class="questionsBody__desc animated fadeIn">Не отслоится, не беспокойтесь :) Ой горе, ну и что</div>
-              </li>
-              <li class="questionsBody__item">
-                <div class="questionsBody__title">Не отслоится ли со временем декоративный слой от утеплителя? </div>
-                <div class="questionsBody__trigger">+</div>
+              </div>
+              <div class="questionsBody__item">
+                <div class="questionsBody__title"> 
+                  <p>Не отслоится ли со временем декоративный слой от утеплителя? </p>
+                  <div class="questionsBody__trigger">+</div>
+                </div>
                 <div class="questionsBody__desc animated fadeIn">Не отслоится, не беспокойтесь :) Земля круглая</div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -403,8 +417,9 @@
                     <li class="navigation__item hvr-grow link" data-target="products">Оплата</li>
                     <li class="navigation__item hvr-grow link" data-target="reviews">Отзывы</li>
                   </ul>
+                  <div class="navigation__bg"></div>
                   <div class="navigation__phone"><a class="hvr-pulse" href="tel:+78432400238"><span>+7 (843) </span><span>240 02 38</span></a>
-                    <button class="link" data-target="form">Заказать звонок</button>
+                    <button class="link hvr-pulse" data-target="form">Заказать звонок</button>
                   </div>
                   <div class="navigation__burger burger">
                     <div class="burger__lines">

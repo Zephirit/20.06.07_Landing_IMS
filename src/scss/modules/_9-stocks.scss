@@ -171,6 +171,9 @@
 		font-weight: 600;
 		font-size: 19px;
 		text-transform: uppercase;
-		padding-left: 0;
+		padding-left: 0 !important;
+		& input {
+			padding-left: 0 !important;
+		}
 	}
 }

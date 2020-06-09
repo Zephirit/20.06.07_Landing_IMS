@@ -27,7 +27,7 @@
 		}
 		@include phones {
 			width: 85%;
-			height: 430px;
+			height: 360px;
 
 		}
 
@@ -127,7 +127,7 @@
 		font-size: 33px;
 		color: black;
 		@include phones {
-			font-size: 14px;
+			display: none;
 		}
 	}
 	&__bars {
@@ -164,6 +164,8 @@
 		color: rgba(black,.5);
 		@include phones {
 			margin: 10px 0;
+			width: 250px;
+			left: 80px;
 		}
 
 	}
@@ -239,6 +241,9 @@
 		font-weight: 700;
 		font-size: 14px;
 		margin-bottom: 15px;
+		@include phones {
+			font-size: 18px;
+		}
 	}
 	&__image {
 		position: relative;
@@ -329,5 +334,17 @@
 				height: 70px;
 			}
 		}
+	}
+}
+#titleMob {
+	display: none;
+	@include phones {
+		@include centered(x);
+		display: block;
+		text-align: center;
+		width: 85%;
+		height: 100px;
+		font-size: 20px;
+		top: 20px;
 	}
 }

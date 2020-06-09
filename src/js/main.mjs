@@ -1,16 +1,19 @@
+import BeforeAfter from 'before-after'
 window.onload = () => {
-	console.log("Страница загружена")
-	const beforaAfterItem = new BeforeAfter({
-		element: document.querySelector('.beforeAfterBody__img')
-	})
 	function _sendEmail() {
 		const forms = document.querySelectorAll('.form__input')
 		forms.forEach(frm => {
 			frm.onsubmit = (e) => {
 				e.preventDefault()
-				fetch('../send.php', {
+				let frmData = new FormData(frm)
+				fetch('send.php', {
 					method: 'POST',
-					body: new FormData(frm)
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({name: frm.name.value, phone: frm.phone.value})
+				}).then(response => alert('Сообщение отправлено')).then(() => {
+					frm.reset()
 				})
 			}
 		});
@@ -23,10 +26,8 @@ window.onload = () => {
 			sections[section.id] = {}
 			sections[section.id].top = topPos
 		});
-		console.log(sections)
 
 		let _getTop = (id) => {
-			console.log(id)
 			return sections[id].top
 		}
 		return {
@@ -37,7 +38,6 @@ window.onload = () => {
 	function _scrollSection(target) {
 		const element = document.querySelector('#' + target)
 		const targetPos = _sectionsPosition().getTop(target)
-		console.log(element, targetPos)
 		if (target === 'description') {
 			const menu = document.querySelector('.descriptionMenu')
 			const menuHeight = menu.clientHeight
@@ -64,12 +64,25 @@ window.onload = () => {
 		})
 	}
 
-	function _tabs(links, tabs) {
+	function _tabs(links, tabs, isBaSlider) {
+		let beforaAfterItem;
 		tabs[0].classList.add('active')
+		if (isBaSlider) {
+			beforaAfterItem = new BeforeAfter({
+				element: tabs[0]
+			})
+			beforaAfterItem.create();
+		}
 		links.forEach((link, index) => {
-			console.log(index, link)
 			link.addEventListener('click', (e) => {
 				e.preventDefault()
+				if (isBaSlider) {
+					beforaAfterItem.destroy()
+					beforaAfterItem = new BeforeAfter({
+						element: tabs[index]
+					})
+					beforaAfterItem.create();
+				}
 				tabs.forEach(tab => {
 					tab.classList.remove('active')
 					tabs[index].classList.add('active')
@@ -90,6 +103,15 @@ window.onload = () => {
 			})
 		});
 	}
+
+	function _checkBurger() {
+		const burger = document.querySelector('.navigation__burger')
+		const list = document.querySelector('.navigation__list')
+		burger.addEventListener('click', (e) => {
+			e.preventDefault()
+			list.classList.toggle('active')
+		})
+	}
 	const linksAdv = document.querySelectorAll('.descriptionMenu__item')
 	const tabsAdv = document.querySelectorAll('.descriptionBody__item')
 	const linksBA = document.querySelectorAll('.beforeAfterMenu__item')
@@ -101,8 +123,9 @@ window.onload = () => {
 		_sendEmail()
 		_getLinks()
 		_tabs(linksAdv, tabsAdv)
-		_tabs(linksBA, tabBA)
+		_tabs(linksBA, tabBA, true)
 		_accordion(linksQuestion, accsQuestion)
+		_checkBurger()
 	}
 	init()
 }

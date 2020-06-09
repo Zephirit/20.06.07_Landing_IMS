@@ -67,7 +67,7 @@
 			cursor: pointer;
 			width: 750px;
 			display: flex;
-			align-items: center;
+			// align-items: center;
 			background: $backColor;
 			color: $mainColor;
 			flex-direction: column;
@@ -93,7 +93,7 @@
 			cursor: pointer;
 			right: 0;
 			top: 0;
-			height: 65px;
+			height: 100%;
 			width: 65px;
 			display: flex;
 			justify-content: center;
@@ -102,23 +102,23 @@
 			font-family: "Panton";
 			text-transform: uppercase;
 			color: $subColor;
-			@include tablets {
-				top: -5px;
-			}
 			@include phones {
-				height: 45px;
 				width: 45px;
-				top: 5px;
 				
 			}
 		}
 		&__title {
+			position: relative;
 			font-size: 18px;
 			font-family: "Panton";
 			text-transform: uppercase;
 			color: $mainColor;
 			font-weight: 600;
 			padding: 25px;
+			& p{
+				padding: 0;
+				margin: 0;
+			}
 			@include tablets {
 				font-size: 16px;
 				padding: 10px 25px;
