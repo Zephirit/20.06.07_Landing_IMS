@@ -6,16 +6,44 @@
 	height: 65px;
 	display: flex;
 	justify-content: flex-end;
-	&--footer{
-		& .burger{
-			display: none;				
+	
+
+	&--footer {
+		& .burger {
+			display: none;
 		}
+
+		
+
 		@include phones {
 			& .navigation__list {
 				display: none;
 			}
 		}
 	}
+
+	&__adress {
+		@include centered(x);
+		width: 980px;
+		font-weight: 400;
+		font-size: 14px;
+		z-index: 20;
+		top: 0;
+		right: 0;
+		text-align: right;
+		padding: 5px 0;
+		background: $mainColor;
+		@include tablets {
+			width: 700px;
+		}
+
+		@include phones {
+			width: 100%;
+			font-size: 10px;
+			text-align: center;
+		}
+	}
+
 	@include tablets {
 		justify-content: space-between;
 		width: 700px;
@@ -27,7 +55,8 @@
 		padding: 12px 0;
 		z-index: 10;
 		background: $mainColor;
-		&--footer{
+
+		&--footer {
 			justify-content: center;
 		}
 	}
@@ -36,11 +65,13 @@
 		@include centered(y);
 		width: 130px;
 		left: 0;
+
 		@include tablets {
 			position: relative;
 			display: flex;
 			align-items: center;
 		}
+
 		@include phones {
 			display: none;
 		}
@@ -50,7 +81,8 @@
 		position: relative;
 		display: flex;
 		align-items: center;
-		transition: right	.4s;
+		transition: right .4s;
+
 		@include tablets {
 			position: absolute;
 			display: flex;
@@ -59,11 +91,12 @@
 			right: 0;
 			top: 80px;
 			right: -100%;
-			background: rgba($mainColor,.8);
+			background: rgba($mainColor, .8);
 			border-radius: 5px;
 			padding: 10px;
 			box-shadow: 0 0 4px $mainColor;
-			&.active{
+
+			&.active {
 				right: 0;
 				z-index: 1;
 			}
@@ -73,7 +106,7 @@
 			position: absolute;
 			display: flex;
 			flex-direction: column;
-			background: rgba($mainColor,.8);
+			background: rgba($mainColor, .8);
 			padding: 10px 0;
 			width: 100%;
 			top: -150px;
@@ -81,23 +114,25 @@
 			// right: -100%;
 			// top: -100%;
 			transition: .7s;
-			
-			&.active{
+
+			&.active {
 				top: 80px;
 				z-index: 1;
 				// right: 0;
 			}
 		}
 	}
+
 	&__bg {
 		position: absolute;
 		display: none;
 		width: 100%;
 		height: 100%;
-		top:0;
+		top: 0;
 		// padding: 12px 0;
 		z-index: 2;
 		background: $mainColor;
+
 		@include phones {
 			display: block;
 		}
@@ -123,7 +158,10 @@
 
 		}
 	}
-
+	&--bottom {
+		top: auto;
+		bottom: 0;
+	}
 	&__phone {
 		position: relative;
 		margin-left: 35px;
@@ -142,6 +180,7 @@
 				font-weight: 300
 			}
 		}
+
 		@include phones {
 			margin-left: 0;
 			padding: 3px 20px;
@@ -178,6 +217,7 @@
 		height: 55px;
 		color: $backColor;
 		display: none;
+
 		@include tablets {
 			position: relative;
 			display: block;
@@ -218,10 +258,11 @@
 		height: 6px;
 		border-radius: 3px;
 		background-color: $backColor;
+
 		@include phones {
 			height: 4px;
 		}
-		
+
 
 		&1 {
 			animation: rotateline1-rev 1s;
@@ -230,8 +271,9 @@
 		&2 {
 			margin: 15px 0;
 			animation: scaleline2-rev 1s;
+
 			@include phones {
-				margin: 5px 0;	
+				margin: 5px 0;
 			}
 		}
 
@@ -244,9 +286,10 @@
 		position: absolute;
 		width: 65px;
 		height: 65px;
+
 		@include phones {
 			width: 35px;
-			height: 35px;	
+			height: 35px;
 		}
 	}
 }

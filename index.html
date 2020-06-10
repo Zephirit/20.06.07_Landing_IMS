@@ -12,21 +12,26 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/hover-min.css">
+    <link rel="stylesheet" href="./css/lightgallery.min.css">
     <link rel="stylesheet" href="./css/app.css">
-    <script type="module" src="./js/main-bundle.mjs"></script><!--[if lt IE 9]>
+    <script type="module" src="./js/lightgallery.min.js"></script>
+    <script type="module" src="./js/lg-thumbnail.min.js"></script>
+    <script type="module" src="./js/lg-zoom.min.js"></script>
+    <script type="module" src="./js/lg-fullscreen.min.js"></script>
+    <script type="module" src="./js/main-bundle.js"></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
     <div class="wrapper">
-      <header class="header section" id="header">
+      <header class="header section" id="header"><span class="navigation__adress">город Казань, улица Фатыха Карима, д. 9, оф. 502</span>
         <div class="header__navigation animated slideInDown">
               <nav class="navigation"><a class="navigation__logo" href="/"><img src="./img/logo.png" alt="logo"></a>
                 <ul class="navigation__list">
                   <li class="navigation__item hvr-grow link" data-target="description">Преимущества</li>
                   <li class="navigation__item hvr-grow link" data-target="comparative">Сравнения</li>
                   <li class="navigation__item hvr-grow link" data-target="applying">Типы панелей</li>
-                  <li class="navigation__item hvr-grow link" data-target="beforeAfter">Галерея</li>
-                  <li class="navigation__item hvr-grow link" data-target="products">Оплата</li>
+                  <li class="navigation__item hvr-grow link" data-target="gallery">Галерея</li>
+                  <!-- li.navigation__item.hvr-grow.link(data-target="products") Оплата-->
                   <li class="navigation__item hvr-grow link" data-target="reviews">Отзывы</li>
                 </ul>
                 <div class="navigation__bg"></div>
@@ -89,28 +94,34 @@
             <div class="descriptionBody__img"><img src="./img/ognestoykost.jpg" alt="fireResist"></div>
             <div class="descriptionBody__text">
               <h3>Легко моются, не впитывают влагу</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos tempore modi cupiditate illum omnis nostrum rem excepturi, voluptas voluptatum neque aperiam quo corporis vel reiciendis doloribus? Nisi a ipsam reiciendis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit libero dolorum qui hic deserunt, nobis quod asperiores? Iste incidunt asperiores non doloribus? Eaque doloremque, ex inventore amet sint laboriosam commodi.</p>
+              <p>Покрытие гибкого камня и термопанелей на основе мраморной крошки и специального эластичного материала отталкивает влагу, в порах поверхности не откладывается придорожная пыль и грязь. Если Вы все же решите помыть этот материал, то это можно сделать даже автомобильной мойкой высокого давления. При направленной струе высокого давления в одну точку материала на расстоянии 10-15 см от него в течение 5-7 минут не нанесут ему никаких повреждений.</p>
             </div>
           </div>
           <div class="descriptionBody__item animated fadeIn">
             <div class="descriptionBody__img"><img src="./img/ognestoykost.jpg" alt="fireResist"></div>
             <div class="descriptionBody__text">
               <h3>Устойчивы к выцветанию</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos tempore modi cupiditate illum omnis nostrum rem excepturi, voluptas voluptatum neque aperiam quo corporis vel reiciendis doloribus? Nisi a ipsam reiciendis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit libero dolorum qui hic deserunt, nobis quod asperiores? Iste incidunt asperiores non doloribus? Eaque doloremque, ex inventore amet sint laboriosam commodi.</p>
+              <p>Цвет гибкого камня и термопанелей образуется путем окрашивания самой мраморной крошки, а не нанесение красящего материала сверху или смешивания с колерами на водной основе. Окрашивание материала осуществляется специальными пигментами устойчивыми к выцветанию. Например TiO2.</p>
             </div>
           </div>
           <div class="descriptionBody__item animated fadeIn">
             <div class="descriptionBody__img"><img src="./img/ognestoykost.jpg" alt="fireResist"></div>
             <div class="descriptionBody__text">
               <h3>Не трескаются, высокопрочные</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos tempore modi cupiditate illum omnis nostrum rem excepturi, voluptas voluptatum neque aperiam quo corporis vel reiciendis doloribus? Nisi a ipsam reiciendis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit libero dolorum qui hic deserunt, nobis quod asperiores? Iste incidunt asperiores non doloribus? Eaque doloremque, ex inventore amet sint laboriosam commodi.</p>
+              <p>При монтаже материала швы заделываются эластичной смесью на основе акриловой смолы. Сам декоративный слой состоит из эластичной акриловой смолы, наполненной натуральной, обеспыленной мраморной крошкой и комплексом модифицированных добавок. Все это позволяет материалу принимать различную форму и под воздействием усадки фундамента не образуются трещины.</p>
             </div>
           </div>
           <div class="descriptionBody__item animated fadeIn">
             <div class="descriptionBody__img"><img src="./img/ognestoykost.jpg" alt="fireResist"></div>
             <div class="descriptionBody__text">
               <h3>Перечень других преимуществ</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos tempore modi cupiditate illum omnis nostrum rem excepturi, voluptas voluptatum neque aperiam quo corporis vel reiciendis doloribus? Nisi a ipsam reiciendis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit libero dolorum qui hic deserunt, nobis quod asperiores? Iste incidunt asperiores non doloribus? Eaque doloremque, ex inventore amet sint laboriosam commodi.</p>
+              <p>Долговечность. Материал устойчив к воздействиям внешней среды.</p>
+              <p>Пластичность. Материал, при желании, может принять любую необходимую форму, прикрепиться к любой поверхности. </p>
+              <p>Простор для творчества и фантазии.Непревзойденный внешний вид, с текстурой среза натурального песчаника.</p>
+              <p>Широкая сфера применения: отделка фасада, стен, пола, бассейна, сауны, облицовка каминов и лестниц, создание ландшафтного дизайна и многое другое.</p>
+              <p>Легкий вес изделия. Для транспортировки можно использовать даже легковой автомобиль.</p>
+              <p>Натуральный материал, совершенно не опасен для здоровья человека, а также не представляет угрозу для окружающей среды.</p>
+              <p>Материал можно использовать для нанесения фрески</p>
             </div>
           </div>
         </div>
@@ -145,14 +156,14 @@
                   <div class="bar bar__third">
                     <div class="bar__text">Сайдинг</div>
                     <div class="bar__body bar__thirdBody">
-                      <div class="bar__bodyAge">15 лет</div>
+                      <div class="bar__bodyAge">10 лет</div>
                       <div class="bar__bodyPrice">2000 р</div>
                     </div>
                   </div>
                   <div class="bar bar__forth">
                     <div class="bar__text">Мокрый фасад</div>
                     <div class="bar__body bar__forthBody">
-                      <div class="bar__bodyAge">15 лет</div>
+                      <div class="bar__bodyAge">7 лет</div>
                       <div class="bar__bodyPrice">2500 р</div>
                     </div>
                   </div>
@@ -171,6 +182,25 @@
         </div>
         <div class="comparative__bg"></div>
       </section>
+      <section class="section thermopanels" id="thermopanels">
+        <div class="thermopanels__content"> 
+          <div class="thermopanels__title">Термопанели – это утепление и одновременно отделка фасада современным декоративным материалом.</div>
+          <p>Для термопанелей основой служит пенополистирол (ППС) или экструдированный пенополистирол (ППС).</p>
+          <p>Мы производим термопанели из ППС высокой плотности толщиной 30, 50 или 100 мм, из ЭППС толщиной 50 мм.</p>
+          <ul>Термопанель толщиной 100мм заменяет:
+            <li>деревянную стену толщиной 450 мм;</li>
+            <li>керамзитобетонную стену толщиной 750 мм;</li>
+            <li>кирпичную стену толщиной 1700 мм.</li>
+          </ul>
+          <p>Термопанели - паропроницаемый и экологически безопасный для здоровья человека и окружающей среды материал.</p>
+          <p>Термопанели не подвергаются воздействию влаги и гниению, не впитывают грязь а декоративный слой из мраморной крошки отлично укрывают стены здания от неблагоприятных атмосферных воздействий отталкивая воду.</p>
+          <p>Малый вес упрощает работу с материалом, а также не утяжеляет фасады конструкций.</p>
+          <p>Термопанели по сравнению с «мокрым фасадом», не трескаются при усадке построек.</p>
+          <p>Монтаж осуществляется на любую поверхность – газоблок, пеноблок, кирпич, штукатурку, дерево.</p>
+          <p>Монтаж термопанелей вы можете заказать у нас или сделать его самостоятельно что позволит существенно сэкономить бюджет по отделке фасада.</p>
+          <p>Применяется для отделки наружных фасадов в декоративных целях, а также в целях утепления. Не боится перепадов температур, любых внешних воздействий и влаги. Изделие можно красить. Наши панели не трескаются, не плесневеют и не гниют, не осыпаются. Пыль и грязь не въедаются, а цвет не выгорает и не меняется. Может монтироваться со швами и бесшовно.</p>
+        </div>
+      </section>
       <section class="applying section" id="applying">
         <div class="applying__content">
           <div class="applying__title">где применяется гибкий камень и термопанели</div>
@@ -179,10 +209,11 @@
       </section>
           <div class="form section" id="form">
             <div class="form__title">Бесплатная консультация специалиста</div>
-            <div class="form__subtitle">Наш сотрудник с радостью ответит на все Ваши вопросы и вышлет на почту лучшее предложение</div>
+            <div class="form__subtitle">Наши специалисты ответят на любые Ваши вопросы и составят максимально выгодное для Вас предложение</div>
             <form class="form__input" method="post" action="./send.php">
-              <input type="text" placeholder="ФИО" name="name">
+              <input type="text" placeholder="Имя" name="name">
               <input type="tel" placeholder="Телефон" name="phone">
+              <input type="email" placeholder="Почта" name="email">
               <input class="form__submit" type="submit">
             </form>
           </div>
@@ -211,32 +242,32 @@
               <div class="beforeAfterBody__img animated fadeIn beforeAfterBody_1">
                 <div class="container-beforeafter">
                   <div class="beforeafter">
-                    <div class="beforeafter-item beforeafter-itemActive"><img src="./img/slider_before.jpg" alt="before"></div>
-                    <div class="beforeafter-item"><img src="./img/slider_after.jpg" alt="after"></div>
+                    <div class="beforeafter-item beforeafter-itemActive"><img src="./img/slider_after.jpg" alt="after"></div>
+                    <div class="beforeafter-item"><img src="./img/slider_before.jpg" alt="before"></div>
                   </div>
                 </div>
               </div>
               <div class="beforeAfterBody__img animated fadeIn beforeAfterBody_2">
                 <div class="container-beforeafter">
                   <div class="beforeafter">
-                    <div class="beforeafter-item beforeafter-itemActive"><img src="./img/slider_before.jpg" alt="before"></div>
-                    <div class="beforeafter-item"><img src="./img/slider_after.jpg" alt="after"></div>
+                    <div class="beforeafter-item beforeafter-itemActive"><img src="./img/slider_after.jpg" alt="after"></div>
+                    <div class="beforeafter-item"><img src="./img/slider_before.jpg" alt="before"></div>
                   </div>
                 </div>
               </div>
               <div class="beforeAfterBody__img animated fadeIn beforeAfterBody_3">
                 <div class="container-beforeafter">
                   <div class="beforeafter">
-                    <div class="beforeafter-item beforeafter-itemActive"><img src="./img/slider_before.jpg" alt="before"></div>
-                    <div class="beforeafter-item"><img src="./img/slider_after.jpg" alt="after"></div>
+                    <div class="beforeafter-item beforeafter-itemActive"><img src="./img/slider_after.jpg" alt="after"></div>
+                    <div class="beforeafter-item"><img src="./img/slider_before.jpg" alt="before"></div>
                   </div>
                 </div>
               </div>
               <div class="beforeAfterBody__img animated fadeIn beforeAfterBody_4">
                 <div class="container-beforeafter">
                   <div class="beforeafter">
-                    <div class="beforeafter-item beforeafter-itemActive"><img src="./img/slider_before.jpg" alt="before"></div>
-                    <div class="beforeafter-item"><img src="./img/slider_after.jpg" alt="after"></div>
+                    <div class="beforeafter-item beforeafter-itemActive"><img src="./img/slider_after.jpg" alt="after"></div>
+                    <div class="beforeafter-item"><img src="./img/slider_before.jpg" alt="before"></div>
                   </div>
                 </div>
               </div>
@@ -248,12 +279,19 @@
       <section class="colors section" id="colors">
         <div class="colors__content">
           <div class="colors__title">цветовая гамма производимых изделий</div>
-          <div class="colors__items"><img src="./img/colors/1.png" alt="1"><img src="./img/colors/2.png" alt="2"><img src="./img/colors/3.png" alt="3"><img src="./img/colors/4.png" alt="4"><img src="./img/colors/5.png" alt="5"><img src="./img/colors/6.png" alt="6"><img src="./img/colors/7.png" alt="7"><img src="./img/colors/8.png" alt="8"><img src="./img/colors/9.png" alt="9"><img src="./img/colors/10.png" alt="10"><img src="./img/colors/11.png" alt="11"><img src="./img/colors/12.png" alt="12"><img src="./img/colors/13.png" alt="13"><img src="./img/colors/14.png" alt="14"><img src="./img/colors/15.png" alt="15"><img src="./img/colors/16.png" alt="16"><img src="./img/colors/17.png" alt="17"><img src="./img/colors/18.png" alt="18"></div>
+          <div class="colors__items"><img class="hvr-grow" src="./img/colors/1.png" alt="1"><img class="hvr-grow" src="./img/colors/2.png" alt="2"><img class="hvr-grow" src="./img/colors/3.png" alt="3"><img class="hvr-grow" src="./img/colors/4.png" alt="4"><img class="hvr-grow" src="./img/colors/5.png" alt="5"><img class="hvr-grow" src="./img/colors/6.png" alt="6"><img class="hvr-grow" src="./img/colors/7.png" alt="7"><img class="hvr-grow" src="./img/colors/8.png" alt="8"><img class="hvr-grow" src="./img/colors/9.png" alt="9"><img class="hvr-grow" src="./img/colors/10.png" alt="10"><img class="hvr-grow" src="./img/colors/11.png" alt="11"><img class="hvr-grow" src="./img/colors/12.png" alt="12"><img class="hvr-grow" src="./img/colors/13.png" alt="13"><img class="hvr-grow" src="./img/colors/14.png" alt="14"><img class="hvr-grow" src="./img/colors/15.png" alt="15"><img class="hvr-grow" src="./img/colors/16.png" alt="16"><img class="hvr-grow" src="./img/colors/17.png" alt="17"><img class="hvr-grow" src="./img/colors/18.png" alt="18">
+          </div>
+          <div class="colors__text"> 
+            <p>Цветовая гамма не является исчерпывающей, а представляет собой лишь пример того, что любое сочетание цветов и оттенков природного материала,  может быть материализовано на нашем призводстве.</p>
+            <p>Если Вы затрудняетесь с выбором цвета, наши дизайнеры, которые являются профессионалами своего дела,  непременно помогут Вам определиться с тем, в каких цветах и оттенках будет окружающее Вас пространство.</p>
+            <p>Также наши дизайнеры готовы создать любой дизайн-проект, который будет отвечать самым изысканным Вашим требованиям.</p>
+          </div>
         </div>
       </section>
       <section class="questions section" id="questions">
+        <div class="questions__bg"></div>
         <div class="questions__content">
-          <div class="questions__title">Часто задаваемые вопросы о продукции</div>
+          <div class="questions__title">Часто задаваемые вопросы</div>
           <div class="questionsBody">
             <div class="questionsBody__list">
               <div class="questionsBody__item">
@@ -261,28 +299,28 @@
                   <p>Не отслоится ли со временем декоративный слой от утеплителя? </p>
                   <div class="questionsBody__trigger">+</div>
                 </div>
-                <div class="questionsBody__desc animated fadeIn">Не отслоится, не беспокойтесь :) Мы все сделаем</div>
+                <div class="questionsBody__desc animated fadeIn">Нет, не отслоится, т.к. декоративный слой не приклеен к пенополистиролу, а интегрирован в его структуру по специальной технологии, глубина проникновения защитного слоя в пенополистирол от 10 до 15 мм.</div>
               </div>
               <div class="questionsBody__item">
                 <div class="questionsBody__title">
-                  <p>Не отслоится ли со временем декоративный слой от утеплителя? </p>
+                  <p>На какую поверхность можно монтировать термопанели? </p>
                   <div class="questionsBody__trigger">+</div>
                 </div>
-                <div class="questionsBody__desc animated fadeIn">Не отслоится, не беспокойтесь :) Она не плачет</div>
+                <div class="questionsBody__desc animated fadeIn">Термопанели монтируются на любую поверхность: кирпич, бетон, дерево, газобетон, OSB, штукатурку.</div>
               </div>
               <div class="questionsBody__item">
                 <div class="questionsBody__title"> 
-                  <p>Не отслоится ли со временем декоративный слой от утеплителя? </p>
+                  <p>Если я утеплю фасад системой, мой дом станет термосом и стены “дышать” не будут? </p>
                   <div class="questionsBody__trigger">+</div>
                 </div>
-                <div class="questionsBody__desc animated fadeIn">Не отслоится, не беспокойтесь :) Ой горе, ну и что</div>
+                <div class="questionsBody__desc animated fadeIn">Паропроницаемость пенопласта никак не отразится на микроклимате помещений, если его установку осуществлять снаружи здания. Не стоит полагать, что в продаже можно найти пенополистирол с разной паропроницаемостью. Эта характеристика остается одинаковой, независимо от плотности и вспененности. Этот показатель аналогичен древесному срубу дуба или сосны.</div>
               </div>
               <div class="questionsBody__item">
                 <div class="questionsBody__title"> 
-                  <p>Не отслоится ли со временем декоративный слой от утеплителя? </p>
+                  <p>Защищена ли фасадная система от вандализма?</p>
                   <div class="questionsBody__trigger">+</div>
                 </div>
-                <div class="questionsBody__desc animated fadeIn">Не отслоится, не беспокойтесь :) Земля круглая</div>
+                <div class="questionsBody__desc animated fadeIn">Термопанели с мраморной крошкой обладают достаточной жесткостью, чтобы их можно было использовать как на частных домах, так и на общественных. Толщина защитного слоя составляет 3-5 мм.</div>
               </div>
             </div>
           </div>
@@ -290,52 +328,18 @@
       </section>
           <div class="form section">
             <div class="form__title">Остались вопросы?</div>
-            <div class="form__subtitle">Наш сотрудник с радостью ответит на все Ваши вопросы и вышлет на почту лучшее предложение</div>
+            <div class="form__subtitle">Наши специалисты ответят на любые Ваши вопросы и составят максимально выгодное для Вас предложение</div>
             <form class="form__input" method="post" action="./send.php">
-              <input type="text" placeholder="ФИО" name="name">
+              <input type="text" placeholder="Имя" name="name">
               <input type="tel" placeholder="Телефон" name="phone">
+              <input type="email" placeholder="Почта" name="email">
               <input class="form__submit" type="submit">
             </form>
           </div>
-      <section class="production section" id="production">
-        <div class="production__content">
-          <div class="production__title">наша продукция</div>
-          <div class="production__items">
-            <div class="production__item product product__first">
-              <div class="product__image"><img src="./img/gibky_kamen.png" alt="Gibky kamen"></div>
-              <div class="product__desc">
-                <div class="product__name">Гибкий камень</div>
-                <div class="product__price">от 750 руб. за кв/м</div>
-                <div class="product__button"> 
-                  <button>Заказать</button>
-                </div>
-              </div>
-            </div>
-            <div class="production__item product product__second">
-              <div class="product__image"><img src="./img/gibky_kamen.png" alt="Gibky kamen"></div>
-              <div class="product__desc">
-                <div class="product__name">Гибкий камень</div>
-                <div class="product__price">от 750 руб. за кв/м</div>
-                <div class="product__button"> 
-                  <button>Заказать</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="stocks section" id="stocks">
-        <div class="stocks__bg"><img src="./img/discount.png" alt="Discount"></div>
-        <div class="stocks__content">
-          <div class="stocks__form">
-            <div class="stocks__title">Акция!</div>
-            <div class="stocks__subtitle">До 31 марта принимаются заказы на строительный сезон 2020 года. Скидка на термопанели 10% с бесплатным хранением на нашем складе.*</div>
-            <div class="stocks__input">
-              <input type="text" placeholder="ФИО">
-              <input type="tel" placeholder="Телефон">
-              <input class="stocks__submit" type="submit">
-            </div>
-          </div>
+      <!-- include ./templates/_8-production-->
+      <section class="section gallery" id="gallery">
+        <div class="gallery__title">Галерея наших дел</div>
+        <div class="gallery__content" id="lightgallery"><a class="gallery__item hvr-shrink" href="./img/gallery/photo_(1).JPG"><img class="gallery__img" src="./img/gallery/photo_(1).JPG" alt="galleryImg1"></a><a class="gallery__item hvr-shrink" href="./img/gallery/photo_(2).JPG"><img class="gallery__img" src="./img/gallery/photo_(2).JPG" alt="galleryImg2"></a><a class="gallery__item hvr-shrink" href="./img/gallery/photo_(3).JPG"><img class="gallery__img" src="./img/gallery/photo_(3).JPG" alt="galleryImg3"></a><a class="gallery__item hvr-shrink" href="./img/gallery/photo_(4).JPG"><img class="gallery__img" src="./img/gallery/photo_(4).JPG" alt="galleryImg4"></a><a class="gallery__item hvr-shrink" href="./img/gallery/photo_(5).JPG"><img class="gallery__img" src="./img/gallery/photo_(5).JPG" alt="galleryImg5"></a><a class="gallery__item hvr-shrink" href="./img/gallery/photo_(6).JPG"><img class="gallery__img" src="./img/gallery/photo_(6).JPG" alt="galleryImg6"></a><a class="gallery__item hvr-shrink" href="./img/gallery/photo_(7).JPG"><img class="gallery__img" src="./img/gallery/photo_(7).JPG" alt="galleryImg7"></a><a class="gallery__item hvr-shrink" href="./img/gallery/photo_(8).JPG"><img class="gallery__img" src="./img/gallery/photo_(8).JPG" alt="galleryImg8"></a>
         </div>
       </section>
       <section class="reviews section" id="reviews">
@@ -343,44 +347,37 @@
           <div class="reviews__title">отзывы</div>
           <div class="reviews__items">
             <div class="review">
-              <div class="review__image"><img src="./img/review_pic.jpg" alt="Review pic"></div>
+              <div class="review__image"><img src="./img/review1_pic.jpg" alt="Review pic"></div>
               <div class="review__desc">
-                <div class="review__name">Sarah Lewin</div>
-                <div class="review__workplace"> 
-                  <div class="review__job">projects manajer in</div>
-                  <div class="review__company">Pixels </div>
-                </div>
-                <div class="review__text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit sed, quam alias repudiandae repellat beatae sapiente fuga inventore esse laborum eaque qui incidunt vero, aspernatur!</div>
+                <div class="review__name">Алексей и Татьяна</div>
+                <div class="review__text"> Добрый день! Хочу сказать спасибо за внешнюю и внутреннюю гармонию нашего дома, которая появилась после проведения работ сотрудниками компании  IMS. Мы любители красоты и порядка. Отмечу - именно сочетания -  красоты и порядка... И эти ребята настолько гармонично всё сделали, что нам очень хочется, чтобы эту технологию оценили другие владельцы домов. Это практично, дешевле по сравнению с аналогами и проще в монтаже. </div>
+                <p>Надеемся, что наш отзыв поможет принять вам верное решение при выборе отделочных материалов для дома.</p>
               </div>
             </div>
             <div class="review">
-              <div class="review__image"><img src="./img/review_pic.jpg" alt="Review pic"></div>
+              <div class="review__image"><img src="./img/review2_pic.jpg" alt="Review pic"></div>
               <div class="review__desc">
-                <div class="review__name">Samuel Willson</div>
-                <div class="review__workplace">
-                  <div class="review__job">creative director in </div>
-                  <div class="review__company">DD Agency</div>
-                </div>
-                <div class="review__text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit sed, quam alias repudiandae repellat beatae sapiente fuga inventore esse laborum eaque qui incidunt vero, aspernatur!</div>
+                <div class="review__name">Роман</div>
+                <div class="review__text"> Не ожидал, честно говоря, что получу за небольшие деньги столько преимуществ по сравнению с теми материалами, которые выбирал. Во-первых, благородный внешний вид, во-вторых, высокую скорость выполнения работ и доступную стоимость как самих работ, так и материалов. В-третьих, я сторонник ЗОЖ и мне важно, чтобы материал, из которого построен дом, был экологически чистым. Мой выбор оценили соседи, которые до этого не слышали о таком материале для отделки дома, а теперь собираются производить ремонтные работы по моему совету. </div>
+                <p>Редко пишу отзывы, в данном случае он был необходим для скептиков, которые боятся использовать новые технологии. Мир не стоит на месте, постоянно появляются новые материалы  - долговечные, энергосберегающие, выгодные по цене.  Желаю IMS дальнейшего развития и процветания.</p>
               </div>
             </div>
             <div class="review">
-              <div class="review__image"><img src="./img/review_pic.jpg" alt="Review pic"></div>
+              <div class="review__image"><img src="./img/review3_pic.jpg" alt="Review pic"></div>
               <div class="review__desc">
-                <div class="review__name">Alex Larkins</div>
-                <div class="review__workplace">
-                  <div class="review__job">founder of </div>
-                  <div class="review__company">Pic Pen Studio</div>
-                </div>
-                <div class="review__text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit sed, quam alias repudiandae repellat beatae sapiente fuga inventore esse laborum eaque qui incidunt vero, aspernatur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit sed, quam alias repudiandae repellat beatae sapiente fuga inventore esse laborum eaque qui incidunt vero, aspernatur!</div>
+                <div class="review__name">Диляра</div>
+                <div class="review__text"> Здравствуйте! Я живу одна в своем доме и для меня любой ремонт – это проблема. Давно была потребность привести фасад дома в хороший внешний вид, но я не знала даже с чего начать. Хотелось, чтобы отделка  была современной, стильной и выглядела достойно. Очень благодарна компании IMS, специалисты которой провели весь цикл необходимых работ.  Они и замерили всё сами, и посоветовали с материалом, и девочки-дизайнеры всё очень хорошо нарисовали то, что впоследствии было в итоге сделано. Монтаж был быстрым и беспроблемным для меня. </div>
+                <p>Хочу сказать, что это удачный пример соотношения цена — качество. Спасибо вам всем большое!</p>
               </div>
             </div>
           </div>
         </div>
       </section>
       <section class="map section" id="map">
-        <div class="map__bg"><img class="map__img" src="./img/map.jpg" alt="map">
-          <div id="googleMap"></div>
+        <div class="map__bg">
+          <div id="yandexMap">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae72cc22f8a40f664cd6a8eba0b572c6ddc0da57a5228a7f6d4c70587364832f3&amp;amp;source=constructor" width="100%" height="410" frameborder="0"></iframe>
+          </div>
         </div>
         <div class="map__content">
           <div class="mapCard">
@@ -398,10 +395,11 @@
       </section>
           <div class="form section">
             <div class="form__title">Бесплатная консультация специалиста</div>
-            <div class="form__subtitle">Наш сотрудник с радостью ответит на все Ваши вопросы и вышлет на почту лучшее предложение</div>
+            <div class="form__subtitle">Наши специалисты ответят на любые Ваши вопросы и составят максимально выгодное для Вас предложение</div>
             <form class="form__input" method="post" action="./send.php">
-              <input type="text" placeholder="ФИО" name="name">
+              <input type="text" placeholder="Имя" name="name">
               <input type="tel" placeholder="Телефон" name="phone">
+              <input type="email" placeholder="Почта" name="email">
               <input class="form__submit" type="submit">
             </form>
           </div>
@@ -413,8 +411,8 @@
                     <li class="navigation__item hvr-grow link" data-target="description">Преимущества</li>
                     <li class="navigation__item hvr-grow link" data-target="comparative">Сравнения</li>
                     <li class="navigation__item hvr-grow link" data-target="applying">Типы панелей</li>
-                    <li class="navigation__item hvr-grow link" data-target="beforeAfter">Галерея</li>
-                    <li class="navigation__item hvr-grow link" data-target="products">Оплата</li>
+                    <li class="navigation__item hvr-grow link" data-target="gallery">Галерея</li>
+                    <!-- li.navigation__item.hvr-grow.link(data-target="products") Оплата-->
                     <li class="navigation__item hvr-grow link" data-target="reviews">Отзывы</li>
                   </ul>
                   <div class="navigation__bg"></div>
@@ -428,7 +426,7 @@
                       <div class="burger__line burger__line3"></div>
                     </div>
                   </div>
-                </nav>
+                </nav><span class="navigation__adress navigation--bottom">город Казань, улица Фатыха Карима, д. 9, оф. 502</span>
           </div>
           <div class="footer__defense">
             <div class="footer__content">

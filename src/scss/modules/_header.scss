@@ -15,16 +15,19 @@
 	&__navigation {
 		position: absolute;
 		z-index: 5;
-		top: 30px;
-
+		top: 0;
+		padding-top: 30px;
+		
 		@include tablets {
-			top: 20px;
+			top: 0;
+			padding-top: 25px;
 			width: calc(100% - 10px);
 		}
 
 		@include phones {
 			z-index: 10;
 			top: 0;
+			padding-top: 10px;
 			width: 100%;
 		}
 	}
@@ -280,7 +283,7 @@
 			position: relative;
 			box-sizing: border-box;
 			padding: 30px;
-			width: 960px;
+			width: 100%;
 
 			& h3 {
 				font-size: 21px;
@@ -297,8 +300,10 @@
 				color: rgb(40, 40, 40);
 				line-height: 1.2;
 				text-align: justify;
+				margin: 5px 0;
 				@include phones {
 				font-size: 14px;
+				// margin: 5px 0;
 				}
 			}
 		}

@@ -41,26 +41,47 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		margin-bottom: 33px;
 		& img {
 			width: 120px;
 			height: 120px;
 			margin: 12px 12px;
 			object-fit: cover;
-			transition: .5s;
-			&:hover {
-				box-shadow: 5px 5px 5px rgba($mainColor,.3);
-			}
+			transition: .2s;
+			// &:hover {
+			// 	width: 124px;
+			// 	height: 124px;
+			// 	margin: 10px 10px;
+			// 	box-shadow: 5px 5px 5px rgba($mainColor,.2);
+			// }
 			@include tablets {
 				width: 100px;
 				height: 100px;
-				margin: 5px 2px;
+				margin: 6px 3px;
 				}
+				// &:hover {
+				// 	width: 104px;
+				// 	height: 104px;
+				// 	margin: 3px 1px;
+				// }
 			@include phones {
 				width: 80px;
 				height: 80px;
-				margin: 5px 5px;
+				margin: 4px 4px;
+				&:hover {
+					width: 84px;
+					height: 84px;
+					margin: 2px 2px;
+				}
 			}
 		}
+	}
+	&__text {
+		position: relative;
+		width: 100%;
+		text-align: justify;
+		font-size: 16px;
+		line-height: 1.2;
+		margin-bottom: 33px;
+		font-weight: 600;
 	}
 }

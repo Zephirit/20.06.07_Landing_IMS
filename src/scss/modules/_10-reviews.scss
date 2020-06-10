@@ -17,6 +17,7 @@
 		}
 		@include phones {
 			width: 85%;
+			margin-bottom: 20px;
 		}
 
 	}
@@ -54,14 +55,15 @@
 .review {
 	position: relative;
 	width: 30%;
+	height: auto;
 	min-width: 250px;
 	// height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	margin-top: 30px;
-	padding: 10px;
-	background: rgba(0,0,0,.05);
+	padding: 10px 10px 0 10px;
+	background: rgba($mainColor,.05);
 	@include tablets {
 		margin-bottom: 30px;
 	}
@@ -98,10 +100,15 @@
 		font-weight: normal;
 		font-size: 14px;
 		color: black;
+		& p {
+			margin-top: 5px;
+
+		}
 	}
 	&__name {
+		font-size: 16px;
 		font-weight: 700;
-		margin: 10px 0 0;
+		margin: 15px 0 15px;
 	}
 	&__workplace {
 		position: relative;

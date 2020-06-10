@@ -5,8 +5,9 @@
 	width: 100%;
 	background: $backColor;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	// flex-direction: column;
+	// justify-content: space-between;
+	// align-items: center;
 	@include phones {
 		height: 380px;
 		
@@ -212,7 +213,8 @@
 		text-align: right;
 	}
 	&__bg {
-		position: relative;
+		position: absolute;
+		right: 0;
 		width: 30%;
 		height: 100%;
 		background: $mainColor;
@@ -275,6 +277,7 @@
 			font-size: 27px;
 			text-align: center;
 			line-height: 20px;
+			width: 85%;
 			@include phones {
 			font-size: 20px;
 		}
