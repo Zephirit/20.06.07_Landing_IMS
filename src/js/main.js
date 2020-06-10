@@ -5,7 +5,6 @@ window.onload = () => {
 		forms.forEach(frm => {
 			frm.onsubmit = (e) => {
 				e.preventDefault()
-				let frmData = new FormData(frm)
 				fetch('send.php', {
 					method: 'POST',
 					headers: {
@@ -22,6 +21,33 @@ window.onload = () => {
 		});
 	}
 
+	function _popup() {
+		const popup = document.querySelector('#popup')
+		console.log(popup)
+		const _popupListeners = () => {
+			const triggers = document.querySelectorAll('.popupTrg')
+			console.log(triggers)
+			triggers.forEach(trg => {
+				console.log(trg)
+				trg.addEventListener('click',(e)=>{
+					e.preventDefault()
+					popup.style.display = "block"
+				})
+			});
+		}
+		const _destroyListener = () => {
+			const closeBtn = popup.querySelector('.popup__close');
+			closeBtn.addEventListener('click',(e)=>{
+				e.preventDefault()
+				popup.style.display = "none"
+			})
+		}
+		const _init = () =>{
+			_popupListeners()
+			_destroyListener()
+		}
+		_init()
+	}
 	function _sectionsPosition() {
 		let sections = {}
 		document.querySelectorAll('.section').forEach(section => {
@@ -113,10 +139,18 @@ window.onload = () => {
 			})
 		});
 	}
+
 	function _initGallery() {
-		console.log(1)
-    lightGallery(document.getElementById('lightgallery'));
-  }
+		lightGallery(document.getElementById('lightgallery'));
+	}
+	function _initApplyingGallery() {
+		lightGallery(document.getElementById('applayingallery'),{
+			zoom: false,
+			thumbnail: false,
+			download: false
+		});
+	}
+
 	function _checkBurger() {
 		const burger = document.querySelector('.navigation__burger')
 		const list = document.querySelector('.navigation__list')
@@ -140,6 +174,8 @@ window.onload = () => {
 		_accordion(linksQuestion, accsQuestion)
 		_checkBurger()
 		_initGallery()
+		_initApplyingGallery()
+		_popup()
 	}
 	init()
 }

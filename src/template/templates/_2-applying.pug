@@ -1,16 +1,7 @@
 section.applying.section#applying
     .applying__content
         .applying__title где применяется гибкий камень и термопанели
-        .applying__items
-            img(src="./img/usage/fasady.jpg", alt="Fasady")
-            img(src="./img/usage/kaminy.jpg", alt="Kaminy")
-            img(src="./img/usage/kartiny.jpg", alt="Kartiny")
-            img(src="./img/usage/kuhnia.jpg", alt="Kuhnia")
-            img(src="./img/usage/podokonniki.jpg", alt="Podokonniki")
-            img(src="./img/usage/poly.jpg", alt="Poly")
-            img(src="./img/usage/sauny.jpg", alt="Sauny")
-            img(src="./img/usage/steny.jpg", alt="Steny")
-            img(src="./img/usage/stoly.jpg", alt="Stoly")
-            img(src="./img/usage/stoyki.jpg", alt="Stoyki")
-            img(src="./img/usage/svet.jpg", alt="Svet")
-            img(src="./img/usage/vannye.jpg", alt="Vannye")
+        .applying__items#applayingallery
+            each item in ['fasady','kaminy','kartiny','kuhnia','podokonniki','sauny','steny','stoly','stoyki','svet','vannye']
+                a(href=`./img/usage/${item}.jpg`).gallery__item.hvr-shrink
+                    img(src=`./img/usage/${item}.jpg` alt=`${item}`).gallery__img

@@ -6,11 +6,22 @@
 	}
 	&--vert{
 		flex-direction: column;
+		@include tablets {
+			left: 20px;
+		}
+		@include phones {
+			top: 20px;
+			left: 5px;
+		}
 	}
 	&__item{
 		position: relative;
 		padding: 8px;
 		width: 30px;
+		@include phones {
+			padding: 4px;
+		}
+
 		& a{
 
 		}

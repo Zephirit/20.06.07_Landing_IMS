@@ -1,0 +1,89 @@
+.popup {
+	@include centered();
+	z-index: 999;
+	position: fixed;
+	display: none;
+	&__close {
+		position: absolute;
+		cursor: pointer;
+		z-index: 5;
+		top: 0px;
+		right: 10px;
+		transform: rotate(45deg);
+		font-size: 40px;
+		color: $mainColor;
+		transition: all .4s;
+		&:hover{
+			color: $contrColor;
+		}
+	}
+}
+.formCall {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: $mainColor;
+	padding: 25px;
+	background: $backColor;
+	box-shadow: 0 0 6px (rgba($mainColor, 0.8));
+
+	&__title {
+		position: relative;
+		width: 100%;
+		margin: 20px 0 10px;
+		text-transform: uppercase;
+		font-family: Panton;
+		font-weight: 900;
+		font-size: 24px;
+		color: black;
+
+		@include tablets {
+			font-size: 24px;
+		}
+
+		@include phones {
+			text-align: center;
+			font-size: 24px;
+		}
+	}
+	&__input {
+		position: relative;
+		margin: 10px 0;
+		width: 230px;
+		height: 45px;
+		box-sizing: border-box;
+		padding-left: 15px;
+		border: 3px solid $subColor;
+		color: black;
+		font-family: Panton;
+		font-weight: 600;
+		font-size: 19px;
+
+		&::placeholder {
+			color: $subColor;
+			text-transform: uppercase;
+			font-family: Panton;
+			font-weight: 600;
+			font-size: 19px;
+		}
+	}
+	&__submit {
+		position: relative;
+		cursor: pointer;
+		padding: 10px 0;
+		margin: 10px 0;
+		border: 0;
+		background: $contrColor;
+		color: $backColor;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 200px;
+		background: $subColor;
+		color: $backColor;
+		font-weight: 600;
+		font-size: 19px;
+		text-transform: uppercase;
+	}
+}

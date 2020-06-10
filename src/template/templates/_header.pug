@@ -1,24 +1,24 @@
 header.header.section#header
-	span.navigation__adress город Казань, улица Фатыха Карима, д. 9, оф. 502
+	//- span.navigation__adress город Казань, улица Фатыха Карима, д. 9, оф. 501
+	+address
 	.header__navigation.animated.slideInDown
 		+navigation
 	//- .header__contacts
 	//- 	+contacts('contacts--vert')
+	
 	.presentation
-		#bg 
-			img(src="./img/headerBg.jpg", alt="background")
-			.presentation__gradient
 		.presentation__title
 		.presentation__contacts
 			+contacts('contacts--vert')
-		.presentation__bg.animated.fadeIn
-			.presentation__filter
-			.presentation__gradient
-			img(src="./img/headerBg.jpg", alt="background")
+		
 		.presentation__title
 			h1.animated.zoomIn Термопанель и гибкий камень
 			h2.animated.zoomIn от производителя
-			button.hvr-pulse-shrink.link(data-target="form") Получить консультацию
+			button.hvr-grow.popupTrg Получить консультацию
+	.presentation__bg.animated.fadeIn
+		.presentation__filter
+		.presentation__gradient
+		img(src="./img/headerBg.jpg", alt="background")
 .description.section#description
 	.descriptionMenu
 		a(href="#").descriptionMenu__item.hvr-bubble-bottom
@@ -73,7 +73,7 @@ header.header.section#header
 				h3 Перечень других преимуществ
 				p Долговечность. Материал устойчив к воздействиям внешней среды.
 				p Пластичность. Материал, при желании, может принять любую необходимую форму, прикрепиться к любой поверхности. 
-				p Простор для творчества и фантазии.Непревзойденный внешний вид, с текстурой среза натурального песчаника.
+				p Простор для творчества и фантазии. Непревзойденный внешний вид, с текстурой среза натурального песчаника.
 				p Широкая сфера применения: отделка фасада, стен, пола, бассейна, сауны, облицовка каминов и лестниц, создание ландшафтного дизайна и многое другое.
 				p Легкий вес изделия. Для транспортировки можно использовать даже легковой автомобиль.
 				p Натуральный материал, совершенно не опасен для здоровья человека, а также не представляет угрозу для окружающей среды.

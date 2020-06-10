@@ -75,13 +75,22 @@
 			}
 		}
 	}
-	&__text {
+	&__textBottom {
 		position: relative;
 		width: 100%;
 		text-align: justify;
-		font-size: 16px;
+		font-size: 20px;
 		line-height: 1.2;
 		margin-bottom: 33px;
+		font-weight: 700;
+	}
+	&__textTop {
+		position: relative;
+		width: 100%;
+		text-align: justify;
+		line-height: 1.2;
+		font-size: 16px;
 		font-weight: 600;
 	}
 }
+

@@ -125,7 +125,7 @@
 		text-transform: uppercase;
 		font-family: Panton;
 		font-weight: 900;
-		font-size: 33px;
+		font-size: 32px;
 		color: black;
 		@include phones {
 			display: none;
@@ -215,7 +215,7 @@
 	&__bg {
 		position: absolute;
 		right: 0;
-		width: 30%;
+		width: 33%;
 		height: 100%;
 		background: $mainColor;
 		@include tablets {
@@ -345,7 +345,7 @@
 		@include centered(x);
 		display: block;
 		text-align: center;
-		width: 85%;
+		width: 300px;
 		height: 100px;
 		font-size: 20px;
 		top: 20px;

@@ -15,16 +15,13 @@ mixin navigation(cl)
 		ul.navigation__list
 			li.navigation__item.hvr-grow.link(data-target="description") Преимущества
 			li.navigation__item.hvr-grow.link(data-target="comparative") Сравнения
-			li.navigation__item.hvr-grow.link(data-target="applying") Типы панелей
+			li.navigation__item.hvr-grow.link(data-target="applying") Применение
 			li.navigation__item.hvr-grow.link(data-target="gallery") Галерея
 			// li.navigation__item.hvr-grow.link(data-target="products") Оплата
 			li.navigation__item.hvr-grow.link(data-target="reviews") Отзывы
 		.navigation__bg
 		.navigation__phone
-			a(href="tel:+78432400238").hvr-pulse
-				span +7 (843) 
-				span 240 02 38
-			button.link(data-target="form").hvr-pulse Заказать звонок
+			button.popupTrg.hvr-grow Заказать звонок
 		.navigation__burger.burger
 			.burger__lines
 				.burger__line.burger__line1
@@ -34,11 +31,38 @@ mixin navigation(cl)
 mixin contacts(cl)
 	ul.contacts(class=cl)
 		li.contacts__item.hvr-grow
-			a(href="#")
+			a(href="viber://chat?number=+79673675636")
 				img(src="./img/viber.png", alt="viber")
 		li.contacts__item.hvr-grow
-			a(href="#")
+			a(href="https://api.whatsapp.com/send?phone=+79673675636")
 				img(src="./img/whatsapp.png", alt="whatsapp")
 		li.contacts__item.hvr-grow
-			a(href="#")
+			a(href="tg://resolve?domain=nikname")
 				img(src="./img/telegram.png", alt="telegram")
+mixin address
+	.address
+		.address__container
+			.address__item.address__questions
+					svg.ypos_ab(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14")
+						path(d="M7 9L5.268 7.484.316 11.729c.18.167.423.271.691.271h11.986c.267 0 .509-.104.688-.271L8.732 7.484 7 9z")
+						path(d="M13.684 2.271A1.007 1.007 0 0 0 12.993 2H1.007c-.267 0-.509.104-.689.273L7 8l6.684-5.729zM0 2.878v8.308l4.833-4.107zM9.167 7.079L14 11.186V2.875z")
+					.address__desc
+						p Вопросы и заявки 
+						a(href="mailto:partner@barsgroup.ru") partner@barsgroup.ru
+			.address__item.address__watsapp
+					svg.ypos_ab(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.667 30.667")
+						path(d="M30.667 14.939c0 8.25-6.74 14.938-15.056 14.938a15.1 15.1 0 0 1-7.276-1.857L0 30.667l2.717-8.017a14.787 14.787 0 0 1-2.159-7.712C.559 6.688 7.297 0 15.613 0c8.315.002 15.054 6.689 15.054 14.939zM15.61 2.382c-6.979 0-12.656 5.634-12.656 12.56 0 2.748.896 5.292 2.411 7.362l-1.58 4.663 4.862-1.545c2 1.312 4.393 2.076 6.963 2.076 6.979 0 12.658-5.633 12.658-12.559C28.27 8.016 22.59 2.382 15.61 2.382zm7.604 15.998c-.094-.151-.34-.243-.708-.427-.367-.184-2.184-1.069-2.521-1.189-.34-.123-.586-.185-.832.182-.243.367-.951 1.191-1.168 1.437-.215.245-.43.276-.799.095-.369-.186-1.559-.57-2.969-1.817-1.097-.972-1.838-2.169-2.052-2.536-.217-.366-.022-.564.161-.746.165-.165.369-.428.554-.643.185-.213.246-.364.369-.609.121-.245.06-.458-.031-.643-.092-.184-.829-1.984-1.138-2.717-.307-.732-.614-.611-.83-.611-.215 0-.461-.03-.707-.03s-.646.089-.983.456-1.291 1.252-1.291 3.054c0 1.804 1.321 3.543 1.506 3.787.186.243 2.554 4.062 6.305 5.528 3.753 1.465 3.753.976 4.429.914.678-.062 2.184-.885 2.49-1.739.308-.858.308-1.593.215-1.746z")
+					.address__desc
+						p Расчет по WhatsApp 
+						a(href="https://api.whatsapp.com/send?phone=+79673675636") +7 (962) 559-30-90
+			.address__item.address__consult
+					svg.ypos_ab(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.56 480.56")
+						path(d="M365.354 317.9c-15.7-15.5-35.3-15.5-50.9 0-11.9 11.8-23.8 23.6-35.5 35.6-3.2 3.3-5.9 4-9.8 1.8-7.7-4.2-15.9-7.6-23.3-12.2-34.5-21.7-63.4-49.6-89-81-12.7-15.6-24-32.3-31.9-51.1-1.6-3.8-1.3-6.3 1.8-9.4 11.9-11.5 23.5-23.3 35.2-35.1 16.3-16.4 16.3-35.6-.1-52.1-9.3-9.4-18.6-18.6-27.9-28-9.6-9.6-19.1-19.3-28.8-28.8-15.7-15.3-35.3-15.3-50.9.1-12 11.8-23.5 23.9-35.7 35.5-11.3 10.7-17 23.8-18.2 39.1-1.9 24.9 4.2 48.4 12.8 71.3 17.6 47.4 44.4 89.5 76.9 128.1 43.9 52.2 96.3 93.5 157.6 123.3 27.6 13.4 56.2 23.7 87.3 25.4 21.4 1.2 40-4.2 54.9-20.9 10.2-11.4 21.7-21.8 32.5-32.7 16-16.2 16.1-35.8.2-51.8-19-19.1-38.1-38.1-57.2-57.1zM346.254 238.2l36.9-6.3c-5.8-33.9-21.8-64.6-46.1-89-25.7-25.7-58.2-41.9-94-46.9l-5.2 37.1c27.7 3.9 52.9 16.4 72.8 36.3 18.8 18.8 31.1 42.6 35.6 68.8zM403.954 77.8c-42.6-42.6-96.5-69.5-156-77.8l-5.2 37.1c51.4 7.2 98 30.5 134.8 67.2 34.9 34.9 57.8 79 66.1 127.5l36.9-6.3c-9.7-56.2-36.2-107.2-76.6-147.7z")
+					.address__desc
+						p Консультация
+						a(href="tel:+78435671348") 8 (843) 259-30-90
+			.address__item.address__place
+					svg.ypos_ab(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512")
+						path(d="M256 0C153.755 0 70.573 83.182 70.573 185.426c0 126.888 165.939 313.167 173.004 321.035 6.636 7.391 18.222 7.378 24.846 0 7.065-7.868 173.004-194.147 173.004-321.035C441.425 83.182 358.244 0 256 0zm0 278.719c-51.442 0-93.292-41.851-93.292-93.293S204.559 92.134 256 92.134s93.291 41.851 93.291 93.293-41.85 93.292-93.291 93.292z")
+					.address__desc
+						b г.Казань, ул. Фатыха Карима, д.9

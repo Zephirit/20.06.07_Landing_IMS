@@ -30,7 +30,7 @@
 		z-index: 20;
 		top: 0;
 		right: 0;
-		text-align: right;
+		text-align: left;
 		padding: 5px 0;
 		background: $mainColor;
 		@include tablets {
@@ -167,7 +167,7 @@
 		margin-left: 35px;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 
 		& a {
