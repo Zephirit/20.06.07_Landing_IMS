@@ -95,39 +95,65 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.onload = () => {
+  function _initAjax(frm, option = 'send') {
+    console.log(option);
+
+    if (option === 'send') {
+      fetch('send.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: frm.name.value,
+          phone: frm.phone.value,
+          email: frm.email.value
+        })
+      }).then(response => alert('Сообщение отправлено')).then(() => {
+        frm.reset();
+      });
+    } else if (option === 'sendCall') {
+      fetch('sendCall.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: frm.name.value,
+          phone: frm.phone.value
+        })
+      }).then(response => alert('Сообщение отправлено')).then(() => {
+        frm.reset();
+      });
+    }
+  }
+
   function _sendEmail() {
-    const forms = document.querySelectorAll('.form__input');
+    const forms = document.querySelectorAll('form');
+    console.log(forms);
     forms.forEach(frm => {
       frm.onsubmit = e => {
         e.preventDefault();
-        fetch('send.php', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            name: frm.name.value,
-            phone: frm.phone.value
-          })
-        }).then(response => alert('Сообщение отправлено')).then(() => {
-          frm.reset();
-        });
+
+        if (frm.classList.contains('formSend')) {
+          _initAjax(frm, 'send');
+        } else if (frm.classList.contains('formCall')) {
+          _initAjax(frm, 'sendCall');
+        }
       };
     });
   }
 
   function _popup() {
     const popup = document.querySelector('#popup');
-    console.log(popup);
 
     const _popupListeners = () => {
       const triggers = document.querySelectorAll('.popupTrg');
-      console.log(triggers);
       triggers.forEach(trg => {
-        console.log(trg);
         trg.addEventListener('click', e => {
           e.preventDefault();
-          popup.style.display = "block";
+          popup.classList.add('popup__active');
+          popup.classList.remove('popup__closed');
         });
       });
     };
@@ -136,7 +162,8 @@ window.onload = () => {
       const closeBtn = popup.querySelector('.popup__close');
       closeBtn.addEventListener('click', e => {
         e.preventDefault();
-        popup.style.display = "none";
+        popup.classList.remove('popup__active');
+        popup.classList.add('popup__closed');
       });
     };
 

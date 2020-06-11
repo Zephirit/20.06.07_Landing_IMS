@@ -1,7 +1,7 @@
-#popup.popup.animated.fadeIn
+#popup.popup.popup__closed
 	a.popup__close +
-	form.formCall#formCall
+	form(method="post" action="./sendCall.php").formCall#formCall
 		h2.formCall__title Заказать звонок
-		input(type="text" placeholder="Ваше имя" name="name").formCall__input
-		input(type="tel" placeholder="Номер телефона" name="phone").formCall__input
+		input(type="text" placeholder="Ваше имя" name="name" required).formCall__input
+		input(type="tel" placeholder="Номер телефона" name="phone" required).formCall__input
 		input(type="submit").formCall__submit

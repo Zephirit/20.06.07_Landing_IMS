@@ -1,8 +1,6 @@
 .popup {
 	@include centered();
-	z-index: 999;
 	position: fixed;
-	display: none;
 	&__close {
 		position: absolute;
 		cursor: pointer;
@@ -12,10 +10,19 @@
 		transform: rotate(45deg);
 		font-size: 40px;
 		color: $mainColor;
-		transition: all .4s;
-		&:hover{
+		transition: all 0.4s;
+		&:hover {
 			color: $contrColor;
 		}
+	}
+	&__active {
+		opacity: 1;
+		z-index: 999;
+		animation: fadeIn .5s;
+	}
+	&__closed {
+		opacity: 0;
+		z-index: -1;
 	}
 }
 .formCall {
@@ -36,21 +43,13 @@
 		font-family: Panton;
 		font-weight: 900;
 		font-size: 24px;
+		text-align: center;
 		color: black;
-
-		@include tablets {
-			font-size: 24px;
-		}
-
-		@include phones {
-			text-align: center;
-			font-size: 24px;
-		}
 	}
 	&__input {
 		position: relative;
 		margin: 10px 0;
-		width: 230px;
+		width: 250px;
 		height: 45px;
 		box-sizing: border-box;
 		padding-left: 15px;
@@ -79,7 +78,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 200px;
+		width: 220px;
 		background: $subColor;
 		color: $backColor;
 		font-weight: 600;

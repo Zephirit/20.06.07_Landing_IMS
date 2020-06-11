@@ -2341,7 +2341,7 @@ ul {
   width: 350px;
   padding: 25px;
   min-height: 300px;
-  font-size: 19px;
+  font-size: 18px;
   font-family: "Panton";
   color: #253c53;
   font-weight: 400;
@@ -2388,18 +2388,37 @@ ul {
   display: flex;
   flex-direction: column;
   font-size: 20px;
-  margin: 15px;
+  margin: 30px 15px 15px;
+}
+
+.mapCard__phones span {
+  font-size: 15px;
+  padding-left: 7px;
+  white-space: nowrap;
 }
 
 @media (max-width: 767px) {
-  .mapCard__phones {
-    font-size: 14px;
+  .mapCard__phones span {
+    font-size: 12px;
   }
 }
 
 .mapCard__phones a {
   text-decoration: none;
   color: #253c53;
+  font-size: 17px;
+}
+
+@media (max-width: 767px) {
+  .mapCard__phones a {
+    font-size: 14px;
+  }
+}
+
+.mapCard__phone {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
 }
 
 .mapCard__email {
@@ -2520,9 +2539,7 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 999;
   position: fixed;
-  display: none;
 }
 
 .popup__close {
@@ -2534,11 +2551,22 @@ ul {
   transform: rotate(45deg);
   font-size: 40px;
   color: #253c53;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .popup__close:hover {
   color: #ea3302;
+}
+
+.popup__active {
+  opacity: 1;
+  z-index: 999;
+  animation: fadeIn .5s;
+}
+
+.popup__closed {
+  opacity: 0;
+  z-index: -1;
 }
 
 .formCall {
@@ -2560,26 +2588,14 @@ ul {
   font-family: Panton;
   font-weight: 900;
   font-size: 24px;
+  text-align: center;
   color: black;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .formCall__title {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 767px) {
-  .formCall__title {
-    text-align: center;
-    font-size: 24px;
-  }
 }
 
 .formCall__input {
   position: relative;
   margin: 10px 0;
-  width: 230px;
+  width: 250px;
   height: 45px;
   box-sizing: border-box;
   padding-left: 15px;
@@ -2609,7 +2625,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
+  width: 220px;
   background: #c3a976;
   color: #fafafa;
   font-weight: 600;
