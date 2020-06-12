@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/hover-min.css">
     <link rel="stylesheet" href="./css/lightgallery.min.css">
-    <link rel="stylesheet" href="./css/app.min.css">
+    <link rel="stylesheet" href="./css/app.css">
     <script type="module" src="./js/lightgallery.min.js"></script>
     <script type="module" src="./js/lg-thumbnail.min.js"></script>
     <script type="module" src="./js/lg-zoom.min.js"></script>
     <script type="module" src="./js/lg-fullscreen.min.js"></script>
-    <script type="module" src="./js/main-bundle.min.js"></script><!--[if lt IE 9]>
+    <script type="module" src="./js/main-bundle.js"></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
@@ -32,7 +32,7 @@
                     <path d="M13.684 2.271A1.007 1.007 0 0 0 12.993 2H1.007c-.267 0-.509.104-.689.273L7 8l6.684-5.729zM0 2.878v8.308l4.833-4.107zM9.167 7.079L14 11.186V2.875z"></path>
                   </svg>
                   <div class="address__desc">
-                    <p>Вопросы и заявки </p><a href="mailto:partner@barsgroup.ru">partner@barsgroup.ru</a>
+                    <p>Вопросы </p><a href="mailto:info@site.ru">info@imakestone.ru</a>
                   </div>
                 </div>
                 <div class="address__item address__watsapp">
@@ -55,7 +55,7 @@
                   <svg class="ypos_ab" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path d="M256 0C153.755 0 70.573 83.182 70.573 185.426c0 126.888 165.939 313.167 173.004 321.035 6.636 7.391 18.222 7.378 24.846 0 7.065-7.868 173.004-194.147 173.004-321.035C441.425 83.182 358.244 0 256 0zm0 278.719c-51.442 0-93.292-41.851-93.292-93.293S204.559 92.134 256 92.134s93.291 41.851 93.291 93.293-41.85 93.292-93.291 93.292z"></path>
                   </svg>
-                  <div class="address__desc"><b>г.Казань, ул. Фатыха Карима, д.9</b></div>
+                  <div class="address__desc"><b>г.Казань, ул. Фатыха Карима, д.9, офис 501</b></div>
                 </div>
               </div>
             </div>
@@ -70,7 +70,7 @@
                   <li class="navigation__item hvr-grow link" data-target="reviews">Отзывы</li>
                 </ul>
                 <div class="navigation__bg"></div>
-                <div class="navigation__phone">
+                <div class="navigation__phone"><a class="hvr-pulse" href="tel:+78432400238"><span>+7 (843) </span><span>240 02 38</span></a>
                   <button class="popupTrg hvr-grow">Заказать звонок</button>
                 </div>
                 <div class="navigation__burger burger">
@@ -427,13 +427,17 @@
           </div>
         </div>
       </section>
-      <div class="popup popup__closed" id="popup"><a class="popup__close">+</a>
-        <form class="formCall" method="post" action="./sendCall.php" id="formCall">
-          <h2 class="formCall__title">Заказать звонок</h2>
-          <input class="formCall__input" type="text" placeholder="Ваше имя" name="name" required>
-          <input class="formCall__input" type="tel" placeholder="Номер телефона" name="phone" required>
-          <input class="formCall__submit" type="submit">
-        </form>
+      <div class="popup__closed" id="popup">
+        <div class="popup__bg"></div>
+        <div class="popup"><a class="popup__close">+</a>
+          <form class="formCall" method="post" action="./sendCall.php" id="formCall">
+            <h2 class="formCall__title">Заказать звонок</h2>
+            <input class="formCall__input" type="text" placeholder="Ваше имя" name="name" required>
+            <input class="formCall__input" type="tel" placeholder="Номер телефона" name="phone" required>
+            <input class="formCall__input" type="email" placeholder="Почта" name="email" required>
+            <input class="formCall__submit" type="submit">
+          </form>
+        </div>
       </div>
       <footer class="animated slideInUp" id="footer">
         <div class="footer">
@@ -448,7 +452,7 @@
                     <li class="navigation__item hvr-grow link" data-target="reviews">Отзывы</li>
                   </ul>
                   <div class="navigation__bg"></div>
-                  <div class="navigation__phone">
+                  <div class="navigation__phone"><a class="hvr-pulse" href="tel:+78432400238"><span>+7 (843) </span><span>240 02 38</span></a>
                     <button class="popupTrg hvr-grow">Заказать звонок</button>
                   </div>
                   <div class="navigation__burger burger">

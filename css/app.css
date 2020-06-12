@@ -120,7 +120,7 @@ ul {
 .presentation__contacts {
   position: absolute;
   left: 0;
-  top: 15%;
+  top: 20%;
 }
 
 @media (max-width: 767px) {
@@ -2534,12 +2534,28 @@ ul {
   }
 }
 
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .popup {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: fixed;
+}
+
+.popup__bg {
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(37, 60, 83, 0.8);
 }
 
 .popup__close {
@@ -2561,7 +2577,7 @@ ul {
 .popup__active {
   opacity: 1;
   z-index: 999;
-  animation: fadeIn .5s;
+  animation: fadeIn 0.5s;
 }
 
 .popup__closed {
@@ -2575,7 +2591,7 @@ ul {
   flex-direction: column;
   align-items: center;
   color: #253c53;
-  padding: 25px;
+  padding: 45px;
   background: #fafafa;
   box-shadow: 0 0 6px rgba(37, 60, 83, 0.8);
 }
@@ -2953,7 +2969,7 @@ ul {
   margin-left: 35px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 

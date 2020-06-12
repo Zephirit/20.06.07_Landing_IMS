@@ -1,6 +1,20 @@
+#popup{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 .popup {
 	@include centered();
 	position: fixed;
+	&__bg {
+		position: absolute;
+		z-index: 0;
+		width: 100vw;
+		height: 100vh;
+		background: rgba($mainColor, 0.8);
+	}
 	&__close {
 		position: absolute;
 		cursor: pointer;
@@ -18,7 +32,7 @@
 	&__active {
 		opacity: 1;
 		z-index: 999;
-		animation: fadeIn .5s;
+		animation: fadeIn 0.5s;
 	}
 	&__closed {
 		opacity: 0;
@@ -31,7 +45,7 @@
 	flex-direction: column;
 	align-items: center;
 	color: $mainColor;
-	padding: 25px;
+	padding: 45px;
 	background: $backColor;
 	box-shadow: 0 0 6px (rgba($mainColor, 0.8));
 

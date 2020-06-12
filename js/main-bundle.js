@@ -138,7 +138,7 @@ window.onload = () => {
         if (frm.classList.contains('formSend')) {
           _initAjax(frm, 'send');
         } else if (frm.classList.contains('formCall')) {
-          _initAjax(frm, 'sendCall');
+          _initAjax(frm, 'send');
         }
       };
     });
